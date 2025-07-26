@@ -18,44 +18,39 @@ from concurrent.futures import ThreadPoolExecutor
 
 def uploadText(fileName: str, batch_size=50):
     with open(f"{fileName}.txt", 'r', encoding='utf-8') as f:
-        text = f.read().strip()
-
+        text = f.read().strip().replace("\n"," ")
     if not text:
         print("❌ File is empty.")
         return
 
-    splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=100)
+    splitter = RecursiveCharacterTextSplitter(chunk_size=400, chunk_overlap=100)
     chunks = splitter.split_text(text)
 
-    embeddings = model.encode(chunks, batch_size=32, show_progress_bar=True)
+    def chunk_batches(lst, size):
+        for i in range(0, len(lst), size):
+            yield lst[i:i + size]
 
-    vectors = [
-        {
-            'id': f"{fileName}-{i}",
-            'values': embedding.tolist(),
-            'metadata': {'text': chunk}
-        }
-        for i, (chunk, embedding) in enumerate(zip(chunks, embeddings))
-    ]
-
-    print(f"🚀 Upserting {len(vectors)} vectors in batches of {batch_size}...")
-
-    def upsert_batch(batch):
-        index.upsert(vectors=batch, namespace=fileName)
+    print(f"🚀 Uploading {len(chunks)} chunks...")
 
     with ThreadPoolExecutor(max_workers=4) as executor:
         futures = []
-        for i in range(0, len(vectors), batch_size):
-            batch = vectors[i:i+batch_size]
-            futures.append(executor.submit(upsert_batch, batch))
+        for batch_id, batch in enumerate(chunk_batches(chunks, batch_size)):
+            embeddings = model.encode(batch, batch_size=32)  # Fast per batch
+            vectors = [
+                {
+                    'id': f"{fileName}-{batch_id * batch_size + i}",
+                    'values': emb.tolist(),
+                    'metadata': {'text': chunk}
+                }
+                for i, (chunk, emb) in enumerate(zip(batch, embeddings))
+            ]
+            futures.append(executor.submit(index.upsert, vectors=vectors, namespace=fileName))
 
         for i, f in enumerate(futures):
-            f.result()  # Block for each future to complete
+            f.result()
             print(f"✅ Uploaded batch {i + 1}")
 
-    print(f"✅ All {len(vectors)} vectors uploaded to namespace '{fileName}'")
-
-
+    print(f"✅ All {len(chunks)} vectors uploaded to namespace '{fileName}'")
 
 @tool
 def searchDocument(query:str,filename:str)->list:
@@ -65,7 +60,7 @@ def searchDocument(query:str,filename:str)->list:
     
     results = index.query(
         vector=query_embedding,
-        top_k=2,
+        top_k=3,
         include_metadata=True,
         namespace=filename
     )
@@ -74,3 +69,5 @@ def searchDocument(query:str,filename:str)->list:
         print(f"Score: {match['score']:.4f}")
         print(f"Text: {match['metadata']['text']}\n")
     return results['matches']
+
+# searchDocument.invoke({"query":"What is the waiting period for pre-existing diseases (PED) to be covered?","filename":"policy"})

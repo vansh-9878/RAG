@@ -4,8 +4,8 @@ from typing import Annotated,Sequence,TypedDict
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langgraph.graph import StateGraph,START,END
 from langgraph.prebuilt import ToolNode
+# from search import searchDocument
 from agent.search import searchDocument
-
 import os
 from dotenv import load_dotenv
 load_dotenv()
@@ -17,7 +17,7 @@ class AgentState(TypedDict):
 tools=[searchDocument]
     
 model=ChatGoogleGenerativeAI(
-    model="gemini-1.5-pro",
+    model="gemini-2.5-pro",
     google_api_key=os.getenv("GEMINI_API"),
     temperature=0.2
 ).bind_tools(tools)
@@ -33,6 +33,7 @@ def agent(state:AgentState)->AgentState:
         - Do not answer unless you've retrieved information using the tool.
         - If the document doesn't contain the answer, say: "The document does not contain this information."
         - Do not guess or use outside knowledge.
+        - Give the response in 2-3 lines only important information related to the query
         - File name : {state['filename']}"""
     prompt=SystemMessage(content=base)
 
@@ -76,3 +77,4 @@ def start(input:str,fileName:str)->str:
     print("*"*500)
     return results['messages'][-1].content
 
+# start("What is the waiting period for pre-existing diseases (PED) to be covered?","policy")

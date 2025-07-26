@@ -4,6 +4,7 @@ from pydantic import BaseModel
 from agent.ocrAgent import readPDF
 from agent.search import uploadText
 from agent.agent import start
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import uvicorn
 import requests
 
@@ -29,20 +30,35 @@ def check():
     }
     
 @app.post("/hackrx/run")
-def getFile(query:input):
-    filePath=query.documents.split('/')[-1].split('?')[0]
-    fileName=filePath.split('.')[0]
-    response=requests.get(query.documents)
-    with open('policy.pdf',"wb") as f:
+def getFile(query: input):
+    filePath = query.documents.split('/')[-1].split('?')[0]
+    fileName = filePath.split('.')[0]
+
+    response = requests.get(query.documents)
+    with open('policy.pdf', "wb") as f:
         f.write(response.content)
-    readPDF(filePath,fileName)
+
+    readPDF(filePath, fileName)
     uploadText(fileName)
-    answers=[]
-    for question in query.questions:
-        sample=start(question,fileName)
-        answers.append(sample)
-    return {    
-        "answers":answers
+
+    questions = query.questions
+    results = [None] * len(questions)
+
+    with ThreadPoolExecutor(max_workers=5) as executor:
+        futures = {
+            executor.submit(start, q, fileName): i
+            for i, q in enumerate(questions)
+        }
+
+        for future in as_completed(futures):
+            idx = futures[future]
+            try:
+                results[idx] = future.result()
+            except Exception as e:
+                results[idx] = f"❌ Error: {str(e)}"
+
+    return {
+        "answers": results
     }
 
 if __name__ == "__main__":
