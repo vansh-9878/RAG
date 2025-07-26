@@ -1,6 +1,5 @@
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.documentintelligence import DocumentIntelligenceClient
-from search import uploadText
 from dotenv import load_dotenv
 import os
 
@@ -35,7 +34,7 @@ def readPDF(file_path:str,fileName:str):
                 f.write(line.content + "\n")
     print("ocr donee")
 
-file_path="sampleDocuments/travel_insurance.pdf"
-fileName=file_path.split('/')[-1].split('.')[0]
-readPDF(file_path,fileName)
-uploadText(fileName)
+# file_path="sampleDocuments/travel_insurance.pdf"
+# fileName=file_path.split('/')[-1].split('.')[0]
+# readPDF(file_path,fileName)
+# uploadText(fileName)

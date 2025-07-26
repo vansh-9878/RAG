@@ -24,8 +24,8 @@ def uploadText(fileName: str, batch_size=50):
         print("❌ File is empty.")
         return
 
-    chunk_size = 500
-    chunks = [text[i:i+chunk_size] for i in range(0, len(text), chunk_size)]
+    splitter = RecursiveCharacterTextSplitter(chunk_size=500, chunk_overlap=100)
+    chunks = splitter.split_text(text)
 
     embeddings = model.encode(chunks, batch_size=32, show_progress_bar=True)
 
@@ -40,7 +40,6 @@ def uploadText(fileName: str, batch_size=50):
 
     print(f"🚀 Upserting {len(vectors)} vectors in batches of {batch_size}...")
 
-    # Upload in parallel
     def upsert_batch(batch):
         index.upsert(vectors=batch, namespace=fileName)
 

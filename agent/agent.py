@@ -4,7 +4,7 @@ from typing import Annotated,Sequence,TypedDict
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langgraph.graph import StateGraph,START,END
 from langgraph.prebuilt import ToolNode
-from search import searchDocument
+from agent.search import searchDocument
 
 import os
 from dotenv import load_dotenv
@@ -67,9 +67,12 @@ graph.add_conditional_edges(
 
 app=graph.compile()
 
-input="what is the grace period for renewing the policy"
-results=app.invoke({"messages":[HumanMessage(content=input)],"filename":"travel_insurance"})
+def start(input:str,fileName:str)->str:
+    # input="what is the grace period for renewing the policy"
+    results=app.invoke({"messages":[HumanMessage(content=input)],"filename":fileName})
 
-print("*"*500)
-print(results['messages'][-1].content)
-print("*"*500)
+    print("*"*500)
+    print(results['messages'][-1].content)
+    print("*"*500)
+    return results['messages'][-1].content
+
