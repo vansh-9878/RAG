@@ -4,6 +4,7 @@ from typing import Annotated,Sequence,TypedDict
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langgraph.graph import StateGraph,START,END
 from langgraph.prebuilt import ToolNode
+from search import searchDocument
 
 import os
 from dotenv import load_dotenv
@@ -11,11 +12,12 @@ load_dotenv()
 
 class AgentState(TypedDict):
     messages:Annotated[Sequence[BaseMessage],add_messages]
+    filename:str
 
-tools=[]
+tools=[searchDocument]
     
 model=ChatGoogleGenerativeAI(
-    model="gemini-2.5-pro",
+    model="gemini-1.5-pro",
     google_api_key=os.getenv("GEMINI_API"),
     temperature=0.2
 ).bind_tools(tools)
@@ -23,10 +25,15 @@ model=ChatGoogleGenerativeAI(
 
 def agent(state:AgentState)->AgentState:
     print("thinking..")
-    base="""You are an AI assistant that answers users query based on the document
-            - Answers question based on the document , dont assume things or answer on your own
-            - Dont hallucinate anything
-            - Structure the answer you get from the tools"""
+    base=f"""You are an AI assistant that answers questions strictly based on retrieved documents.
+        - Always use the `searchDocument` tool to retrieve information.
+        - `searchDocument` takes two arguments:
+            - query: the user's question
+            - filename: the name of the document
+        - Do not answer unless you've retrieved information using the tool.
+        - If the document doesn't contain the answer, say: "The document does not contain this information."
+        - Do not guess or use outside knowledge.
+        - File name : {state['filename']}"""
     prompt=SystemMessage(content=base)
 
     messages = [prompt] + state["messages"]
@@ -60,8 +67,8 @@ graph.add_conditional_edges(
 
 app=graph.compile()
 
-input="give some information about cases similar to property dispute"
-results=app.invoke({"messages":[HumanMessage(content=input)]})
+input="what is the grace period for renewing the policy"
+results=app.invoke({"messages":[HumanMessage(content=input)],"filename":"travel_insurance"})
 
 print("*"*500)
 print(results['messages'][-1].content)

@@ -1,11 +1,14 @@
 from azure.core.credentials import AzureKeyCredential
 from azure.ai.documentintelligence import DocumentIntelligenceClient
+from search import uploadText
 from dotenv import load_dotenv
 import os
 
 load_dotenv()
 
-def readPDF(file_path:str):
+
+def readPDF(file_path:str,fileName:str):
+    print("OCR started..")
     endpoint = os.getenv('ocr_endpoint')
     key = os.getenv('key1')
 
@@ -22,11 +25,17 @@ def readPDF(file_path:str):
         body=f,
         content_type="application/octet-stream"
     )
+    
+    print("Got text..")
 
     result = poller.result()
-
-    with open("extracted2.txt",'w',encoding='utf-8') as f:    
+    with open(f"{fileName}.txt",'w',encoding='utf-8') as f:    
         for page in result.pages:
             for line in page.lines:
                 f.write(line.content + "\n")
+    print("ocr donee")
 
+file_path="sampleDocuments/travel_insurance.pdf"
+fileName=file_path.split('/')[-1].split('.')[0]
+readPDF(file_path,fileName)
+uploadText(fileName)
