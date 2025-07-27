@@ -29,7 +29,7 @@ def check():
         "status":"Status Running...."
     }
     
-@app.post("/hackrx/run")
+@app.post("/")
 def getFile(query: input):
     filePath = query.documents.split('/')[-1].split('?')[0]
     fileName = filePath.split('.')[0]

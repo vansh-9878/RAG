@@ -3,7 +3,6 @@ from langchain_core.messages import AIMessage,HumanMessage,SystemMessage,BaseMes
 from typing import Annotated,Sequence,TypedDict
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langgraph.graph import StateGraph,START,END
-from langgraph.prebuilt import ToolNode
 from agent.localDatabase import search
 # from localDatabase import search
 import os
