@@ -1,9 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from agent.ocrAgent import readPDF
-from agent.search import uploadText
+from agent.localDatabase import storeVectors
 from agent.agent import start
+from agent.localOCR import pdf_to_text
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import uvicorn
 import requests
@@ -38,15 +38,15 @@ def getFile(query: input):
     with open('policy.pdf', "wb") as f:
         f.write(response.content)
 
-    readPDF(filePath, fileName)
-    uploadText(fileName)
+    pdf_to_text(fileName)
+    storeVectors(fileName)
 
     questions = query.questions
     results = [None] * len(questions)
 
     with ThreadPoolExecutor(max_workers=5) as executor:
         futures = {
-            executor.submit(start, q, fileName): i
+            executor.submit(start, q): i
             for i, q in enumerate(questions)
         }
 
