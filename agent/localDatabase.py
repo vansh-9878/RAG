@@ -48,7 +48,7 @@ def create_faiss_index(embeddings):
     return index
 
 
-def search_faiss(index, query, texts,top_k=10):
+def search_faiss(index, query, texts,top_k=15):
     query_embedding = model.encode([query], convert_to_numpy=True, normalize_embeddings=True)
     D, I = index.search(query_embedding, top_k)
     results = [(texts[i], float(D[0][j])) for j, i in enumerate(I[0])]
