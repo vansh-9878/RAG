@@ -39,13 +39,13 @@ def verify_token(credentials: HTTPAuthorizationCredentials = Depends(bearer_sche
 
 
 
-@app.get("/")
+@app.get("/hackrx/run")
 def check():
     return{
         "status":"Status Running...."
     }
     
-@app.post("/",dependencies=[Depends(verify_token)])
+@app.post("/hackrx/run",dependencies=[Depends(verify_token)])
 def getFile(query: input):
     filePath = query.documents.split('/')[-1].split('?')[0]
     fileName = filePath.split('.')[0]
