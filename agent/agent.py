@@ -28,7 +28,7 @@ def agent(state:AgentState)->AgentState:
         - You are given retrieved information at the bottom use that to answer the query
         - If the document doesn't contain the answer, say: "The document does not contain this information."
         - Do not guess or use outside knowledge.
-        - Give the response in 2-3 lines only important information related to the query
+        - Give the response in 1-2 lines only and that too only important information related to the query
         - Retrieved Information : {result}"""
     prompt=SystemMessage(content=base)
 

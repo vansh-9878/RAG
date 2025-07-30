@@ -37,8 +37,6 @@ def verify_token(credentials: HTTPAuthorizationCredentials = Depends(bearer_sche
             detail="Invalid or missing token",
         )
 
-
-
 @app.get("/hackrx/run")
 def check():
     return{

@@ -5,7 +5,8 @@ from tqdm import tqdm
 from langchain_core.tools import tool
 import numpy as np
 
-model = SentenceTransformer("BAAI/bge-small-en-v1.5")
+# model = SentenceTransformer("BAAI/bge-small-en-v1.5")
+model = SentenceTransformer("all-MiniLM-L6-v2")
 # model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
 # model = SentenceTransformer("intfloat/e5-base-v2")
 globalIndex=None
@@ -48,7 +49,7 @@ def create_faiss_index(embeddings):
     return index
 
 
-def search_faiss(index, query, texts,top_k=15):
+def search_faiss(index, query, texts,top_k=25):
     query_embedding = model.encode([query], convert_to_numpy=True, normalize_embeddings=True)
     D, I = index.search(query_embedding, top_k)
     results = [(texts[i], float(D[0][j])) for j, i in enumerate(I[0])]
