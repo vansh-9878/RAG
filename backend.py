@@ -6,8 +6,9 @@ from agent.localDatabase import storeVectors
 from agent.agent import start
 from agent.localOCR import pdf_to_text
 from concurrent.futures import ThreadPoolExecutor, as_completed
-import uvicorn,os
+import uvicorn,os,io
 import requests
+from docx import Document
 from dotenv import load_dotenv
 load_dotenv()
 
@@ -50,8 +51,19 @@ def getFile(query: input):
     fileName = filePath.split('.')[0]
 
     response = requests.get(query.documents)
-    with open('policy.pdf', "wb") as f:
-        f.write(response.content)
+    content_type = response.headers.get("Content-Type")
+    
+    if "pdf" in content_type:
+        with open(f'{fileName}.pdf', "wb") as f:
+            f.write(response.content)
+    elif "document" in content_type:
+        doc = Document(io.BytesIO(response.content))
+        text = "\n".join([para.text for para in doc.paragraphs])
+        with open(f"{fileName}.txt",'w') as f:
+            f.write(text)
+    else:
+        with open(f"{fileName}.txt",'w') as f:
+            f.write(response.content)
 
     pdf_to_text(fileName)
     storeVectors(fileName)
