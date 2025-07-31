@@ -25,7 +25,7 @@ def load_text_chunks(filepath, chunk_size=800,stride=200):
             chunks.append(chunk)
     return chunks
 
-def embed_in_batches(texts, model, batch_size=64, max_workers=4):
+def embed_in_batches(texts, model, batch_size=64, max_workers=12):
     embeddings = []
 
     def embed_batch(batch):
