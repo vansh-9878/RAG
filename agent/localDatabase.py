@@ -5,10 +5,17 @@ from tqdm import tqdm
 from langchain_core.tools import tool
 from localOCR import pdf_to_text
 import numpy as np
+import torch
+import gc
+import os
+
+# Set PyTorch CUDA memory allocation configuration to avoid fragmentation
+os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
 
 # model = SentenceTransformer("BAAI/bge-small-en-v1.5")
 # model = SentenceTransformer("all-MiniLM-L6-v2")
-model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
+# Use GPU with memory optimization
+model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2", device='cuda')
 # model = SentenceTransformer("intfloat/e5-base-v2")
 globalIndex=None
 globalTexts=None
@@ -26,20 +33,29 @@ def load_text_chunks(filepath, chunk_size=800,stride=200):
             chunks.append(chunk)
     return chunks
 
-def embed_in_batches(texts, model, batch_size=64, max_workers=12):
+def embed_in_batches(texts, model, batch_size=8, max_workers=2):
     embeddings = []
 
     def embed_batch(batch):
-        return model.encode(batch, convert_to_numpy=True, normalize_embeddings=True)
+        # Clear GPU cache before processing batch
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+        
+        batch_embeddings = model.encode(batch, convert_to_numpy=True, normalize_embeddings=True)
+        
+        # Clear GPU cache after processing batch
+        if torch.cuda.is_available():
+            torch.cuda.empty_cache()
+        
+        return batch_embeddings
 
-    with ThreadPoolExecutor(max_workers=max_workers) as executor:
-        futures = []
-        for i in range(0, len(texts), batch_size):
-            batch = texts[i:i + batch_size]
-            futures.append(executor.submit(embed_batch, batch))
-
-        for future in tqdm(futures, desc="Embedding"):
-            embeddings.append(future.result())
+    # Process in smaller batches to avoid memory issues
+    for i in tqdm(range(0, len(texts), batch_size), desc="Embedding"):
+        batch = texts[i:i + batch_size]
+        embeddings.append(embed_batch(batch))
+        
+        # Force garbage collection
+        gc.collect()
 
     return np.vstack(embeddings)
 
@@ -61,7 +77,8 @@ def storeVectors(fileName):
     texts = load_text_chunks(fileName+".txt")
     print(f"Loaded {len(texts)} chunks.")
 
-    embeddings = embed_in_batches(texts, model, batch_size=64, max_workers=8)
+    # Use much smaller batch size to avoid GPU memory issues
+    embeddings = embed_in_batches(texts, model, batch_size=4, max_workers=1)
     index = create_faiss_index(embeddings)
     
     faiss.write_index(index, f"vector/{fileName}.faiss")
@@ -84,8 +101,12 @@ def search(query):
         # print(f"\nRank {i+1} (Score: {score:.4f}):\n{text[:300]}...")
     return results
 
-
 arr=['Arogya%20Sanjeevani','Family%20Medicare','indian_constitution','principia_newton','Super_Splendor_(Feb_2023)']
 for i in arr:    
     pdf_to_text(i)
     storeVectors(i)
+    
+    # Clear GPU memory after each file to prevent accumulation
+    if torch.cuda.is_available():
+        torch.cuda.empty_cache()
+    gc.collect()
