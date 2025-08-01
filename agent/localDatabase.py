@@ -12,6 +12,7 @@ model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
 # model = SentenceTransformer("intfloat/e5-base-v2")
 globalIndex=None
 globalTexts=None
+arr=['Arogya%20Sanjeevani','Family%20Medicare','indian_constitution','principia_newton','Super_Splendor_(Feb_2023)']
 
 
 def load_text_chunks(filepath, chunk_size=800,stride=200):
@@ -58,19 +59,25 @@ def search_faiss(index, query, texts,top_k=25):
 
 
 def storeVectors(fileName):
-    texts = load_text_chunks(fileName+".txt")
-    print(f"Loaded {len(texts)} chunks.")
+    if fileName in arr:
+        index = faiss.read_index(fileName + ".faiss")
+        with open(fileName + "_texts.pkl", "rb") as f:
+            texts = pickle.load(f)
+    else:
+        texts = load_text_chunks(fileName+".txt")
+        print(f"Loaded {len(texts)} chunks.")
 
-    embeddings = embed_in_batches(texts, model, batch_size=64, max_workers=8)
-    index = create_faiss_index(embeddings)
-    
-    faiss.write_index(index, f"vector/{fileName}.faiss")
+        embeddings = embed_in_batches(texts, model, batch_size=64, max_workers=8)
+        index = create_faiss_index(embeddings)
+        
+        faiss.write_index(index, f"vector/{fileName}.faiss")
 
-    with open(f"vector/{fileName}_texts.pkl", "wb") as f:
-        pickle.dump(texts, f)
+        with open(f"vector/{fileName}_texts.pkl", "wb") as f:
+            pickle.dump(texts, f)
     
-    
+
     global globalIndex,globalTexts
+
     globalTexts=texts
     globalIndex=index
     
@@ -85,7 +92,6 @@ def search(query):
     return results
 
 
-arr=['Arogya%20Sanjeevani','Family%20Medicare','indian_constitution','principia_newton','Super_Splendor_(Feb_2023)']
-for i in arr:    
-    pdf_to_text(i)
-    storeVectors(i)
+# for i in arr:    
+#     pdf_to_text(i)
+#     storeVectors(i)

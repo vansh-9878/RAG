@@ -13,4 +13,4 @@ def pdf_to_text(fileName):
     with open(f"{fileName}.txt", "w", encoding="utf-8") as f:
         f.write(all_text)
 
-pdf_to_text("travel_insurance")
+# pdf_to_text("travel_insurance")
