@@ -47,6 +47,8 @@ def check():
 def getFile(query: input):
     filePath = query.documents.split('/')[-1].split('?')[0]
     fileName = filePath.split('.')[0]
+    for question in input.questions:
+        print(fileName+" "+question)
 
     response = requests.get(query.documents)
     content_type = response.headers.get("Content-Type")
