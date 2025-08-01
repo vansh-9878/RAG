@@ -22,7 +22,7 @@ model=ChatGoogleGenerativeAI(
 
 
 def agent(state:AgentState)->AgentState:
-    print("thinking..")
+    # print("thinking..")
     result=search.invoke({"query":state['messages'][0].content})
     base=f"""You are an AI assistant that answers questions strictly based on retrieved documents.
         - You are given retrieved information at the bottom use that to answer the query
@@ -40,7 +40,7 @@ def agent(state:AgentState)->AgentState:
     }
     
 def shouldContinue(state:AgentState)->str:
-    print("deciding...")
+    # print("deciding...")
     lastMessage=state["messages"][-1]
     if(lastMessage.tool_calls):
         return "continue"
@@ -68,9 +68,9 @@ def start(input:str)->str:
     # input="what is the grace period for renewing the policy"
     results=app.invoke({"messages":[HumanMessage(content=input)]})
 
-    print("*"*500)
-    print(results['messages'][-1].content)
-    print("*"*500)
+    # print("*"*500)
+    # print(results['messages'][-1].content)
+    # print("*"*500)
     return results['messages'][-1].content
 
 

@@ -3,7 +3,7 @@ from concurrent.futures import ThreadPoolExecutor
 from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
 from langchain_core.tools import tool
-from localOCR import pdf_to_text
+# from localOCR import pdf_to_text
 import numpy as np
 import torch
 import gc
@@ -19,6 +19,7 @@ model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2", device='c
 # model = SentenceTransformer("intfloat/e5-base-v2")
 globalIndex=None
 globalTexts=None
+arr=['Arogya%20Sanjeevani','Family%20Medicare','indian_constitution','principia_newton','Super_Splendor_(Feb_2023)','policy']
 
 
 def load_text_chunks(filepath, chunk_size=800,stride=200):
@@ -74,20 +75,25 @@ def search_faiss(index, query, texts,top_k=25):
 
 
 def storeVectors(fileName):
-    texts = load_text_chunks(fileName+".txt")
-    print(f"Loaded {len(texts)} chunks.")
+    if any(fileName in item for item in arr):
+        index = faiss.read_index(f"vector/{fileName}.faiss")
+        with open(f"vector/{fileName}_texts.pkl", "rb") as f:
+            texts = pickle.load(f)
+    else:
+        texts = load_text_chunks(fileName+".txt")
+        print(f"Loaded {len(texts)} chunks.")
 
-    # Use much smaller batch size to avoid GPU memory issues
-    embeddings = embed_in_batches(texts, model, batch_size=4, max_workers=1)
-    index = create_faiss_index(embeddings)
-    
-    faiss.write_index(index, f"vector/{fileName}.faiss")
+        embeddings = embed_in_batches(texts, model, batch_size=64, max_workers=8)
+        index = create_faiss_index(embeddings)
+        
+        faiss.write_index(index, f"vector/{fileName}.faiss")
 
-    with open(f"vector/{fileName}_texts.pkl", "wb") as f:
-        pickle.dump(texts, f)
+        with open(f"vector/{fileName}_texts.pkl", "wb") as f:
+            pickle.dump(texts, f)
     
-    
+
     global globalIndex,globalTexts
+
     globalTexts=texts
     globalIndex=index
     
@@ -101,12 +107,3 @@ def search(query):
         # print(f"\nRank {i+1} (Score: {score:.4f}):\n{text[:300]}...")
     return results
 
-arr=['Arogya%20Sanjeevani','Family%20Medicare','indian_constitution','principia_newton','Super_Splendor_(Feb_2023)']
-for i in arr:    
-    pdf_to_text(i)
-    storeVectors(i)
-    
-    # Clear GPU memory after each file to prevent accumulation
-    if torch.cuda.is_available():
-        torch.cuda.empty_cache()
-    gc.collect()
