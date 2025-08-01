@@ -1,13 +1,14 @@
-import faiss
+import faiss,pickle
 from concurrent.futures import ThreadPoolExecutor
 from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
 from langchain_core.tools import tool
+from localOCR import pdf_to_text
 import numpy as np
 
 # model = SentenceTransformer("BAAI/bge-small-en-v1.5")
-model = SentenceTransformer("all-MiniLM-L6-v2")
-# model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
+# model = SentenceTransformer("all-MiniLM-L6-v2")
+model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
 # model = SentenceTransformer("intfloat/e5-base-v2")
 globalIndex=None
 globalTexts=None
@@ -62,6 +63,13 @@ def storeVectors(fileName):
 
     embeddings = embed_in_batches(texts, model, batch_size=64, max_workers=8)
     index = create_faiss_index(embeddings)
+    
+    faiss.write_index(index, f"vector/{fileName}.faiss")
+
+    with open(f"vector/{fileName}_texts.pkl", "wb") as f:
+        pickle.dump(texts, f)
+    
+    
     global globalIndex,globalTexts
     globalTexts=texts
     globalIndex=index
@@ -69,9 +77,15 @@ def storeVectors(fileName):
 @tool   
 def search(query):
     """Search the document for the answer to the given query."""
-    print("Tooooool")
+    # print("Tooooool")
     results = search_faiss(globalIndex, query, globalTexts)
-    print("\nTop results:")
-    for i, (text, score) in enumerate(results):
-        print(f"\nRank {i+1} (Score: {score:.4f}):\n{text[:300]}...")
+    # print("\nTop results:")
+    # for i, (text, score) in enumerate(results):
+        # print(f"\nRank {i+1} (Score: {score:.4f}):\n{text[:300]}...")
     return results
+
+
+arr=['Arogya%20Sanjeevani','Family%20Medicare','indian_constitution','principia_newton','Super_Splendor_(Feb_2023)']
+for i in arr:    
+    pdf_to_text(i)
+    storeVectors(i)
