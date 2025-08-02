@@ -13,14 +13,16 @@ import os
 os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
 
 # model = SentenceTransformer("BAAI/bge-small-en-v1.5")
-# model = SentenceTransformer("all-MiniLM-L6-v2")
+model = SentenceTransformer("all-MiniLM-L6-v2")
 # Use GPU with memory optimization
-model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2", device='cuda')
+# model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2", device='cuda')
 # model = SentenceTransformer("intfloat/e5-base-v2")
 globalIndex=None
 globalTexts=None
-arr=['Arogya%20Sanjeevani','Family%20Medicare','indian_constitution','principia_newton','Super_Splendor_(Feb_2023)','policy']
 
+arr=os.listdir('./vector')
+arr=[item.split(".")[0] for item in arr]
+print(arr)
 
 def load_text_chunks(filepath, chunk_size=800,stride=200):
     with open(filepath, 'r', encoding='utf-8') as f:
@@ -75,7 +77,7 @@ def search_faiss(index, query, texts,top_k=25):
 
 
 def storeVectors(fileName):
-    if any(fileName in item for item in arr):
+    if fileName in arr:
         index = faiss.read_index(f"vector/{fileName}.faiss")
         with open(f"vector/{fileName}_texts.pkl", "rb") as f:
             texts = pickle.load(f)
