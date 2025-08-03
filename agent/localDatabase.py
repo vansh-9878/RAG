@@ -19,7 +19,6 @@ model = SentenceTransformer("all-MiniLM-L6-v2")
 # model = SentenceTransformer("intfloat/e5-base-v2")
 globalIndex=None
 globalTexts=None
-arr=['Arogya%20Sanjeevani','Family%20Medicare','indian_constitution','principia_newton','Super_Splendor_(Feb_2023)']
 
 arr=os.listdir('./vector')
 arr=[item.split(".")[0] for item in arr]

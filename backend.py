@@ -92,6 +92,13 @@ def getFile(query: input):
                 results[idx] = future.result()
             except Exception as e:
                 results[idx] = f"❌ Error: {str(e)}"
+    # Print questions and answers before returning
+    print("--- Questions and Answers ---")
+    for q, a in zip(questions, results):
+        print(f"Q: {q}\nA: {a}\n")
+    print("----------------------------")
+    import sys
+    sys.stdout.flush()
 
     return {
         "answers": results
