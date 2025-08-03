@@ -47,10 +47,21 @@ def check():
 def getFile(query: input):
     filePath = query.documents.split('/')[-1].split('?')[0]
     fileName = filePath.split('.')[0]
-
+    
+    # Debug: Print the entire query object
+    print(f"Received query: {query}")
+    print(f"Questions received: {query.questions}")
+    print(f"Number of questions: {len(query.questions) if query.questions else 0}")
+    
+    # Force flush the output
+    import sys
+    for question in query.questions:
+        print(f"{fileName} {question}")
+        sys.stdout.flush()  # Force immediate output
+    
     response = requests.get(query.documents)
     content_type = response.headers.get("Content-Type")
-    
+        
     if "pdf" in content_type:
         with open(f'{fileName}.pdf', "wb") as f:
             f.write(response.content)
