@@ -24,7 +24,7 @@ search_lock = threading.Lock()
 
 arr=os.listdir('./vector')
 arr=[item.split(".")[0] for item in arr]
-print(arr)
+# print(arr)
 
 def load_text_chunks(filepath, chunk_size=800,stride=200):
     with open(filepath, 'r', encoding='utf-8') as f:
@@ -79,11 +79,11 @@ def search_faiss(index, query, texts,top_k=25):
         expected_dim = index.d
         actual_dim = query_embedding.shape[1]
         
-        print(f"Index dimension: {expected_dim}, Query embedding dimension: {actual_dim}")
-        print(f"Query embedding shape: {query_embedding.shape}")
-        print(f"Query embedding dtype: {query_embedding.dtype}")
-        print(f"Index type: {type(index)}")
-        print(f"Number of vectors in index: {index.ntotal}")
+        # print(f"Index dimension: {expected_dim}, Query embedding dimension: {actual_dim}")
+        # print(f"Query embedding shape: {query_embedding.shape}")
+        # print(f"Query embedding dtype: {query_embedding.dtype}")
+        # print(f"Index type: {type(index)}")
+        # print(f"Number of vectors in index: {index.ntotal}")
         
         if expected_dim != actual_dim:
             print(f"Dimension mismatch! Index expects {expected_dim} but query has {actual_dim}")
@@ -124,29 +124,25 @@ def storeVectors(fileName):
         print(f"Created new index with dimension: {index.d}")
     
 
-    global globalIndex,globalTexts
+    # global globalIndex,globalTexts
 
-    globalTexts=texts
-    globalIndex=index
+    # globalTexts=texts
+    # globalIndex=index
+    return index,texts
     
-@tool   
-def search(query):
+@tool
+def search(query,index,texts):
     """Search the document for the answer to the given query."""
-    global globalIndex, globalTexts
-    
-    print(f"Search called with query: {query}")
-    print(f"globalIndex is None: {globalIndex is None}")
-    print(f"globalTexts is None: {globalTexts is None}")
-    
-    if globalIndex is None or globalTexts is None:
-        print("ERROR: globalIndex or globalTexts is None!")
-        return "No documents have been processed yet. Please ensure document processing completed successfully."
-    
     # print("Tooooool")
-    results = search_faiss(globalIndex, query, globalTexts)
-    print(f"Search returned {len(results)} results")
+    results = search_faiss(index, query, texts)
     # print("\nTop results:")
     # for i, (text, score) in enumerate(results):
         # print(f"\nRank {i+1} (Score: {score:.4f}):\n{text[:300]}...")
     return results
 
+# arr2 = [item for item in os.listdir('./') if item.endswith('.pdf')]
+# arr2 = [item[:-4] for item in arr2]
+# print(arr2)
+
+# for i in arr2:
+#     storeVectors(i)
