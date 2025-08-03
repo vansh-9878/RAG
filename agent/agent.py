@@ -76,13 +76,22 @@ graph.add_edge("agent",END)
 app=graph.compile()
 
 def start(input:str)->str:
-    # input="what is the grace period for renewing the policy"
-    results=app.invoke({"messages":[HumanMessage(content=input)]})
+    try:
+        # input="what is the grace period for renewing the policy"
+        print(f"Processing question: {input}")
+        results=app.invoke({"messages":[HumanMessage(content=input)]})
 
-    # print("*"*500)
-    # print(results['messages'][-1].content)
-    # print("*"*500)
-    return results['messages'][-1].content
+        # print("*"*500)
+        # print(results['messages'][-1].content)
+        # print("*"*500)
+        answer = results['messages'][-1].content
+        print(f"Generated answer: {answer}")
+        return answer
+    except Exception as e:
+        import traceback
+        error_details = traceback.format_exc()
+        print(f"Error in start function: {error_details}")
+        raise e
 
 
 

@@ -8,6 +8,7 @@ import numpy as np
 import torch
 import gc
 import os
+import threading
 
 # Set PyTorch CUDA memory allocation configuration to avoid fragmentation
 os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
@@ -19,6 +20,7 @@ model = SentenceTransformer("all-MiniLM-L6-v2")
 # model = SentenceTransformer("intfloat/e5-base-v2")
 globalIndex=None
 globalTexts=None
+search_lock = threading.Lock()
 
 arr=os.listdir('./vector')
 arr=[item.split(".")[0] for item in arr]
@@ -70,18 +72,45 @@ def create_faiss_index(embeddings):
 
 
 def search_faiss(index, query, texts,top_k=25):
-    query_embedding = model.encode([query], convert_to_numpy=True, normalize_embeddings=True)
-    D, I = index.search(query_embedding, top_k)
-    results = [(texts[i], float(D[0][j])) for j, i in enumerate(I[0])]
-    return results
+    with search_lock:  # Add thread safety
+        query_embedding = model.encode([query], convert_to_numpy=True, normalize_embeddings=True)
+        
+        # Detailed debugging
+        expected_dim = index.d
+        actual_dim = query_embedding.shape[1]
+        
+        print(f"Index dimension: {expected_dim}, Query embedding dimension: {actual_dim}")
+        print(f"Query embedding shape: {query_embedding.shape}")
+        print(f"Query embedding dtype: {query_embedding.dtype}")
+        print(f"Index type: {type(index)}")
+        print(f"Number of vectors in index: {index.ntotal}")
+        
+        if expected_dim != actual_dim:
+            print(f"Dimension mismatch! Index expects {expected_dim} but query has {actual_dim}")
+            return [("Error: Embedding dimension mismatch. Please regenerate the vector index.", 0.0)]
+        
+        try:
+            D, I = index.search(query_embedding, top_k)
+            print(f"Search successful, found {len(I[0])} results")
+            results = [(texts[i], float(D[0][j])) for j, i in enumerate(I[0])]
+            return results
+        except Exception as e:
+            print(f"FAISS search error: {e}")
+            print(f"Error type: {type(e)}")
+            import traceback
+            traceback.print_exc()
+            return [("Error during FAISS search", 0.0)]
 
 
 def storeVectors(fileName):
     if fileName in arr:
+        print(f"Loading pre-computed vectors for {fileName}")
         index = faiss.read_index(f"vector/{fileName}.faiss")
         with open(f"vector/{fileName}_texts.pkl", "rb") as f:
             texts = pickle.load(f)
+        print(f"Loaded index with dimension: {index.d}")
     else:
+        print(f"Creating new vectors for {fileName}")
         texts = load_text_chunks(fileName+".txt")
         print(f"Loaded {len(texts)} chunks.")
 
@@ -92,6 +121,7 @@ def storeVectors(fileName):
 
         with open(f"vector/{fileName}_texts.pkl", "wb") as f:
             pickle.dump(texts, f)
+        print(f"Created new index with dimension: {index.d}")
     
 
     global globalIndex,globalTexts
@@ -102,8 +132,19 @@ def storeVectors(fileName):
 @tool   
 def search(query):
     """Search the document for the answer to the given query."""
+    global globalIndex, globalTexts
+    
+    print(f"Search called with query: {query}")
+    print(f"globalIndex is None: {globalIndex is None}")
+    print(f"globalTexts is None: {globalTexts is None}")
+    
+    if globalIndex is None or globalTexts is None:
+        print("ERROR: globalIndex or globalTexts is None!")
+        return "No documents have been processed yet. Please ensure document processing completed successfully."
+    
     # print("Tooooool")
     results = search_faiss(globalIndex, query, globalTexts)
+    print(f"Search returned {len(results)} results")
     # print("\nTop results:")
     # for i, (text, score) in enumerate(results):
         # print(f"\nRank {i+1} (Score: {score:.4f}):\n{text[:300]}...")

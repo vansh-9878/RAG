@@ -91,6 +91,9 @@ def getFile(query: input):
             try:
                 results[idx] = future.result()
             except Exception as e:
+                import traceback
+                error_details = traceback.format_exc()
+                print(f"Error processing question {idx}: {error_details}")
                 results[idx] = f"❌ Error: {str(e)}"
     # Print questions and answers before returning
     print("--- Questions and Answers ---")
