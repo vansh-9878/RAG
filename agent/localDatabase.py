@@ -19,11 +19,10 @@ model = SentenceTransformer("all-MiniLM-L6-v2")
 # model = SentenceTransformer("intfloat/e5-base-v2")
 globalIndex=None
 globalTexts=None
-arr=['Arogya%20Sanjeevani','Family%20Medicare','indian_constitution','principia_newton','Super_Splendor_(Feb_2023)']
 
 arr=os.listdir('./vector')
 arr=[item.split(".")[0] for item in arr]
-print(arr)
+# print(arr)
 
 def load_text_chunks(filepath, chunk_size=800,stride=200):
     with open(filepath, 'r', encoding='utf-8') as f:
@@ -95,16 +94,17 @@ def storeVectors(fileName):
             pickle.dump(texts, f)
     
 
-    global globalIndex,globalTexts
+    # global globalIndex,globalTexts
 
-    globalTexts=texts
-    globalIndex=index
+    # globalTexts=texts
+    # globalIndex=index
+    return index,texts
     
 @tool   
-def search(query):
+def search(query,index,texts):
     """Search the document for the answer to the given query."""
     # print("Tooooool")
-    results = search_faiss(globalIndex, query, globalTexts)
+    results = search_faiss(index, query, texts)
     # print("\nTop results:")
     # for i, (text, score) in enumerate(results):
         # print(f"\nRank {i+1} (Score: {score:.4f}):\n{text[:300]}...")

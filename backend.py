@@ -90,7 +90,11 @@ def getFile(query: input):
             idx = futures[future]
             try:
                 results[idx] = future.result()
+                print('hii')
             except Exception as e:
+                import traceback
+                error_msg = traceback.format_exc()
+                print(f"Error for question {questions[idx]}:\n{error_msg}")
                 results[idx] = f"❌ Error: {str(e)}"
 
     return {
