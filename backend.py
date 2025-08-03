@@ -96,6 +96,13 @@ def getFile(query: input):
                 error_msg = traceback.format_exc()
                 print(f"Error for question {questions[idx]}:\n{error_msg}")
                 results[idx] = f"❌ Error: {str(e)}"
+    # Print questions and answers before returning
+    print("--- Questions and Answers ---")
+    for q, a in zip(questions, results):
+        print(f"Q: {q}\nA: {a}\n")
+    print("----------------------------")
+    import sys
+    sys.stdout.flush()
 
     return {
         "answers": results
