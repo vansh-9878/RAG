@@ -12,6 +12,8 @@ load_dotenv()
 
 class AgentState(TypedDict):
     messages:Annotated[Sequence[BaseMessage],add_messages]
+    index :str
+    texts:str
 
 # tools=[search]
     
@@ -24,7 +26,7 @@ model=ChatGoogleGenerativeAI(
 
 def agent(state:AgentState)->AgentState:
     # print("thinking..")
-    result=search.invoke({"query":state['messages'][0].content})
+    result=search(state['messages'][0].content,state['index'],state['texts'])
     base=f"""INSTRUCTIONS:
         1. ONLY use information from the provided document extracts to answer.
         2. If the answer is not in the document, state: "This information is not found in the document."
@@ -75,9 +77,9 @@ graph.add_edge("agent",END)
 
 app=graph.compile()
 
-def start(input:str)->str:
+def start(input:str,index,texts)->str:
     # input="what is the grace period for renewing the policy"
-    results=app.invoke({"messages":[HumanMessage(content=input)]})
+    results=app.invoke({"messages":[HumanMessage(content=input)],"index":index,"texts":texts})
 
     # print("*"*500)
     # print(results['messages'][-1].content)

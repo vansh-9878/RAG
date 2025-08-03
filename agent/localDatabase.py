@@ -100,7 +100,7 @@ def storeVectors(fileName):
     # globalIndex=index
     return index,texts
     
-@tool   
+
 def search(query,index,texts):
     """Search the document for the answer to the given query."""
     # print("Tooooool")

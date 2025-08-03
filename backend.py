@@ -75,14 +75,14 @@ def getFile(query: input):
             f.write(response.content)
 
     pdf_to_text(fileName)
-    storeVectors(fileName)
+    index,texts=storeVectors(fileName)
 
     questions = query.questions
     results = [None] * len(questions)
 
     with ThreadPoolExecutor(max_workers=5) as executor:
         futures = {
-            executor.submit(start, q): i
+            executor.submit(start, q,index, texts): i
             for i, q in enumerate(questions)
         }
 
