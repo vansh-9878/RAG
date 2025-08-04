@@ -1,5 +1,6 @@
 from threading import Semaphore, Lock
 import itertools
+import random
 from typing import List, Tuple
 import os
 from dotenv import load_dotenv
@@ -22,16 +23,28 @@ class APIKeyLoadBalancer:
             api_key: Semaphore(concurrency_limit_per_key) 
             for api_key in api_keys
         }
+    
+    def acquire_any_available(self) -> Tuple[str, bool]:
+        """
+        Try to acquire semaphore for any available API key
+        Using random selection to avoid lock contention
         
-        # Round-robin iterator for load balancing
-        self.key_iterator = itertools.cycle(api_keys)
-        self.iterator_lock = Lock()
-    
-    def get_next_api_key(self) -> str:
-        """Get the next API key in round-robin fashion"""
-        with self.iterator_lock:
-            return next(self.key_iterator)
-    
+        Returns:
+            Tuple of (api_key, success) where success indicates if acquisition was successful
+        """
+        # Shuffle keys for random distribution - no locks needed!
+        shuffled_keys = self.api_keys.copy()
+        random.shuffle(shuffled_keys)
+        
+        # Try each key
+        for api_key in shuffled_keys:
+            if self.acquire_semaphore(api_key):
+                return api_key, True
+        
+        # If no semaphore is available, wait for the first key
+        self.semaphores[shuffled_keys[0]].acquire()
+        return shuffled_keys[0], True
+
     def acquire_semaphore(self, api_key: str) -> bool:
         """
         Acquire semaphore for specific API key
@@ -44,29 +57,6 @@ class APIKeyLoadBalancer:
         """
         return self.semaphores[api_key].acquire(blocking=False)
     
-    def acquire_any_available(self) -> Tuple[str, bool]:
-        """
-        Try to acquire semaphore for any available API key
-        Starting with the next one in round-robin order
-        
-        Returns:
-            Tuple of (api_key, success) where success indicates if acquisition was successful
-        """
-        starting_key = self.get_next_api_key()
-        
-        # Try the round-robin selected key first
-        if self.acquire_semaphore(starting_key):
-            return starting_key, True
-        
-        # If that fails, try all other keys
-        for api_key in self.api_keys:
-            if api_key != starting_key and self.acquire_semaphore(api_key):
-                return api_key, True
-        
-        # If no semaphore is available, wait for the round-robin selected key
-        self.semaphores[starting_key].acquire()
-        return starting_key, True
-    
     def release_semaphore(self, api_key: str):
         """Release semaphore for specific API key"""
         self.semaphores[api_key].release()
@@ -78,7 +68,10 @@ class APIKeyLoadBalancer:
 
 # Default configuration - you can modify this array with your API keys
 GEMINI_API_KEYS = [
-    os.getenv("k1"),os.getenv("k2"),os.getenv("k3")
+    os.getenv("k1"),
+    os.getenv("k2"),
+    os.getenv("k3"),
+    os.getenv("k4")
 ]
 
 GEMINI_CONCURRENCY_LIMIT_PER_KEY = 25
