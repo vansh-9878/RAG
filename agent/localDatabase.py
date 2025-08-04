@@ -140,9 +140,9 @@ def search(query,index,texts):
         # print(f"\nRank {i+1} (Score: {score:.4f}):\n{text[:300]}...")
     return results
 
-# arr2 = [item for item in os.listdir('./') if item.endswith('.pdf')]
-# arr2 = [item[:-4] for item in arr2]
-# print(arr2)
+arr2 = [item for item in os.listdir('./') if item.endswith('.pdf')]
+arr2 = [item[:-4] for item in arr2]
+print(arr2)
 
-# for i in arr2:
-#     storeVectors(i)
+for i in arr2:
+    storeVectors(i)
