@@ -1,0 +1,7 @@
+['policy', 'Happy%20Family%20Floater%20-%202024%20OICHLIP25046V062425%201', 'indian_constitution', 'Family%20Medicare%20Policy%20(UIN-%20UIIHLIP22070V042122)%201', 'UNI%20GROUP%20HEALTH%20INSURANCE%20POLICY%20-%20UIIHLGP26043V022526%201', 'Super_Splendor_(Feb_2023)', 'HDFHLIP23024V072223', 'Arogya%20Sanjeevani%20Policy%20-%20CIN%20-%20U10200WB1906GOI001713%201', 'principia_newton', 'Arogya%2520Sanjeevani%2520Policy%2520-%2520CIN%2520-%2520U10200WB1906GOI001713%25201', 'travel_insurance']
+Loading pre-computed vectors for policy
+Loaded index with dimension: 768
+Loading pre-computed vectors for Happy%20Family%20Floater%20-%202024%20OICHLIP25046V062425%201
+Loaded index with dimension: 768
+Creating new vectors for indian_constitution
+Loaded 4346 chunks.

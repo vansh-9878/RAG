@@ -14,9 +14,9 @@ import threading
 os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
 
 # model = SentenceTransformer("BAAI/bge-small-en-v1.5")
-model = SentenceTransformer("all-MiniLM-L6-v2")
+# model = SentenceTransformer("all-MiniLM-L6-v2")
 # Use GPU with memory optimization
-# model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2", device='cuda')
+model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2", device='cuda')
 # model = SentenceTransformer("intfloat/e5-base-v2")
 globalIndex=None
 globalTexts=None
@@ -144,5 +144,5 @@ arr2 = [item for item in os.listdir('./') if item.endswith('.pdf')]
 arr2 = [item[:-4] for item in arr2]
 print(arr2)
 
-# for i in arr2:
-#     storeVectors(i)
+for i in arr2:
+    storeVectors(i)
