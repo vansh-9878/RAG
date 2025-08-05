@@ -49,27 +49,34 @@ def check():
         "status":"Status Running...."
     }
     
+    
+arr=os.listdir('./vector')
+arr=[item.split(".")[0] for item in arr]
+    
 @app.post("/hackrx/run", dependencies=[Depends(verify_token)])
 def getFile(query: input):
     filePath = query.documents.split('/')[-1].split('?')[0]
     fileName = filePath.split('.')[0]
+    
+    if fileName not in arr:
+    
+        response = requests.get(query.documents)
+        content_type = response.headers.get("Content-Type")
 
-    response = requests.get(query.documents)
-    content_type = response.headers.get("Content-Type")
+        if "pdf" in content_type:
+            with open(f'{fileName}.pdf', "wb") as f:
+                f.write(response.content)
+        elif "document" in content_type:
+            doc = Document(io.BytesIO(response.content))
+            text = "\n".join([para.text for para in doc.paragraphs])
+            with open(f"{fileName}.txt", 'w') as f:
+                f.write(text)
+        else:
+            with open(f"{fileName}.txt", 'w') as f:
+                f.write(response.content)
 
-    if "pdf" in content_type:
-        with open(f'{fileName}.pdf', "wb") as f:
-            f.write(response.content)
-    elif "document" in content_type:
-        doc = Document(io.BytesIO(response.content))
-        text = "\n".join([para.text for para in doc.paragraphs])
-        with open(f"{fileName}.txt", 'w') as f:
-            f.write(text)
-    else:
-        with open(f"{fileName}.txt", 'w') as f:
-            f.write(response.content)
-
-    pdf_to_text(fileName)
+        pdf_to_text(fileName)
+        
     index, texts = storeVectors(fileName)
 
     questions = query.questions
