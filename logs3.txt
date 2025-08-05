@@ -1,0 +1,330 @@
+['policy', 'Happy%20Family%20Floater%20-%202024%20OICHLIP25046V062425%201', 'indian_constitution', 'Family%20Medicare%20Policy%20(UIN-%20UIIHLIP22070V042122)%201', 'UNI%20GROUP%20HEALTH%20INSURANCE%20POLICY%20-%20UIIHLGP26043V022526%201', 'Super_Splendor_(Feb_2023)', 'HDFHLIP23024V072223', 'Arogya%20Sanjeevani%20Policy%20-%20CIN%20-%20U10200WB1906GOI001713%201', 'principia_newton', 'Arogya%2520Sanjeevani%2520Policy%2520-%2520CIN%2520-%2520U10200WB1906GOI001713%25201', 'travel_insurance']
+Loading pre-computed vectors for policy
+Loaded index with dimension: 768
+Loading pre-computed vectors for Happy%20Family%20Floater%20-%202024%20OICHLIP25046V062425%201
+Loaded index with dimension: 768
+Loading pre-computed vectors for indian_constitution
+Loaded index with dimension: 768
+Loading pre-computed vectors for Family%20Medicare%20Policy%20(UIN-%20UIIHLIP22070V042122)%201
+Loaded index with dimension: 768
+Loading pre-computed vectors for UNI%20GROUP%20HEALTH%20INSURANCE%20POLICY%20-%20UIIHLGP26043V022526%201
+Loaded index with dimension: 768
+Loading pre-computed vectors for Super_Splendor_(Feb_2023)
+Loaded index with dimension: 768
+Loading pre-computed vectors for HDFHLIP23024V072223
+Loaded index with dimension: 768
+Loading pre-computed vectors for Arogya%20Sanjeevani%20Policy%20-%20CIN%20-%20U10200WB1906GOI001713%201
+Loaded index with dimension: 768
+Loading pre-computed vectors for principia_newton
+Loaded index with dimension: 768
+Loading pre-computed vectors for Arogya%2520Sanjeevani%2520Policy%2520-%2520CIN%2520-%2520U10200WB1906GOI001713%25201
+Loaded index with dimension: 768
+Loading pre-computed vectors for travel_insurance
+Loaded index with dimension: 768
+Loading pre-computed vectors for indian_constitution
+Loaded index with dimension: 768
+Processing 40 questions in 2 batches
+Processing 20 questions
+Processing 20 questions
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Raw response from Gemini: ["India, that is Bharat, shall be a Union of States.", "Article 14 guarantees equality before the law and equal protection of laws to all persons.", "Article 17 of the Constitution abolishes 'Untouchability' and forbids its practice in any form.", "The key ideals mentioned in the Preamble are to constitute India into a Sovereign Socialist Secular Democratic Republic and to secure to all its citizens Justice, Liberty, Equality, and to promote Fraternity.", "Parliament can alter the boundaries, area, or name of an existing State under Article 3.", "According to Article 24, children below the age of fourteen years are prohibited from working in hazardous industries like factories or mines.", "Article 21 signifies the protection of life and personal liberty, stating that no person shall be deprived of these except according to procedure established by law.", "Under Article 15, the State can make special provisions for women and children, socially and educationally backward classes of citizens, Scheduled Castes, Scheduled Tribes, and economically weaker sections of citizens.", "Article 11 allows Parliament to regulate the right of citizenship and make provisions regarding the acquisition and termination of citizenship, overriding previous articles on citizenship (Articles 5 to 10).", "This information is not found in the document.", "India, that is Bharat, shall be a Union of States.", "Article 14 guarantees equality before the law and equal protection of laws to all persons.", "Article 17 of the Constitution abolishes 'Untouchability' and forbids its practice in any form.", "The key ideals mentioned in the Preamble are to constitute India into a Sovereign Socialist Secular Democratic Republic and to secure to all its citizens Justice, Liberty, Equality, and to promote Fraternity.", "Parliament can alter the boundaries, area, or name of an existing State under Article 3.", "According to Article 24, children below the age of fourteen years are prohibited from working in hazardous industries like factories or mines.", "Article 21 signifies the protection of life and personal liberty, stating that no person shall be deprived of these except according to procedure established by law.", "Under Article 15, the State can make special provisions for women and children, socially and educationally backward classes of citizens, Scheduled Castes, Scheduled Tribes, and economically weaker sections of citizens.", "Article 11 allows Parliament to regulate the right of citizenship and make provisions regarding the acquisition and termination of citizenship, overriding previous articles on citizenship (Articles 5 to 10).", "This information is not found in the document."]
+Successfully parsed 20 answers
+Received 20 answers for batch starting at index 20
+Raw response from Gemini: ["India, that is Bharat, shall be a Union of States.", "Article 14 guarantees equality before the law and equal protection of laws to all persons.", "Article 17 of the Constitution abolishes \"Untouchability\" and forbids its practice in any form.", "The key ideals mentioned in the Preamble are Sovereign, Socialist, Secular, Democratic Republic, Justice, Liberty, Equality, and Fraternity.", "Parliament can alter the boundaries, area, or name of an existing State under Article 3.", "According to Article 24, children below the age of fourteen years are prohibited from working in hazardous industries like factories or mines.", "Article 21 signifies the protection of life and personal liberty, stating that no person shall be deprived of these except according to procedure established by law.", "Under Article 15, the State can make special provisions for women and children, socially and educationally backward classes of citizens, Scheduled Castes, Scheduled Tribes, and economically weaker sections of citizens.", "Article 11 allows Parliament to regulate the right of citizenship and make provisions regarding its acquisition and termination, overriding previous articles on citizenship (Articles 5 to 10).", "This information is not found in the document.", "India, that is Bharat, shall be a Union of States.", "Article 14 guarantees equality before the law and equal protection of laws to all persons.", "Article 17 of the Constitution abolishes \"Untouchability\" and forbids its practice in any form.", "The key ideals mentioned in the Preamble are Sovereign, Socialist, Secular, Democratic Republic, Justice, Liberty, Equality, and Fraternity.", "Parliament can alter the boundaries, area, or name of an existing State under Article 3.", "According to Article 24, children below the age of fourteen years are prohibited from working in hazardous industries like factories or mines.", "Article 21 signifies the protection of life and personal liberty, stating that no person shall be deprived of these except according to procedure established by law.", "Under Article 15, the State can make special provisions for women and children, socially and educationally backward classes of citizens, Scheduled Castes, Scheduled Tribes, and economically weaker sections of citizens.", "Article 11 allows Parliament to regulate the right of citizenship and make provisions regarding its acquisition and termination, overriding previous articles on citizenship (Articles 5 to 10).", "This information is not found in the document."]
+Successfully parsed 20 answers
+Received 20 answers for batch starting at index 0
+Returning 40 answers
+INFO:     2401:4900:2341:f520:7b40:ca4a:96ec:5814:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+Loading pre-computed vectors for Arogya%20Sanjeevani%20Policy%20-%20CIN%20-%20U10200WB1906GOI001713%201
+Loaded index with dimension: 768
+Processing 4 questions in 1 batches
+Processing 4 questions
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Raw response from Gemini: ["The company shall settle or reject a claim within 15 days from the date of receipt of the last necessary document, or within 45 days if an investigation is warranted.", "No, expenses related to sterility and infertility, including Assisted Reproduction services such as IVF, are excluded from coverage.", "No, the company will not settle the full Rs 100,000 for cataract treatment; it is subject to a limit of 25% of the Sum Insured or Rs. 40,000 per eye, whichever is lower, per policy year.", "For hospitalization for heart surgery, you need to upload a duly completed claim form, photo identity proof of the patient, medical practitioner’s prescription advising admission, original bills with itemized break-up, payment receipts, discharge summary, investigation/diagnostic test reports, OT notes or Surgeon's certificate, sticker/invoice of implants (if applicable), MLR/FIR (if applicable), NEFT details and cancelled cheque, KYC (if claim liability is above Rs. 1 Lakh), legal heir/succession certificate (if applicable), and any other relevant document required by the Company/TPA."]
+Successfully parsed 4 answers
+Received 4 answers for batch starting at index 0
+Returning 4 answers
+INFO:     20.244.56.156:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+Loading pre-computed vectors for Arogya%20Sanjeevani%20Policy%20-%20CIN%20-%20U10200WB1906GOI001713%201
+Loaded index with dimension: 768
+Processing 1 questions in 1 batches
+Processing 1 questions
+Search successful, found 25 results
+Raw response from Gemini: ["This information is not found in the document."]
+Successfully parsed 1 answers
+Received 1 answers for batch starting at index 0
+Returning 1 answers
+INFO:     20.244.56.156:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+Loading pre-computed vectors for Super_Splendor_(Feb_2023)
+Loaded index with dimension: 768
+Processing 5 questions in 1 batches
+Processing 5 questions
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Raw response from Gemini: ["The ideal spark plug gap recommended is 0.8-0.9 mm, to be measured using a wire-type feeler gauge.", "Yes, the tyres fitted on this vehicle are of the TUBELESS type, and the rims are designed for tubeless tyres.", "The document mentions both 'Disc variant' and 'Drum variant' for brakes, indicating that a disc brake is not compulsory.", "No, the document specifies using Hero genuine engine oil or recommended grade oil (SAE 10W 30 SL Grade (JASO MA2)) and explicitly states that non-detergent, vegetable, or castor-based racing oils are not recommended.", "This information is not found in the document."]
+Successfully parsed 5 answers
+Received 5 answers for batch starting at index 0
+Returning 5 answers
+INFO:     20.244.56.156:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+Loading pre-computed vectors for Family%20Medicare%20Policy%20(UIN-%20UIIHLIP22070V042122)%201
+Loaded index with dimension: 768
+Processing 3 questions in 1 batches
+Processing 3 questions
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Raw response from Gemini: ["The document does not explicitly state whether Non-infective Arthritis is covered. It lists Gout and Rheumatism under a two-year waiting period, but does not specify if Non-infective Arthritis falls under this category.", "Based on the provided document, Hydrocele is not listed as a permanent exclusion or a specific condition with a waiting period in the snippets provided. Since you have been a customer for 6 years, any general waiting periods for pre-existing diseases or specific conditions would have passed, implying a claim could be raised if it's not a permanent exclusion.", "Lawful medical termination of pregnancy is covered under the Maternity Expenses and New Born Baby Cover, provided the sum insured is above Rs. 3 Lacs, the policy has been continuously in force for a minimum of 24 months, and it is not a voluntary termination within the first twelve weeks from conception, limited to two deliveries or terminations in a lifetime."]
+Successfully parsed 3 answers
+Received 3 answers for batch starting at index 0
+Returning 3 answers
+INFO:     20.244.56.156:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+Loading pre-computed vectors for indian_constitution
+Loaded index with dimension: 768
+Processing 10 questions in 1 batches
+Processing 10 questions
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+INFO:     2401:4900:2341:f520:8466:f7ff:fec3:9561:0 - "GET /hackrx/run HTTP/1.1" 200 OK
+Raw response from Gemini: ["India, that is Bharat, shall be a Union of States according to Article 1 of the Constitution.", "Article 14 guarantees equality before the law and equal protection of the laws to all persons within the territory of India.", "Untouchability and its practice in any form are abolished by Article 17 of the Constitution.", "The key ideals mentioned in the Preamble are Sovereign, Socialist, Secular, Democratic, Republic, Justice, Liberty, Equality, and Fraternity.", "Parliament can alter the boundaries, area, or name of an existing State under Article 3 of the Constitution.", "According to Article 24, children below the age of fourteen years are prohibited from working in any factory or mine or engaged in any other hazardous employment.", "Article 21 is significant as it guarantees the protection of life and personal liberty, stating that no person shall be deprived of these rights except according to procedure established by law.", "Under Article 15, the State can make special provisions for women and children, socially and educationally backward classes of citizens, Scheduled Castes, Scheduled Tribes, and economically weaker sections of citizens.", "Article 11 allows Parliament to regulate the right of citizenship and make provisions with respect to its acquisition and termination, overriding previous articles on citizenship (Articles 5 to 10).", "This information is not found in the document."]
+Successfully parsed 10 answers
+Received 10 answers for batch starting at index 0
+Returning 10 answers
+INFO:     20.244.56.156:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+Loading pre-computed vectors for indian_constitution
+Loaded index with dimension: 768
+Processing 10 questions in 1 batches
+Processing 10 questions
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Raw response from Gemini: ["The document indicates that criminal law, including matters in the Indian Penal Code, covers offenses. Theft of a car would fall under criminal law.", "The document states that any arrested person must be informed of the grounds for arrest and produced before a magistrate within twenty-four hours, and cannot be detained beyond that period without a magistrate's authority. It does not explicitly state whether an arrest without a warrant is legal or illegal in general, but outlines rights upon arrest.", "No, it is not allowed. The document states that no citizen shall be discriminated against in matters of public employment or appointment to any office under the State on grounds only of religion, race, caste, sex, descent, place of birth, or residence.", "The document states that compulsory acquisition of land for public purposes is permitted in accordance with the law, and such laws are not deemed void for inconsistency with certain rights. However, if the land is under personal cultivation and within the ceiling limit, the law must provide for compensation at a rate not less than the market value.", "No, it is not legal. The document explicitly prohibits the employment of any child below the age of fourteen years in any factory or mine or in any other hazardous employment.", "Yes, it is against your rights. All citizens have the right to freedom of speech and expression, and the right to assemble peaceably and without arms.", "The document states that no citizen shall be subject to any disability, liability, restriction, or condition regarding access to public restaurants, hotels, and places of public entertainment, or the use of public resorts maintained wholly or partly out of State funds, on grounds only of religion, race, caste, sex, or place of birth. It also mentions throwing open Hindu religious institutions of a public character to all classes and sections of Hindus, but does not explicitly address all religious places or specific gender-based restrictions.", "The document states that all persons are equally entitled to freedom of conscience and the right to freely profess, practice, and propagate religion, subject to public order, morality, and health. It does not mention the government having the power to stop someone from changing their religion.", "The right to life and personal liberty is being violated, as no person shall be deprived of their life or personal liberty except according to procedure established by law. Additionally, the right against self-incrimination is protected, as no person accused of any offense shall be compelled to be a witness against himself.", "No, you cannot be denied admission to an educational institution maintained by the State or receiving aid out of State funds solely on grounds of religion, race, caste, or language. The State can also make special provisions for the advancement of socially and educationally backward classes, including their admission to educational institutions."]
+Successfully parsed 10 answers
+Received 10 answers for batch starting at index 0
+Returning 10 answers
+INFO:     20.244.56.156:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+Loading pre-computed vectors for principia_newton
+Loaded index with dimension: 768
+Processing 12 questions in 1 batches
+Processing 12 questions
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Raw response from Gemini: ["Newton defines 'quantity of motion' as the measure arising from the velocity and quantity of matter conjunctly. It is distinct from 'force' (vis insita), which is described as an innate power of resisting, by which every body endeavors to persevere in its present state of rest or uniform motion.", "Newton's three laws of motion are: (I) Every body perseveres in its state of rest or uniform motion unless compelled by impressed forces; (II) The alteration of motion is proportional to the impressed motive force and in its direction; (III) To every action there is always an equal and opposite reaction. In celestial mechanics, these laws explain how planets and comets preserve their motions in free spaces and how mutual attractions disturb their orbits.", "The document states that Newton inferred the force retaining a planet in its orbit was always directed to the sun from Kepler's first law, which it describes as the proportionality of areas to the times of their description. It also notes that if the sun were quiescent and planets did not mutually act, their orbits would be elliptic and areas exactly proportional to times by specific propositions, implying his laws support this, but does not detail the derivation process from his laws of motion and gravitation.", "Newton demonstrates that gravity is inversely proportional to the square of the distance by deducing this principle from the motion of the moon and Kepler's laws, specifically from Kepler's second law that planets move in ellipses with the sun at one focus. He also proves this in Proposition VIII, Theorem VIII, stating that in two mutually gravitating spheres, the weight of one towards the other is reciprocally as the square of the distance between their centers.", "Newton argues that all bodies are endowed with a principle of mutual gravitation because observations show that all bodies about the Earth gravitate towards it, the Moon gravitates towards Earth, the sea towards the Moon, and all planets mutually gravitate towards one another and comets towards the Sun. Furthermore, by Law III (action-reaction), if parts of one planet gravitate towards another, the second planet must also gravitate towards the parts of the first.", "Newton explains that the mutual actions of planets on one another cause perturbations in their orbits, though these disturbances are generally very small. He specifically notes that Jupiter and Saturn sensibly disturb each other's motions, and the Sun and Moon disturb the Earth's sea and the Earth's orbit.", "Newton used the fundamental principle of his fluxionary calculus in Principia, but its standard algorithm or notation was not published until 1693. He preferred and often censured the handling of geometrical subjects by algebraic calculations, admiring the elegant demonstrations of the ancients.", "Newton uses the concept of centripetal force to explain orbital motion by defining it as the force that draws bodies towards a center, preventing them from flying off in straight lines. He illustrates this with a stone in a sling, explaining that this force perpetually draws planets from their rectilinear paths, causing them to revolve in curvilinear orbits.", "Newton handles motion in resisting media by investigating the theory of fluid resistance, stating it arises from the fluid's tenacity, attrition, and density. He specifies that resistance from density is in a duplicate ratio of velocity, while resistance from tenacity is uniform, and that resistance of swiftly moving bodies is nearly proportional to fluid density.", "Newton distinguishes absolute time as flowing equably without external regard, while relative time is a sensible measure of duration by motion. Absolute space is inherently immovable, whereas relative space is a movable measure determined by position to bodies. This distinction supports his laws by asserting that true motion is generated or altered only by impressed forces, unlike relative motion which can change without such forces.", "The grandfather of Isaac Newton was Robert Newton.", "Yes, the document also mentions Isaac Newton's father, John Newton, and his mother, Harriet Ayscough, who was the daughter of James Ayscough."]
+Successfully parsed 12 answers
+Received 12 answers for batch starting at index 0
+Returning 12 answers
+INFO:     20.244.56.156:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+Loading pre-computed vectors for UNI%20GROUP%20HEALTH%20INSURANCE%20POLICY%20-%20UIIHLGP26043V022526%201
+Loaded index with dimension: 768
+Processing 36 questions in 2 batches
+Processing 20 questions
+Processing 16 questions
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Raw response from Gemini: [
+  "Expenses for arthritis treatment taken at home due to non-availability of hospital beds would not be covered, as arthritis is specifically excluded from domiciliary hospitalization claims.",
+  "The cost of the prosthetic device implanted during surgery is payable. However, the walker and lumbar belt are generally not payable as they are considered ambulatory devices and belts/braces used post-discharge, unless the lumbar belt is for a lumbar spine surgery.",
+  "The claim for dental surgery after an accident is admissible as dental treatment is covered if necessitated by an accident. For a dependent child aged 18-26 who is unemployed and unmarried, they are eligible for coverage. The claim submission requires sending the claim form with invoices, treating Medical Practitioner's prescription, and reports to the branch or head office.",
+  "Intra Operative Neuro Monitoring (IONM) expenses are covered up to the limit specified in the Policy Schedule or Certificate of Insurance per policy period. ICU care charges are covered up to the category/limit specified in the Policy Schedule or actual expenses incurred, whichever is less.",
+  "To add a newly-adopted child (3 years old) as a dependent, the application for cover must be accepted, and additional pro-rata premium received, followed by an endorsement. The insurer may refuse cover if the application is not accepted or if the child does not meet the eligibility criteria for dependents, such as being between 91 days and 18 years, or if parents are not concurrently covered.",
+  "For the day care cataract procedure, the claim documents should be submitted immediately after discharge. For the 5 days of inpatient care due to complications, this would be considered a relapse if it occurs within 45 days from the discharge date of the initial hospitalization, and the claim documents for hospitalization expenses should be submitted within 15 days of discharge.",
+  "Newborn babies are accepted for cover from birth if the mother is covered and maternity cover is opted, subject to written notification on or before the last day of the month following birth and receipt of agreed premium. Therefore, the newborn's intensive care expenses would be eligible for coverage under the New Born Baby Benefit Cover, provided these conditions are met.",
+  "No, this is not sufficient. While a Clinical Psychologist is a recognized Mental Healthcare Professional, the policy states that treatment must be prescribed by a Medical Practitioner, and a general practitioner's prescription alone may not be sufficient for inpatient psychiatric treatment, as a psychiatrist is typically required for such conditions.",
+  "ECG electrodes are payable up to 5 electrodes for every case visiting OT or ICU, and for longer ICU stays, one set every second day is payable. Sterilized gloves are payable, but unsterilized gloves are not payable.",
+  "Pre-hospitalization medical expenses incurred 18 days before admission are claimable as they fall within the 'pre-defined number of days preceding hospitalization' for the same condition. Post-hospitalization diagnostics and pharmacy expenses incurred 20 days after discharge are also claimable as they fall within the 'pre-defined number of days immediately after discharge' for the same condition, provided the inpatient hospitalization claim is admissible.",
+  "When a dependent child turns 27, their coverage ceases as the policy covers children up to the age of 26 years, provided they are unmarried, unemployed, and dependent. The policy states that cover ends when a dependent insured person ceases to be a dependent, unless specifically agreed for continuation until the end of the policy period.",
+  "According to the Proportionate Clause (Note 1 of Clause III.A.1.A), if the room rate exceeds the policy limits, the reimbursement of all associated medical expenses incurred at the hospital, including diagnostic and specialist fees, will be effected in the same proportion as the admissible room rate bears to the actual room rate.",
+  "If a claim is partly rejected due to a deficiency in documents, the company will send up to three reminders if the deficiency is not met or partially met within 10 working days of the first intimation. The insured person may represent for reconsideration of the decision within 15 days from the date of receipt of the claims decision.",
+  "Yes, the claim is eligible under Day Care Treatment. This category covers medical treatment and/or surgical procedures undertaken under general or local anesthesia in a hospital/day care center in less than 24 hours due to technological advancement, which would otherwise have required hospitalization of more than 24 hours.",
+  "For towns with a population of less than 1,000,000, a hospital must have at least 10 in-patient beds. In all other places (metropolitan areas), a hospital must have at least 15 in-patient beds. Both must have qualified nursing staff and medical practitioners round the clock, a fully equipped operation theatre, and maintain daily patient records.",
+  "For an employer-employee group, a newly appointed employee and their newly wedded spouse can be added during the policy period. Siblings are covered up to age 26 if unmarried, unemployed, and dependent. The process requires the application for cover to be accepted, additional pro-rata premium received, and an endorsement issued by the insurer.",
+  "Robotic surgeries for malignancies are covered up to the limit specified in the Policy Schedule or Certificate of Insurance per policy period. This coverage applies whether the procedure is performed as an in-patient or as part of day care treatment in a hospital.",
+  "For air ambulance evacuation due to an accident, the insured person must immediately notify the insurer either at their call center or in writing. Emergency medical evacuations require pre-authorization, where the insurer's specialists, in association with the emergency assistance service provider, determine medical necessity before approval. The claim submission for reimbursement requires an air ambulance ticket from a registered service provider.",
+  "If the insured person has continuous coverage without any break as defined under IRDAI portability norms, the waiting period for specific diseases/procedures like knee replacement surgery (other than caused by an accident) and osteoarthritis would be reduced to the extent of their prior coverage.",
+  "No, the expense for an imported medication not normally used in India would likely not be covered. Medically Necessary Treatment must conform to professional standards widely accepted in international medical practice or by the medical community in India, and unproven/experimental treatment, which is not based on established medical practice in India, is excluded."
+]
+Successfully parsed 20 answers
+Received 20 answers for batch starting at index 0
+Raw response from Gemini: ["In a non-employer group policy, if a member dies, their dependents may continue to be covered until the policy's expiration at the option of the insured, as specified in the Policy Schedule.",
+"For claims involving implanted devices like cardiac stents, the original invoice with payment receipt and implant stickers are required. The document does not specify how a claim would be affected if only a generic invoice without an implant sticker is provided, but it implies the sticker is a necessary part of the documentation.",
+"Home nursing charges qualify for reimbursement if arranged by the hospital for a Qualified Nurse to provide expert nursing services immediately after hospital treatment, for as long as medically necessary, and if the treating Specialist recommended these services. Documentation required includes bills from a registered nursing service provider.",
+"If primary policy coverage is less than the admissible claim, the primary insurer will seek details of other policies and coordinate with other insurers to settle the balance, provided the insured submits a written request. The company may accept duly certified documents and claim settlement advice from the other insurer if original documents were submitted to them.",
+"No, expenses related to hospitalization primarily for diagnostics and evaluation purposes only are excluded, as are any diagnostic expenses not related or incidental to the current diagnosis and treatment.",
+"The policy requires any change of nomination to be communicated in writing and to be effective only when an endorsement is made on the policy. In the absence of a subsisting nominee, the company will pay the legal heirs or legal representatives of the policyholder.",
+"Prostheses or medical appliances are not covered if they are not required intra-operatively for the illness/injury for which the insured person was hospitalized. Additionally, non-medical expenses such as ambulatory devices, walkers, crutches, belts, collars, splints, slings, braces, stockings, diabetic footwear, glucometers, thermometers, and any medical equipment used at home are generally not covered unless they form part of room expenses.",
+"No, expenses for inpatient care from an AYUSH hospital not registered locally will not be reimbursed. The policy defines a hospital, including AYUSH Day Care Centres, as an institution that must be registered with local authorities wherever applicable.",
+"In the event of any change in the diagnosis, treatment plan, or cost during hospitalization, the Network Provider must obtain a fresh authorization letter from the insurer to maintain cashless eligibility.",
+"The claim for pre-hospitalization medical expenses will be processed only after the decision on the main inpatient hospitalization claim has been made.",
+"This information is not found in the document.",
+"This information is not found in the document.",
+"If a claim is fraudulent, or if any false statement or declaration is made or used, all benefits under the policy and the premium paid shall be forfeited. If any amount has already been paid, it must be repaid by the recipient(s)/policyholder(s). For missing documents, the company will intimate deficiencies and may deduct the amount for which documents are missing, settling the claim if it is otherwise valid.",
+"You can receive reimbursement for pre-hospitalization and post-hospitalization medical expenses, provided they are for the same condition as an admissible inpatient hospitalization claim. However, all non-medical expenses and convenience items not consistent with or incidental to the diagnosis and treatment of the illness/injury for which the insured was hospitalized are generally not reimbursable.",
+"Medical procedures not allowed include: Treatment received outside India; any form of Alternative Treatment (Hydrotherapy, Acupuncture, Reflexology, Chiropractic Treatment, indigenous medicine); Dental Treatment unless necessitated by an accident requiring 24-hour hospitalization; Routine eye examinations, cost of spectacles, multifocal lens, contact lenses; Cost of hearing aids; Vaccinations (unless required for hospitalization/daycare after an animal bite); Treatment for alopecia, baldness, wigs, toupees, and hair fall; Health check-ups or medical examinations for employment/travel; Any hospital stay without undertaking treatment; Artificial life maintenance for patients in a vegetative state; Certification/diagnosis/treatment by a family member or unregistered medical practitioner; Prostheses/corrective devices not required intra-operatively; Instruments like CPAP, Oxygen Concentrator for Bronchial Asthmatic condition, infusion pumps, or other external devices used during or after treatment.",
+"This information is not found in the document."]
+Successfully parsed 16 answers
+Received 16 answers for batch starting at index 20
+Returning 36 answers
+INFO:     20.244.56.156:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+INFO:     194.145.227.125:0 - "GET /wp-content/plugins/wp-seo-spy-google/ofc/php-ofc-library/ofc_upload_image.php HTTP/1.1" 404 Not Found
+Loading pre-computed vectors for Happy%20Family%20Floater%20-%202024%20OICHLIP25046V062425%201
+Loaded index with dimension: 768
+Processing 25 questions in 2 batches
+Processing 20 questions
+Processing 5 questions
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Search successful, found 25 results
+Raw response from Gemini: ["This information is not found in the document.", "If any claim is made using fraudulent means or false statements, all benefits under the policy shall be forfeited, and any amounts already paid for such claims must be repaid by all persons named in the policy schedule.", "This information is not found in the document.", "This information is not found in the document.", "If any claim is made using fraudulent means or false statements, all benefits under the policy shall be forfeited, and any amounts already paid for such claims must be repaid by all persons named in the policy schedule."]
+Successfully parsed 5 answers
+Received 5 answers for batch starting at index 20
+Raw response from Gemini: [
+  "Dental treatment is generally excluded unless necessitated due to an injury. A female child is covered until she gets married, and if married, she becomes ineligible for coverage in subsequent renewals. The document does not specify the process for updating a surname, but the company's grievance redressal email is csd@orientalinsurance.co.in.",
+  "For robotic surgery, supporting documents include original bills, all receipts, discharge certificate, doctor's consultation reports/history, medical history, and any other required information. To confirm if a hospital is a network provider, check the list available with the Company/TPA. The document states unmarried siblings are eligible if financially dependent, but does not specify an age limit or re-eligibility after job loss for siblings above 26.",
+  "The maximum cashless hospitalization benefit for accidental trauma for a covered parent-in-law is up to the Sum Insured. Immediate notice of claim with particulars must be given to the Company/TPA by fax or e-mail within 48 hours of admission but before discharge. The document does not specify the process for replacing a lost ID card.",
+  "Hospitalization for psychiatric illness for a 17-year-old son is covered if advised by a Mental Health Professional and takes place in a Mental Health Establishment. The insured must inform the Company immediately in writing of any change in address. OPD dental checkups are covered only under the Platinum Plan, up to Rs. 5,000 in a block of every three years, and are explicitly excluded from the Gold Plan.",
+  "To port a prior individual policy for a dependent parent-in-law, apply to the new insurer at least 30 days, but not earlier than 60 days, before the policy renewal date to gain continuity benefits. For a post-hospitalization medicine claim, submit original bills, all receipts, and discharge certificate/card from the hospital, along with documents pertaining to the illness. The company's toll-free customer service number is 1800118485 or 011-33208485.",
+  "For a scheduled caesarean delivery at a non-network hospital, cashless access is not available, but reimbursement can be sought by submitting full claim papers within 15 days of discharge. Mid-term inclusion for a newborn is permitted upon payment of pro-rata premium. The document states that any change of address must be informed in writing, but does not specifically detail the process for changing a communication email.",
+  "The document generally excludes external/durable medical equipment, which may include prosthetic limbs, but offers a lump sum benefit for loss of a limb under Personal Accident Cover. If the sum insured is exhausted under one policy, the insured person can prefer claims under other policies for disallowed amounts. Any change of nomination for a legal heir must be communicated to the company in writing and will be effective upon endorsement on the policy.",
+  "Cashless psychiatric care for a dependent child is covered if it requires hospitalization in a network Mental Health Establishment and is pre-authorized. A survival benefit is payable under the Life Hardship Survival Benefit Plan for critical illnesses like cancer, once per illness per insured person. For a cancer diagnosis claim, histological evidence of malignancy confirmed by a pathologist is required, along with standard claim documents like original bills, receipts, discharge certificate, and medical history.",
+  "Pre-authorization for air ambulance transfer for a road accident is covered under the Platinum Plan up to 5% of the sum insured for life-threatening emergencies. The document does not provide information on re-issuing a lost policy document. The document permits mid-term inclusion of members on pro-rata premium but does not specify a general waiting period for newly included dependents.",
+  "Cataract surgery has a 2-year waiting period. To upgrade from Silver to Diamond plan with enhanced sum insured, if no claims were reported in the two immediate preceding policy periods, you can change to the Diamond plan at the initial SI slab or two steps higher from the current SI. For example, the Insurance Ombudsman for Karnataka is in Bengaluru, with Tel.: 080 - 26652048 / 26652049 and Email: bimalokpal.bengaluru@ecoi.co.in.",
+  "This information is not found in the document and cannot be provided.",
+  "This information is not found in the document and cannot be provided.",
+  "This information is not found in the document and cannot be provided.",
+  "This information is not found in the document and cannot be provided.",
+  "This information is not found in the document and cannot be provided.",
+  "This information is not found in the document and cannot be provided.",
+  "This information is not found in the document and cannot be provided.",
+  "This information is not found in the document and cannot be provided.",
+  "Cosmetic eye surgeries are explicitly excluded from ophthalmic cover. The document does not indicate coverage for other types of cosmetic surgery.",
+  "This information is not found in the document."
+]
+Successfully parsed 20 answers
+Received 20 answers for batch starting at index 0
+Returning 25 answers
+INFO:     20.244.56.156:0 - "POST /hackrx/run HTTP/1.1" 200 OK

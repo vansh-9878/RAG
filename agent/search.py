@@ -12,7 +12,7 @@ pc=Pinecone(api_key=os.getenv("PINECONE_API"))
 
 index = pc.Index(name="ragsearch",host="https://ragsearch-e785njk.svc.aped-4627-b74a.pinecone.io")
 
-model = SentenceTransformer("all-MiniLM-L6-v2")  
+model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")  
 
 from concurrent.futures import ThreadPoolExecutor
 

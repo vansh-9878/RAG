@@ -59,7 +59,7 @@ def getFile(query: input):
     fileName = filePath.split('.')[0]
     
     if fileName not in arr:
-    
+        print("Downloading file...")
         response = requests.get(query.documents)
         content_type = response.headers.get("Content-Type")
 
