@@ -55,11 +55,17 @@ arr=[item.split(".")[0] for item in arr]
     
 @app.post("/hackrx/run", dependencies=[Depends(verify_token)])
 def getFile(query: input):
+    # Log request received
+    print("=" * 80)
+    print("REQUEST RECEIVED:")
+    print(f"Documents: {query.documents}")
+    print(f"Questions: {query.questions}")
+    print("=" * 80)
+    
     filePath = query.documents.split('/')[-1].split('?')[0]
     fileName = filePath.split('.')[0]
     
     if fileName not in arr:
-        print("Downloading file...")
         response = requests.get(query.documents)
         content_type = response.headers.get("Content-Type")
 
@@ -92,8 +98,6 @@ def getFile(query: input):
         batch_questions = questions[i:batch_end]
         batch_indices = list(range(i, batch_end))
         batches.append((batch_questions, batch_indices))
-    
-    print(f"Processing {total_questions} questions in {len(batches)} batches")
 
     # Process batches concurrently
     with ThreadPoolExecutor(max_workers=5) as executor:
@@ -109,14 +113,11 @@ def getFile(query: input):
             
             try:
                 batch_answers = future.result()
-                print(f"Received {len(batch_answers) if isinstance(batch_answers, list) else 'invalid'} answers for batch starting at index {batch_indices[0]}")
                 
                 # Validate the response
                 if not isinstance(batch_answers, list):
-                    print(f"Warning: Expected list but got {type(batch_answers)}")
                     batch_answers = [f"❌ Invalid response type: {type(batch_answers)}"] * len(batch_indices)
                 elif len(batch_answers) != len(batch_indices):
-                    print(f"Warning: Expected {len(batch_indices)} answers but got {len(batch_answers)}")
                     # Pad or truncate to match expected length
                     if len(batch_answers) < len(batch_indices):
                         batch_answers.extend([f"❌ Missing answer"] * (len(batch_indices) - len(batch_answers)))
@@ -130,7 +131,6 @@ def getFile(query: input):
                     
             except Exception as e:
                 error_msg = str(e)
-                print(f"Error processing batch starting at index {batch_indices[0]}: {error_msg}")
                 # Assign error messages to all questions in this batch
                 for original_index in batch_indices:
                     results[original_index] = f"❌ Error: {error_msg}"
@@ -139,13 +139,15 @@ def getFile(query: input):
     for i, result in enumerate(results):
         if result is None:
             results[i] = "❌ No response received"
-            print(f"Warning: Question at index {i} has no answer")
     
-    print(f"Returning {len(results)} answers")
+    response_data = {"answers": results}
+    
+    # Log response sent
+    print("RESPONSE SENT:")
     print(f"Answers: {results}")
-    return {
-        "answers": results
-    }
+    print("=" * 80)
+    
+    return response_data
 
 
 if __name__ == "__main__":

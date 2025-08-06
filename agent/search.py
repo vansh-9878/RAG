@@ -20,7 +20,6 @@ def uploadText(fileName: str, batch_size=50):
     with open(f"{fileName}.txt", 'r', encoding='utf-8') as f:
         text = f.read().strip().replace("\n"," ")
     if not text:
-        print("❌ File is empty.")
         return
 
     splitter = RecursiveCharacterTextSplitter(chunk_size=400, chunk_overlap=100)
@@ -29,8 +28,6 @@ def uploadText(fileName: str, batch_size=50):
     def chunk_batches(lst, size):
         for i in range(0, len(lst), size):
             yield lst[i:i + size]
-
-    print(f"🚀 Uploading {len(chunks)} chunks...")
 
     with ThreadPoolExecutor(max_workers=4) as executor:
         futures = []
@@ -48,14 +45,10 @@ def uploadText(fileName: str, batch_size=50):
 
         for i, f in enumerate(futures):
             f.result()
-            print(f"✅ Uploaded batch {i + 1}")
-
-    print(f"✅ All {len(chunks)} vectors uploaded to namespace '{fileName}'")
 
 @tool
 def searchDocument(query:str,filename:str)->list:
     """Search the document for the answer to the given query."""
-    print("Tooooool")
     query_embedding = model.encode(query).tolist()
     
     results = index.query(
@@ -65,9 +58,6 @@ def searchDocument(query:str,filename:str)->list:
         namespace=filename
     )
     
-    for match in results['matches']:
-        print(f"Score: {match['score']:.4f}")
-        print(f"Text: {match['metadata']['text']}\n")
     return results['matches']
 
 # searchDocument.invoke({"query":"What is the waiting period for pre-existing diseases (PED) to be covered?","filename":"policy"})

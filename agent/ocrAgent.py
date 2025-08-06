@@ -7,7 +7,6 @@ load_dotenv()
 
 
 def readPDF(file_path:str,fileName:str):
-    print("OCR started..")
     endpoint = os.getenv('ocr_endpoint')
     key = os.getenv('key1')
 
@@ -25,14 +24,11 @@ def readPDF(file_path:str,fileName:str):
         content_type="application/octet-stream"
     )
     
-    print("Got text..")
-
     result = poller.result()
     with open(f"{fileName}.txt",'w',encoding='utf-8') as f:    
         for page in result.pages:
             for line in page.lines:
                 f.write(line.content + "\n")
-    print("ocr donee")
 
 # file_path="sampleDocuments/travel_insurance.pdf"
 # fileName=file_path.split('/')[-1].split('.')[0]
