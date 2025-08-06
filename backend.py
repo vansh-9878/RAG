@@ -142,6 +142,7 @@ def getFile(query: input):
             print(f"Warning: Question at index {i} has no answer")
     
     print(f"Returning {len(results)} answers")
+    print(f"Answers: {results}")
     return {
         "answers": results
     }
