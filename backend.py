@@ -10,6 +10,8 @@ import uvicorn,os,io
 import requests
 from docx import Document
 from dotenv import load_dotenv
+from datetime import datetime
+import time
 load_dotenv()
 
 app=FastAPI()
@@ -55,9 +57,13 @@ arr=[item.split(".")[0] for item in arr]
     
 @app.post("/hackrx/run", dependencies=[Depends(verify_token)])
 def getFile(query: input):
+    # Record start time
+    start_time = time.time()
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    
     # Log request received
     print("=" * 80)
-    print("REQUEST RECEIVED:")
+    print(f"REQUEST RECEIVED AT: {timestamp}")
     print(f"Documents: {query.documents}")
     print(f"Questions: {query.questions}")
     print("=" * 80)
@@ -142,8 +148,14 @@ def getFile(query: input):
     
     response_data = {"answers": results}
     
-    # Log response sent
+    # Calculate time taken and log response sent
+    end_time = time.time()
+    time_taken = round(end_time - start_time, 2)
+    response_timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    
     print("RESPONSE SENT:")
+    print(f"Response sent at: {response_timestamp}")
+    print(f"Time taken: {time_taken} seconds")
     print(f"Answers: {results}")
     print("=" * 80)
     

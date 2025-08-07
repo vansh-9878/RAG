@@ -15,8 +15,11 @@ os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
 
 # model = SentenceTransformer("BAAI/bge-small-en-v1.5")
 # model = SentenceTransformer("all-MiniLM-L6-v2")
-# Use GPU with memory optimization
-model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2", device='cuda')
+# Use GPU with fallback to CPU if CUDA is not available
+try:
+    model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2", device='cuda')
+except RuntimeError:
+    model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2", device='cpu')
 # model = SentenceTransformer("intfloat/e5-base-v2")
 globalIndex=None
 globalTexts=None
