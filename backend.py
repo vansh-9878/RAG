@@ -57,6 +57,7 @@ arr=[item.split(".")[0] for item in arr]
     
 @app.post("/hackrx/run", dependencies=[Depends(verify_token)])
 def getFile(query: input):
+    print()
     # Record start time
     start_time = time.time()
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
@@ -69,7 +70,12 @@ def getFile(query: input):
     print("=" * 80)
     
     filePath = query.documents.split('/')[-1].split('?')[0]
-    fileName = filePath.split('.')[0]
+    fileName = filePath.split('.')[0].replace("%20"," ")
+    print(fileName,filePath)
+    if ".jpeg" in filePath:
+        fileName+="_jpeg"
+    elif ".png" in filePath:
+        fileName+="_png"
     
     if fileName not in arr:
         response = requests.get(query.documents)
@@ -88,11 +94,11 @@ def getFile(query: input):
                 f.write(response.content)
 
         pdf_to_text(fileName)
-        
     index, texts = storeVectors(fileName)
 
     questions = query.questions
     total_questions = len(questions)
+    print(total_questions)
     
     # Initialize results array with None values
     results = [None] * total_questions

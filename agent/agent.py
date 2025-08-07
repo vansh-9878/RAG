@@ -19,7 +19,7 @@ class AgentState(TypedDict):
     search:str
 
 model=ChatGoogleGenerativeAI(
-    model="gemini-2.5-pro",
+    model="gemini-2.5-flash",
     google_api_key=os.getenv("k1"),
     temperature=0.2
 )
@@ -42,7 +42,8 @@ def agent(state:AgentState)->AgentState:
         10. Return ONLY a valid JSON array of string answers, nothing else.
         11. The first answer in the array must correspond to the first question - maintain exact order.
         12. Each answer must be a simple string without nested arrays or objects.
-        
+        13. Dont use any single or double quotes in the answer.
+
         RESPONSE FORMAT:
         ["answer1", "answer2", "answer3", ...]
         
@@ -75,6 +76,7 @@ app=graph.compile()
 
 def start(questions: list[str], index: str, texts: str)->list[str]:
     # Build search results for all questions
+    print(len(questions))
     searchResult = ""
     for i, question in enumerate(questions):
         search_response = search.invoke({"query": question, "index": index, "texts": texts})
@@ -91,7 +93,11 @@ def start(questions: list[str], index: str, texts: str)->list[str]:
     })
 
     answer = results['messages'][-1].content.strip()
-    
+    answer=answer.replace("json","").replace("```","")
+    if(not answer.endswith("]")):
+        answer += "]"
+    print("Raw answer from model:")
+    print(answer)
     try:
         # Try to parse as JSON first
         if answer.startswith('[') and answer.endswith(']'):
@@ -99,12 +105,13 @@ def start(questions: list[str], index: str, texts: str)->list[str]:
         else:
             # Fallback to ast.literal_eval
             answers = ast.literal_eval(answer)
-        
+        print("Parsed answers:", answers)
         if not isinstance(answers, list):
             raise ValueError(f"Expected a list of answers, got {type(answers)}")
         
         # Ensure all answers are strings
         answers = [str(ans) for ans in answers]
+        print(len(answers),len(questions))
         
         if len(answers) != len(questions):
             # Pad with error messages if needed
@@ -112,7 +119,7 @@ def start(questions: list[str], index: str, texts: str)->list[str]:
                 answers.extend([f"Missing answer for question {i+1}" for i in range(len(answers), len(questions))])
             else:
                 answers = answers[:len(questions)]
-        
+        print("answers",answers)
         return answers
         
     except (json.JSONDecodeError, ValueError, SyntaxError) as e:

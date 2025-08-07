@@ -9,7 +9,7 @@ import torch
 import gc
 import os
 import threading
-import openpyxl
+# import openpyxl
 from docx import Document
 
 
@@ -142,10 +142,10 @@ def ocrDocs():
         with open(f"{file[:-5]}.txt", 'w', encoding='utf-8') as txt_file:
             for para in doc.paragraphs:
                 txt_file.write(para.text + '\n')
-ocrDocs()
+# ocrDocs()
 
-# arr2 = [item for item in os.listdir('./') if item.endswith('.pdf')]
-# arr2 = [item[:-4] for item in arr2]
+arr2 = [item for item in os.listdir('./') if item.endswith('.pdf') or item.endswith('.txt')]
+arr2 = [item[:-4] for item in arr2]
 
-# for i in arr2:
-#     storeVectors(i)
+for i in arr2:
+    storeVectors(i)
