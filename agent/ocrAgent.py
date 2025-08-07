@@ -25,7 +25,7 @@ def readPDF(file_path:str,fileName:str):
     )
     
     result = poller.result()
-    with open(f"{fileName}.txt",'w',encoding='utf-8') as f:    
+    with open(f"{fileName}_png.txt",'w',encoding='utf-8') as f:    
         for page in result.pages:
             for line in page.lines:
                 f.write(line.content + "\n")
@@ -34,3 +34,4 @@ def readPDF(file_path:str,fileName:str):
 # fileName=file_path.split('/')[-1].split('.')[0]
 # readPDF(file_path,fileName)
 # uploadText(fileName)
+readPDF("unknownDoc/image.png","image")

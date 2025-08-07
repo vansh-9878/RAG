@@ -9,6 +9,9 @@ import torch
 import gc
 import os
 import threading
+import openpyxl
+from docx import Document
+
 
 # Set PyTorch CUDA memory allocation configuration to avoid fragmentation
 os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
@@ -118,8 +121,31 @@ def search(query,index,texts):
     results = search_faiss(index, query, texts)
     return results
 
-arr2 = [item for item in os.listdir('./') if item.endswith('.pdf')]
-arr2 = [item[:-4] for item in arr2]
 
-for i in arr2:
-    storeVectors(i)
+def ocrExcel():
+    arr=[item for item in os.listdir('./unknownDoc') if item.endswith('.xlsx')]
+    for file in arr:
+        workbook = openpyxl.load_workbook(f"./unknownDoc/{file}")
+        with open(f'{file[:-5]}.txt', 'w', encoding='utf-8') as txt_file:
+            for sheet in workbook.worksheets:
+                txt_file.write(f'--- Sheet: {sheet.title} ---\n')
+                for row in sheet.iter_rows(values_only=True):
+                    line = '\t'.join([str(cell) if cell is not None else '' for cell in row])
+                    txt_file.write(line + '\n')
+                txt_file.write('\n')
+    
+    
+def ocrDocs():
+    arr=[item for item in os.listdir('./unknownDoc') if item.endswith('.docx')]
+    for file in arr:
+        doc = Document(f"./unknownDoc/{file}")
+        with open(f"{file[:-5]}.txt", 'w', encoding='utf-8') as txt_file:
+            for para in doc.paragraphs:
+                txt_file.write(para.text + '\n')
+ocrDocs()
+
+# arr2 = [item for item in os.listdir('./') if item.endswith('.pdf')]
+# arr2 = [item[:-4] for item in arr2]
+
+# for i in arr2:
+#     storeVectors(i)
