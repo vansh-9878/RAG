@@ -3,6 +3,7 @@ from concurrent.futures import ThreadPoolExecutor
 from sentence_transformers import SentenceTransformer
 from tqdm import tqdm
 from langchain_core.tools import tool
+from pptx import Presentation
 # from localOCR import pdf_to_text
 import numpy as np
 import torch
@@ -14,13 +15,13 @@ from docx import Document
 
 
 # Set PyTorch CUDA memory allocation configuration to avoid fragmentation
-os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
+# os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
 
 # model = SentenceTransformer("BAAI/bge-small-en-v1.5")
 # model = SentenceTransformer("all-MiniLM-L6-v2")
 # Use GPU with fallback to CPU if CUDA is not available
 try:
-    model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2", device='cuda')
+    model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
 except RuntimeError:
     model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2", device='cpu')
 # model = SentenceTransformer("intfloat/e5-base-v2")
@@ -143,9 +144,26 @@ def ocrDocs():
             for para in doc.paragraphs:
                 txt_file.write(para.text + '\n')
 # ocrDocs()
+def extract_text_from_pptx(pptx_path, output_txt_path):
+    prs = Presentation(pptx_path)
+    full_text = []
 
-arr2 = [item for item in os.listdir('./') if item.endswith('.pdf') or item.endswith('.txt')]
-arr2 = [item[:-4] for item in arr2]
+    for slide_number, slide in enumerate(prs.slides, start=1):
+        slide_text = [f"--- Slide {slide_number} ---"]
+        for shape in slide.shapes:
+            if hasattr(shape, "text"):
+                slide_text.append(shape.text)
+        full_text.append("\n".join(slide_text))
 
-for i in arr2:
-    storeVectors(i)
+    with open(output_txt_path, "w", encoding="utf-8") as f:
+        f.write("\n\n".join(full_text))
+
+    print(f"Text extracted and saved to '{output_txt_path}'")
+
+extract_text_from_pptx("unknownDoc/Test Case HackRx.pptx","Test Case HackRx.txt")
+
+# arr2 = [item for item in os.listdir('./') if item.endswith('.pdf') or item.endswith('.txt')]
+# arr2 = [item[:-4] for item in arr2]
+
+# for i in arr2:
+#     storeVectors(i)
