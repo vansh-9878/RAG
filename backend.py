@@ -12,7 +12,71 @@ from docx import Document
 from dotenv import load_dotenv
 from datetime import datetime
 import time
+from bs4 import BeautifulSoup
+import json
+import logging
 load_dotenv()
+
+def scrape_url(url):
+    """
+    Web scraper to get data from URL and return it
+    """
+    try:
+        headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+        }
+        
+        response = requests.get(url, headers=headers, timeout=30)
+        response.raise_for_status()
+        
+        # Try to parse as JSON first
+        try:
+            json_data = response.json()
+            return json_data
+        except:
+            # If not JSON, return text content
+            soup = BeautifulSoup(response.text, 'html.parser')
+            # Remove script and style elements
+            for script in soup(["script", "style"]):
+                script.decompose()
+            
+            text = soup.get_text()
+            # Clean up whitespace
+            lines = (line.strip() for line in text.splitlines())
+            chunks = (phrase.strip() for line in lines for phrase in line.split("  "))
+            text = ' '.join(chunk for chunk in chunks if chunk)
+            
+            return text
+            
+    except requests.exceptions.RequestException as e:
+        logging.error(f"Error scraping URL {url}: {e}")
+        return None
+    except Exception as e:
+        logging.error(f"Unexpected error scraping URL {url}: {e}")
+        return None
+
+def check_content_for_embedding(content):
+    """
+    Check if content has sufficient data for embedding
+    Raises exception if content is empty or insufficient
+    """
+    if not content:
+        raise ValueError("Content is empty - no need to embed")
+    
+    if isinstance(content, str):
+        # Remove whitespace and check length
+        cleaned_content = content.strip()
+        if len(cleaned_content) == 0:
+            raise ValueError("Content is empty after cleaning - no need to embed")
+        if len(cleaned_content) < 10:  # Minimum threshold
+            raise ValueError("Content too short for meaningful embedding")
+    
+    elif isinstance(content, dict):
+        # For JSON content, check if it has meaningful data
+        if not any(content.values()):
+            raise ValueError("JSON content has no meaningful values - no need to embed")
+    
+    return True
 
 app=FastAPI()
 bearer_scheme = HTTPBearer()
@@ -78,23 +142,74 @@ def getFile(query: input):
         fileName+="_png"
     
     if fileName not in arr:
-        response = requests.get(query.documents)
-        content_type = response.headers.get("Content-Type")
-
-        if "pdf" in content_type:
-            with open(f'{fileName}.pdf', "wb") as f:
-                f.write(response.content)
-        elif "document" in content_type:
-            doc = Document(io.BytesIO(response.content))
-            text = "\n".join([para.text for para in doc.paragraphs])
-            with open(f"{fileName}.txt", 'w') as f:
-                f.write(text)
+        # Check if this is a web scraping URL
+        if "register.hackrx.in/utils/" in query.documents:
+            try:
+                content = scrape_url(query.documents)
+                if content:
+                    # Check if content is suitable for embedding
+                    try:
+                        check_content_for_embedding(content)
+                        # Save scraped content
+                        with open(f"{fileName}.txt", 'w', encoding='utf-8') as f:
+                            if isinstance(content, dict):
+                                f.write(json.dumps(content, indent=2))
+                            else:
+                                f.write(str(content))
+                    except ValueError as e:
+                        print(f"Skipping embedding for {query.documents}: {e}")
+                        # Return empty response for empty content
+                        return {"answers": ["Content is empty - no data available"] * len(query.questions)}
+                else:
+                    print(f"Failed to scrape content from {query.documents}")
+                    return {"answers": ["Failed to retrieve content from URL"] * len(query.questions)}
+            except Exception as e:
+                print(f"Error processing URL {query.documents}: {e}")
+                return {"answers": [f"Error processing URL: {str(e)}"] * len(query.questions)}
         else:
-            with open(f"{fileName}.txt", 'w') as f:
-                f.write(response.content)
+            # Regular file processing
+            response = requests.get(query.documents)
+            content_type = response.headers.get("Content-Type")
 
-        pdf_to_text(fileName)
-    index, texts = storeVectors(fileName)
+            if "pdf" in content_type:
+                with open(f'{fileName}.pdf', "wb") as f:
+                    f.write(response.content)
+            elif "document" in content_type:
+                doc = Document(io.BytesIO(response.content))
+                text = "\n".join([para.text for para in doc.paragraphs])
+                # Check content before saving
+                try:
+                    check_content_for_embedding(text)
+                    with open(f"{fileName}.txt", 'w') as f:
+                        f.write(text)
+                except ValueError as e:
+                    print(f"Skipping embedding for {fileName}: {e}")
+                    return {"answers": ["Document is empty - no data available"] * len(query.questions)}
+            else:
+                # Check content before saving
+                try:
+                    check_content_for_embedding(response.content)
+                    with open(f"{fileName}.txt", 'w') as f:
+                        f.write(response.content.decode('utf-8', errors='ignore'))
+                except ValueError as e:
+                    print(f"Skipping embedding for {fileName}: {e}")
+                    return {"answers": ["Content is empty - no data available"] * len(query.questions)}
+
+        try:
+            pdf_to_text(fileName)
+        except Exception as e:
+            print(f"Error in pdf_to_text for {fileName}: {e}")
+            # Continue processing even if OCR fails
+    
+    try:
+        index, texts = storeVectors(fileName)
+        # Check if vectors were created successfully
+        if not texts or len(texts) == 0:
+            print(f"No text content found for {fileName} after vector processing")
+            return {"answers": ["No meaningful content found in document"] * len(query.questions)}
+    except Exception as e:
+        print(f"Error in storeVectors for {fileName}: {e}")
+        return {"answers": [f"Error processing document: {str(e)}"] * len(query.questions)}
 
     questions = query.questions
     total_questions = len(questions)

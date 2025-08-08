@@ -1,0 +1,21 @@
+
+================================================================================
+REQUEST RECEIVED AT: 2025-08-08 12:10:51
+Documents: http://localhost:8000/Secret%20Token.html
+Questions: ['Go to url and get the secret key']
+================================================================================
+Secret Token Secret%20Token.html
+Error in pdf_to_text for Secret Token: no such file: 'Secret Token.pdf'
+1
+1
+Raw answer from model:
+["The secret key is dcf748c1aa477c4555dafb912305f0797df15807a48ac62c6c51cf367a00f221."]
+Parsed answers: ['The secret key is dcf748c1aa477c4555dafb912305f0797df15807a48ac62c6c51cf367a00f221.']
+1 1
+answers ['The secret key is dcf748c1aa477c4555dafb912305f0797df15807a48ac62c6c51cf367a00f221.']
+RESPONSE SENT:
+Response sent at: 2025-08-08 12:10:57
+Time taken: 5.82 seconds
+Answers: ['The secret key is dcf748c1aa477c4555dafb912305f0797df15807a48ac62c6c51cf367a00f221.']
+================================================================================
+INFO:     2401:4900:6331:3365:ec1b:bab1:7570:6828:0 - "POST /hackrx/run HTTP/1.1" 200 OK
