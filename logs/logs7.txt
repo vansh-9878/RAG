@@ -1,0 +1,68 @@
+
+================================================================================
+REQUEST RECEIVED AT: 2025-08-08 11:57:03
+Documents: https://hackrx.blob.core.windows.net/assets/Test%20/Test%20Case%20HackRx.pptx?sv=2023-01-03&spr=https&st=2025-08-04T18%3A36%3A56Z&se=2026-08-05T18%3A36%3A00Z&sr=b&sp=r&sig=v3zSJ%2FKW4RhXaNNVTU9KQbX%2Bmo5dDEIzwaBzXCOicJM%3D
+Questions: ['What is the grace period for premium payment under the National Parivar Mediclaim Plus Policy?', 'What is the waiting period for pre-existing diseases (PED) to be covered?', 'Does this policy cover maternity expenses, and what are the conditions?', 'What is the waiting period for cataract surgery?', 'Are the medical expenses for an organ donor covered under this policy?', 'What is the No Claim Discount (NCD) offered in this policy?', 'Is there a benefit for preventive health check-ups?', "How does the policy define a 'Hospital'?", 'What is the extent of coverage for AYUSH treatments?', 'Are there any sub-limits on room rent and ICU charges for Plan A?']
+================================================================================
+Test Case HackRx Test%20Case%20HackRx.pptx
+10
+10
+Raw answer from model:
+["This information is not found in the document.", "A 36-month waiting period applies for all pre-existing medical conditions before coverage becomes effective.", "Yes, optional maternity coverage is available with a 10% additional premium, covering the first two children up to ₹50,000 after a nine-month waiting period, with newborns covered from day one.", "There is a 1-3 year waiting period for specific conditions like cataract.", "Yes, ambulance services up to 1% of the sum insured or ₹2,000, and organ donation hospitalization expenses are covered.", "A low claim ratio discount of up to 40% premium reduction is offered.", "This information is not found in the document.", "A hospital is defined as a registered facility with qualified nursing staff and medical practitioners, having a minimum of 10-15 beds and an equipped operation theater.", "AYUSH Hospitals are covered for treatments like Ayurveda, Yoga, Unani, Siddha, and Homeopathy, provided by qualified traditional medicine practitioners.", "Room and nursing expenses are covered up to 1% of the sum insured or ₹5,000 daily, and ICU expenses are also covered. The document does not specify Plan A."]
+Parsed answers: ['This information is not found in the document.', 'A 36-month waiting period applies for all pre-existing medical conditions before coverage becomes effective.', 'Yes, optional maternity coverage is available with a 10% additional premium, covering the first two children up to ₹50,000 after a nine-month waiting period, with newborns covered from day one.', 'There is a 1-3 year waiting period for specific conditions like cataract.', 'Yes, ambulance services up to 1% of the sum insured or ₹2,000, and organ donation hospitalization expenses are covered.', 'A low claim ratio discount of up to 40% premium reduction is offered.', 'This information is not found in the document.', 'A hospital is defined as a registered facility with qualified nursing staff and medical practitioners, having a minimum of 10-15 beds and an equipped operation theater.', 'AYUSH Hospitals are covered for treatments like Ayurveda, Yoga, Unani, Siddha, and Homeopathy, provided by qualified traditional medicine practitioners.', 'Room and nursing expenses are covered up to 1% of the sum insured or ₹5,000 daily, and ICU expenses are also covered. The document does not specify Plan A.']
+10 10
+answers ['This information is not found in the document.', 'A 36-month waiting period applies for all pre-existing medical conditions before coverage becomes effective.', 'Yes, optional maternity coverage is available with a 10% additional premium, covering the first two children up to ₹50,000 after a nine-month waiting period, with newborns covered from day one.', 'There is a 1-3 year waiting period for specific conditions like cataract.', 'Yes, ambulance services up to 1% of the sum insured or ₹2,000, and organ donation hospitalization expenses are covered.', 'A low claim ratio discount of up to 40% premium reduction is offered.', 'This information is not found in the document.', 'A hospital is defined as a registered facility with qualified nursing staff and medical practitioners, having a minimum of 10-15 beds and an equipped operation theater.', 'AYUSH Hospitals are covered for treatments like Ayurveda, Yoga, Unani, Siddha, and Homeopathy, provided by qualified traditional medicine practitioners.', 'Room and nursing expenses are covered up to 1% of the sum insured or ₹5,000 daily, and ICU expenses are also covered. The document does not specify Plan A.']
+RESPONSE SENT:
+Response sent at: 2025-08-08 11:57:10
+Time taken: 6.93 seconds
+Answers: ['This information is not found in the document.', 'A 36-month waiting period applies for all pre-existing medical conditions before coverage becomes effective.', 'Yes, optional maternity coverage is available with a 10% additional premium, covering the first two children up to ₹50,000 after a nine-month waiting period, with newborns covered from day one.', 'There is a 1-3 year waiting period for specific conditions like cataract.', 'Yes, ambulance services up to 1% of the sum insured or ₹2,000, and organ donation hospitalization expenses are covered.', 'A low claim ratio discount of up to 40% premium reduction is offered.', 'This information is not found in the document.', 'A hospital is defined as a registered facility with qualified nursing staff and medical practitioners, having a minimum of 10-15 beds and an equipped operation theater.', 'AYUSH Hospitals are covered for treatments like Ayurveda, Yoga, Unani, Siddha, and Homeopathy, provided by qualified traditional medicine practitioners.', 'Room and nursing expenses are covered up to 1% of the sum insured or ₹5,000 daily, and ICU expenses are also covered. The document does not specify Plan A.']
+================================================================================
+INFO:     2401:4900:6331:3365:ec1b:bab1:7570:6828:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+
+================================================================================
+REQUEST RECEIVED AT: 2025-08-08 11:57:52
+Documents: https://hackrx.blob.core.windows.net/hackrx/rounds/FinalRound4SubmissionPDF.pdf?sv=2023-01-03&spr=https&st=2025-08-07T14%3A23%3A48Z&se=2027-08-08T14%3A23%3A00Z&sr=b&sp=r&sig=nMtZ2x9aBvz%2FPjRWboEOZIGB%2FaGfNf5TfBOrhGqSv4M%3D
+Questions: ['What is my flight number?']
+================================================================================
+FinalRound4SubmissionPDF FinalRound4SubmissionPDF.pdf
+1
+1
+Raw answer from model:
+["This information is not found in the document."]
+Parsed answers: ['This information is not found in the document.']
+1 1
+answers ['This information is not found in the document.']
+RESPONSE SENT:
+Response sent at: 2025-08-08 11:58:02
+Time taken: 9.43 seconds
+Answers: ['This information is not found in the document.']
+================================================================================
+INFO:     20.244.56.156:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+
+================================================================================
+REQUEST RECEIVED AT: 2025-08-08 11:58:04
+Documents: https://register.hackrx.in/utils/get-secret-token?hackTeam=1665
+Questions: ['Go to the link and get the secret token and return it']
+================================================================================
+get-secret-token get-secret-token
+INFO:     20.244.56.156:0 - "POST /hackrx/run HTTP/1.1" 500 Internal Server Error
+
+================================================================================
+REQUEST RECEIVED AT: 2025-08-08 11:58:18
+Documents: https://hackrx.blob.core.windows.net/hackrx/rounds/News.pdf?sv=2023-01-03&spr=https&st=2025-08-07T17%3A10%3A11Z&se=2026-08-08T17%3A10%3A00Z&sr=b&sp=r&sig=ybRsnfv%2B6VbxPz5xF7kLLjC4ehU0NF7KDkXua9ujSf0%3D
+Questions: ['ട്രംപ് ഏത് ദിവസമാണ് 100% ശുൽകം പ്രഖ്യാപിച്ചത്?', 'ഏത് ഉത്പന്നങ്ങൾക്ക് ഈ 100% ഇറക്കുമതി ശുൽകം ബാധകമാണ്?', 'ഏത് സാഹചര്യത്തിൽ ഒരു കമ്പനിയ്ക്ക് ഈ 100% ശുൽകത്തിൽ നിന്നും നിന്നും ഒഴികെയാക്കും?', 'What was Apple’s investment commitment and what was its objective?', 'What impact will this new policy have on consumers and the global market?']
+================================================================================
+News News.pdf
+5
+5
+Raw answer from model:
+["2025 ഓഗസ്റ്റ് 6-ന് ട്രംപ് 100% ശുൽകം പ്രഖ്യാപിച്ചു.", "വിദേശത്ത് നിർമ്മിച്ച കമ്പ്യൂട്ടർ ചിപ്പുകൾക്കും സെമിക്കണ്ടക്ടറുകൾക്കും ഈ 100% ഇറക്കുമതി ശുൽകം ബാധകമാണ്.", "യുഎസിൽ നിർമ്മിക്കാൻ പ്രതിജ്ഞാബദ്ധരായ കമ്പനികൾക്ക് ഈ 100% ശുൽകം ബാധകമല്ല.", "Apple committed to a future investment of 600 billion dollars, with the objective to strengthen American domestic manufacturing and reduce foreign dependency.", "This new policy will lead to increased prices and anti-trade reactions."]
+Parsed answers: ['2025 ഓഗസ്റ്റ് 6-ന് ട്രംപ് 100% ശുൽകം പ്രഖ്യാപിച്ചു.', 'വിദേശത്ത് നിർമ്മിച്ച കമ്പ്യൂട്ടർ ചിപ്പുകൾക്കും സെമിക്കണ്ടക്ടറുകൾക്കും ഈ 100% ഇറക്കുമതി ശുൽകം ബാധകമാണ്.', 'യുഎസിൽ നിർമ്മിക്കാൻ പ്രതിജ്ഞാബദ്ധരായ കമ്പനികൾക്ക് ഈ 100% ശുൽകം ബാധകമല്ല.', 'Apple committed to a future investment of 600 billion dollars, with the objective to strengthen American domestic manufacturing and reduce foreign dependency.', 'This new policy will lead to increased prices and anti-trade reactions.']
+5 5
+answers ['2025 ഓഗസ്റ്റ് 6-ന് ട്രംപ് 100% ശുൽകം പ്രഖ്യാപിച്ചു.', 'വിദേശത്ത് നിർമ്മിച്ച കമ്പ്യൂട്ടർ ചിപ്പുകൾക്കും സെമിക്കണ്ടക്ടറുകൾക്കും ഈ 100% ഇറക്കുമതി ശുൽകം ബാധകമാണ്.', 'യുഎസിൽ നിർമ്മിക്കാൻ പ്രതിജ്ഞാബദ്ധരായ കമ്പനികൾക്ക് ഈ 100% ശുൽകം ബാധകമല്ല.', 'Apple committed to a future investment of 600 billion dollars, with the objective to strengthen American domestic manufacturing and reduce foreign dependency.', 'This new policy will lead to increased prices and anti-trade reactions.']
+RESPONSE SENT:
+Response sent at: 2025-08-08 11:58:28
+Time taken: 9.54 seconds
+Answers: ['2025 ഓഗസ്റ്റ് 6-ന് ട്രംപ് 100% ശുൽകം പ്രഖ്യാപിച്ചു.', 'വിദേശത്ത് നിർമ്മിച്ച കമ്പ്യൂട്ടർ ചിപ്പുകൾക്കും സെമിക്കണ്ടക്ടറുകൾക്കും ഈ 100% ഇറക്കുമതി ശുൽകം ബാധകമാണ്.', 'യുഎസിൽ നിർമ്മിക്കാൻ പ്രതിജ്ഞാബദ്ധരായ കമ്പനികൾക്ക് ഈ 100% ശുൽകം ബാധകമല്ല.', 'Apple committed to a future investment of 600 billion dollars, with the objective to strengthen American domestic manufacturing and reduce foreign dependency.', 'This new policy will lead to increased prices and anti-trade reactions.']
+================================================================================
+INFO:     20.244.56.156:0 - "POST /hackrx/run HTTP/1.1" 200 OK

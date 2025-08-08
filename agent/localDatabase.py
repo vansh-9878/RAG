@@ -15,7 +15,7 @@ from docx import Document
 
 
 # Set PyTorch CUDA memory allocation configuration to avoid fragmentation
-# os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
+os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
 
 # model = SentenceTransformer("BAAI/bge-small-en-v1.5")
 # model = SentenceTransformer("all-MiniLM-L6-v2")
@@ -160,7 +160,7 @@ def extract_text_from_pptx(pptx_path, output_txt_path):
 
     print(f"Text extracted and saved to '{output_txt_path}'")
 
-extract_text_from_pptx("unknownDoc/Test Case HackRx.pptx","Test Case HackRx.txt")
+# extract_text_from_pptx("unknownDoc/Test Case HackRx.pptx","Test Case HackRx.txt")
 
 # arr2 = [item for item in os.listdir('./') if item.endswith('.pdf') or item.endswith('.txt')]
 # arr2 = [item[:-4] for item in arr2]
