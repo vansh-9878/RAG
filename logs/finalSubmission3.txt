@@ -1,0 +1,100 @@
+INFO:     2401:4900:632b:c625:6061:4bff:fe18:3612:0 - "GET /hackrx/run HTTP/1.1" 200 OK
+INFO:     2401:4900:632b:c625:6061:4bff:fe18:3612:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     122.187.117.179:0 - "GET /hackrx/run HTTP/1.1" 200 OK
+
+================================================================================
+REQUEST RECEIVED AT: 2025-08-08 19:58:05
+Documents: https://hackrx.blob.core.windows.net/hackrx/rounds/FinalRound4SubmissionPDF.pdf?sv=2023-01-03&spr=https&st=2025-08-07T14%3A23%3A48Z&se=2027-08-08T14%3A23%3A00Z&sr=b&sp=r&sig=nMtZ2x9aBvz%2FPjRWboEOZIGB%2FaGfNf5TfBOrhGqSv4M%3D
+Questions: ['What is my flight number?']
+================================================================================
+Classifying question: What is my flight number?
+Classified as COMPLEX navigation
+Classifying question: What is my flight number?
+Classified as COMPLEX navigation
+Detected intent: complex
+Executing complex navigation for: What is my flight number?
+Found 6 URLs in document
+Scraping URL 1: https://register.hackrx.in/submissions/myFavouriteCity
+Scraping URL 2: https://register.hackrx.in/teams/public/flights/getFirstCityFlightNumber
+Scraping URL 3: https://register.hackrx.in/teams/public/flights/getSecondCityFlightNumber
+Scraping URL 4: https://register.hackrx.in/teams/public/flights/getThirdCityFlightNumber
+Scraping URL 5: https://register.hackrx.in/teams/public/flights/getFourthCityFlightNumber
+==================================================
+GEMINI REQUEST FOR COMPLEX QUESTION:
+Question: What is my flight number?
+Scraped 5 URLs successfully
+==================================================
+Using direct extraction method...
+Looking for flight number in scraped data...
+Checking url_1: https://register.hackrx.in/submissions/myFavouriteCity
+Found favorite city: New York
+Checking url_2: https://register.hackrx.in/teams/public/flights/getFirstCityFlightNumber
+Found flight number: b34c59 from https://register.hackrx.in/teams/public/flights/getFirstCityFlightNumber
+Checking url_3: https://register.hackrx.in/teams/public/flights/getSecondCityFlightNumber
+Found flight number: 9868fa from https://register.hackrx.in/teams/public/flights/getSecondCityFlightNumber
+Checking url_4: https://register.hackrx.in/teams/public/flights/getThirdCityFlightNumber
+Found flight number: a929f3 from https://register.hackrx.in/teams/public/flights/getThirdCityFlightNumber
+Checking url_5: https://register.hackrx.in/teams/public/flights/getFourthCityFlightNumber
+Found flight number: 5c5d83 from https://register.hackrx.in/teams/public/flights/getFourthCityFlightNumber
+Favorite city is: New York
+Available flight numbers: {'https://register.hackrx.in/teams/public/flights/getFirstCityFlightNumber': 'b34c59', 'https://register.hackrx.in/teams/public/flights/getSecondCityFlightNumber': '9868fa', 'https://register.hackrx.in/teams/public/flights/getThirdCityFlightNumber': 'a929f3', 'https://register.hackrx.in/teams/public/flights/getFourthCityFlightNumber': '5c5d83'}
+City New York has landmark: Eiffel Tower
+Landmark Eiffel Tower maps to endpoint: getThirdCityFlightNumber
+Selected flight number a929f3 for city New York with landmark Eiffel Tower
+RESPONSE SENT:
+Response sent at: 2025-08-08 19:58:09
+Time taken: 4.09 seconds
+Answers: ['a929f3']
+================================================================================
+INFO:     20.244.56.156:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+
+================================================================================
+REQUEST RECEIVED AT: 2025-08-08 19:58:12
+Documents: https://register.hackrx.in/utils/get-secret-token?hackTeam=8798
+Questions: ['Go to the link and get the secret token and return it']
+================================================================================
+Classifying question: Go to the link and get the secret token and return it
+Classified as COMPLEX navigation
+Classifying question: Go to the link and get the secret token and return it
+Classified as COMPLEX navigation
+Detected intent: complex
+Executing complex navigation for: Go to the link and get the secret token and return it
+Found 0 URLs in document
+No URLs in document, but this appears to be a secret/token/link question
+Trying to access the document URL directly for secret extraction
+RESPONSE SENT:
+Response sent at: 2025-08-08 19:58:13
+Time taken: 0.55 seconds
+Answers: ['Secret Token 🔒 Your Secret Token a8f53abbf9f74bf4bf6dbd91ef5477cc7eb584e85cb6be728cef1cbb61435f46']
+================================================================================
+INFO:     20.244.56.156:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+
+================================================================================
+REQUEST RECEIVED AT: 2025-08-08 19:58:15
+Documents: https://hackrx.blob.core.windows.net/hackrx/rounds/News.pdf?sv=2023-01-03&spr=https&st=2025-08-07T17%3A10%3A11Z&se=2026-08-08T17%3A10%3A00Z&sr=b&sp=r&sig=ybRsnfv%2B6VbxPz5xF7kLLjC4ehU0NF7KDkXua9ujSf0%3D
+Questions: ['ട്രംപ് ഏത് ദിവസമാണ് 100% ശുൽകം പ്രഖ്യാപിച്ചത്?', 'ഏത് ഉത്പന്നങ്ങൾക്ക് ഈ 100% ഇറക്കുമതി ശുൽകം ബാധകമാണ്?', 'ഏത് സാഹചര്യത്തിൽ ഒരു കമ്പനിയ്ക്ക് ഈ 100% ശുൽകത്തിൽ നിന്നും നിന്നും ഒഴികെയാക്കും?', 'What was Apple’s investment commitment and what was its objective?', 'What impact will this new policy have on consumers and the global market?']
+================================================================================
+Classifying question: ട്രംപ് ഏത് ദിവസമാണ് 100% ശുൽകം പ്രഖ്യാപിച്ചത്?
+Classified as SIMPLE document Q&A
+Classifying question: ഏത് ഉത്പന്നങ്ങൾക്ക് ഈ 100% ഇറക്കുമതി ശുൽകം ബാധകമാണ്?
+Classified as SIMPLE document Q&A
+Classifying question: ഏത് സാഹചര്യത്തിൽ ഒരു കമ്പനിയ്ക്ക് ഈ 100% ശുൽകത്തിൽ നിന്നും നിന്നും ഒഴികെയാക്കും?
+Classified as SIMPLE document Q&A
+Classifying question: What was Apple’s investment commitment and what was its objective?
+Classified as SIMPLE document Q&A
+Classifying question: What impact will this new policy have on consumers and the global market?
+Classified as SIMPLE document Q&A
+News News.pdf
+5
+5
+Raw answer from model:
+["ട്രംപ് 2025 ഓഗസ്റ്റ് 6-ന് 100% ശുൽകം പ്രഖ്യാപിച്ചു.", "വിദേശത്ത് നിർമ്മിച്ച കമ്പ്യൂട്ടർ ചിപ്പുകൾക്കും സെമിക്കണ്ടക്ടറുകൾക്കുമാണ് ഈ 100% ഇറക്കുമതി ശുൽകം ബാധകം.", "യുഎസിൽ നിർമ്മിക്കാൻ പ്രതിജ്ഞാബദ്ധരായ കമ്പനികൾക്ക് ഈ 100% ശുൽകം ബാധകമല്ല.", "Apple’s investment commitment was 600 billion dollars, but its objective is not found in the document.", "This new policy could lead to price increases and anti-commercial reactions."]
+Parsed answers: ['ട്രംപ് 2025 ഓഗസ്റ്റ് 6-ന് 100% ശുൽകം പ്രഖ്യാപിച്ചു.', 'വിദേശത്ത് നിർമ്മിച്ച കമ്പ്യൂട്ടർ ചിപ്പുകൾക്കും സെമിക്കണ്ടക്ടറുകൾക്കുമാണ് ഈ 100% ഇറക്കുമതി ശുൽകം ബാധകം.', 'യുഎസിൽ നിർമ്മിക്കാൻ പ്രതിജ്ഞാബദ്ധരായ കമ്പനികൾക്ക് ഈ 100% ശുൽകം ബാധകമല്ല.', 'Apple’s investment commitment was 600 billion dollars, but its objective is not found in the document.', 'This new policy could lead to price increases and anti-commercial reactions.']
+5 5
+answers ['ട്രംപ് 2025 ഓഗസ്റ്റ് 6-ന് 100% ശുൽകം പ്രഖ്യാപിച്ചു.', 'വിദേശത്ത് നിർമ്മിച്ച കമ്പ്യൂട്ടർ ചിപ്പുകൾക്കും സെമിക്കണ്ടക്ടറുകൾക്കുമാണ് ഈ 100% ഇറക്കുമതി ശുൽകം ബാധകം.', 'യുഎസിൽ നിർമ്മിക്കാൻ പ്രതിജ്ഞാബദ്ധരായ കമ്പനികൾക്ക് ഈ 100% ശുൽകം ബാധകമല്ല.', 'Apple’s investment commitment was 600 billion dollars, but its objective is not found in the document.', 'This new policy could lead to price increases and anti-commercial reactions.']
+RESPONSE SENT:
+Response sent at: 2025-08-08 19:58:24
+Time taken: 8.38 seconds
+Answers: ['ട്രംപ് 2025 ഓഗസ്റ്റ് 6-ന് 100% ശുൽകം പ്രഖ്യാപിച്ചു.', 'വിദേശത്ത് നിർമ്മിച്ച കമ്പ്യൂട്ടർ ചിപ്പുകൾക്കും സെമിക്കണ്ടക്ടറുകൾക്കുമാണ് ഈ 100% ഇറക്കുമതി ശുൽകം ബാധകം.', 'യുഎസിൽ നിർമ്മിക്കാൻ പ്രതിജ്ഞാബദ്ധരായ കമ്പനികൾക്ക് ഈ 100% ശുൽകം ബാധകമല്ല.', 'Apple’s investment commitment was 600 billion dollars, but its objective is not found in the document.', 'This new policy could lead to price increases and anti-commercial reactions.']
+================================================================================
+INFO:     20.244.56.156:0 - "POST /hackrx/run HTTP/1.1" 200 OK
