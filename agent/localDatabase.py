@@ -17,7 +17,7 @@ from docx import Document
 # Set PyTorch CUDA memory allocation configuration to avoid fragmentation
 os.environ['PYTORCH_CUDA_ALLOC_CONF'] = 'expandable_segments:True'
 
-# model = SentenceTransformer("BAAI/bge-small-en-v1.5")
+# model = SentenceTransformer("BAAI/bge-base/-en-v1.5")
 # model = SentenceTransformer("all-MiniLM-L6-v2")
 # Use GPU with fallback to CPU if CUDA is not available
 try:
