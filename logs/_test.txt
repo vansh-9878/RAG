@@ -1,0 +1,95 @@
+INFO:     2401:4900:632b:c625:dd38:29cd:333f:1f55:0 - "GET /hackrx/run HTTP/1.1" 200 OK
+INFO:     2401:4900:632b:c625:dd38:29cd:333f:1f55:0 - "GET /hackrx/run HTTP/1.1" 200 OK
+INFO:     2401:4900:632b:c625:dd38:29cd:333f:1f55:0 - "GET /hackrx/run HTTP/1.1" 200 OK
+
+================================================================================
+REQUEST RECEIVED AT: 2025-08-08 15:13:15
+Documents: https://register.hackrx.in/utils/get-secret-token?hackTeam=1665
+Questions: ['what is the secret key']
+================================================================================
+Classifying question: what is the secret key
+Classified as COMPLEX navigation
+Classifying question: what is the secret key
+Classified as COMPLEX navigation
+Detected intent: complex
+Executing complex navigation for: what is the secret key
+Found 0 URLs in document
+RESPONSE SENT:
+Response sent at: 2025-08-08 15:13:16
+Time taken: 0.99 seconds
+Answers: ['No URLs found in document for complex navigation']
+================================================================================
+INFO:     14.195.131.227:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+
+================================================================================
+REQUEST RECEIVED AT: 2025-08-08 15:13:45
+Documents: https://register.hackrx.in/utils/get-secret-token?hackTeam=1665
+Questions: ['what is the secret key']
+================================================================================
+Classifying question: what is the secret key
+Classified as COMPLEX navigation
+Classifying question: what is the secret key
+Classified as COMPLEX navigation
+Detected intent: complex
+Executing complex navigation for: what is the secret key
+Found 0 URLs in document
+RESPONSE SENT:
+Response sent at: 2025-08-08 15:13:46
+Time taken: 0.58 seconds
+Answers: ['No URLs found in document for complex navigation']
+================================================================================
+INFO:     14.195.131.227:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+
+================================================================================
+REQUEST RECEIVED AT: 2025-08-08 15:14:24
+Documents: https://register.hackrx.in/utils/get-secret-token?hackTeam=1665
+Questions: ['what is the secret key']
+================================================================================
+Classifying question: what is the secret key
+Classified as COMPLEX navigation
+Classifying question: what is the secret key
+Classified as COMPLEX navigation
+Detected intent: complex
+Executing complex navigation for: what is the secret key
+Found 0 URLs in document
+RESPONSE SENT:
+Response sent at: 2025-08-08 15:14:25
+Time taken: 0.46 seconds
+Answers: ['No URLs found in document for complex navigation']
+================================================================================
+INFO:     14.195.131.227:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+
+================================================================================
+REQUEST RECEIVED AT: 2025-08-08 15:15:01
+Documents: http://localhost:8000/Secret%20Token.html
+Questions: ['Go to url and get the secret key']
+================================================================================
+Classifying question: Go to url and get the secret key
+Classified as COMPLEX navigation
+Classifying question: Go to url and get the secret key
+Classified as COMPLEX navigation
+Detected intent: complex
+Executing complex navigation for: Go to url and get the secret key
+Found 2 URLs in document
+Scraping URL 1: https://www.gstatic.com/images/branding/googlelogo
+Scraping URL 2: https://www.hcaptcha.com/
+==================================================
+GEMINI REQUEST FOR COMPLEX QUESTION:
+Question: Go to url and get the secret key
+Scraped 1 URLs successfully
+==================================================
+Using direct extraction method...
+Looking for secret/token/key...
+Detected secret/token question, using direct document URL access
+RESPONSE SENT:
+Response sent at: 2025-08-08 15:15:03
+Time taken: 2.37 seconds
+Answers: ['Secret Token ð\x9f\x94\x92 Your Secret Token dcf748c1aa477c4555dafb912305f0797df15807a48ac62c6c51cf367a00f221']
+================================================================================
+INFO:     127.0.0.1:53874 - "POST /hackrx/run HTTP/1.1" 200 OK
+INFO:     91.84.111.136:0 - "GET / HTTP/1.1" 404 Not Found
+INFO:     66.249.65.96:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     66.249.65.105:0 - "GET / HTTP/1.1" 404 Not Found
+INFO:     66.249.65.105:0 - "GET / HTTP/1.1" 404 Not Found
+INFO:     66.249.65.105:0 - "GET / HTTP/1.1" 404 Not Found
+INFO:     66.249.65.105:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
