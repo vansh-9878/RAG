@@ -11,7 +11,7 @@ A modern, responsive web interface for the RAG (Retrieval-Augmented Generation) 
 - **Error Handling**: User-friendly error messages and validation
 - **Auto-save**: Saves form data locally for convenience
 - **Copy to Clipboard**: Easy copying of results
-- **Keyboard Shortcuts**: 
+- **Keyboard Shortcuts**:
   - Ctrl/Cmd + Enter: Submit form
   - Escape: Clear errors
 
@@ -20,6 +20,7 @@ A modern, responsive web interface for the RAG (Retrieval-Augmented Generation) 
 1. **Enter Document URL**: Provide the URL of the document you want to analyze (PDF, DOC, etc.)
 
 2. **Add Questions**: Enter one or more questions about the document. You can:
+
    - Add new questions with the "Add Question" button
    - Remove questions with the trash icon
    - Press Enter in any question field to submit
@@ -33,6 +34,7 @@ A modern, responsive web interface for the RAG (Retrieval-Augmented Generation) 
 ## Technical Details
 
 ### Files Structure
+
 ```
 frontend/
 ├── index.html          # Main HTML file
@@ -53,6 +55,7 @@ frontend/
 ### API Integration
 
 The frontend communicates with the FastAPI backend via:
+
 - **Endpoint**: `POST /hackrx/run`
 - **Authentication**: Bearer token in Authorization header
 - **Request Format**:
@@ -72,11 +75,13 @@ The frontend communicates with the FastAPI backend via:
 ## Customization
 
 ### Styling
+
 - Main colors can be changed in `styles.css` CSS variables
 - Tailwind classes can be modified in `index.html`
 - Custom animations and effects are in `styles.css`
 
 ### Functionality
+
 - Modify `script.js` to add new features
 - Validation rules can be updated in the `validateInputs()` function
 - API endpoint can be changed in the `handleSubmit()` function

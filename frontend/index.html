@@ -1,145 +1,198 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>RAG Document Query System</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link href="/static/styles.css" rel="stylesheet">
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link href="/static/styles.css" rel="stylesheet" />
     <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      .gradient-bg {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      }
+      .question-item {
+        transition: all 0.3s ease;
+      }
+      .question-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .loading-spinner {
+        border: 4px solid #f3f4f6;
+        border-top: 4px solid #3b82f6;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
         }
-        .question-item {
-            transition: all 0.3s ease;
+        100% {
+          transform: rotate(360deg);
         }
-        .question-item:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-        .loading-spinner {
-            border: 4px solid #f3f4f6;
-            border-top: 4px solid #3b82f6;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-        }
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-        .answer-card {
-            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-            border-left: 4px solid #3b82f6;
-        }
+      }
+      .answer-card {
+        background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        border-left: 4px solid #3b82f6;
+      }
     </style>
-</head>
-<body class="bg-gray-50 min-h-screen">
+  </head>
+  <body class="bg-gray-50 min-h-screen">
     <div class="gradient-bg text-white py-8">
-        <div class="container mx-auto px-4">
-            <h1 class="text-4xl font-bold text-center mb-2">
-                <i class="fas fa-robot mr-3"></i>RAG Document Query System
-            </h1>
-            <p class="text-center text-blue-100">Intelligent Document Analysis & Question Answering</p>
-        </div>
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl font-bold text-center mb-2">
+          <i class="fas fa-robot mr-3"></i>RAG Document Query System
+        </h1>
+        <p class="text-center text-blue-100">
+          Intelligent Document Analysis & Question Answering
+        </p>
+      </div>
     </div>
 
     <div class="container mx-auto px-4 py-8">
-        <div class="max-w-6xl mx-auto">
-            <!-- Input Section -->
-            <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
-                <h2 class="text-2xl font-semibold mb-6 text-gray-800">
-                    <i class="fas fa-file-upload mr-2 text-blue-500"></i>Submit Your Query
-                </h2>
-                
-                <!-- Document URL Input -->
-                <div class="mb-6">
-                    <label for="documentUrl" class="block text-sm font-medium text-gray-700 mb-2">
-                        Document URL
-                    </label>
-                    <input type="url" id="documentUrl" 
-                           class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                           placeholder="https://example.com/document.pdf">
-                    <p class="text-sm text-gray-500 mt-1">Enter the URL of the document you want to analyze</p>
+      <div class="max-w-6xl mx-auto">
+        <!-- Input Section -->
+        <div class="bg-white rounded-lg shadow-lg p-6 mb-8">
+          <h2 class="text-2xl font-semibold mb-6 text-gray-800">
+            <i class="fas fa-file-upload mr-2 text-blue-500"></i>Submit Your
+            Query
+          </h2>
+
+          <!-- Document URL Input -->
+          <div class="mb-6">
+            <label
+              for="documentUrl"
+              class="block text-sm font-medium text-gray-700 mb-2"
+            >
+              Document URL
+            </label>
+            <input
+              type="url"
+              id="documentUrl"
+              class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              placeholder="https://example.com/document.pdf"
+            />
+            <p class="text-sm text-gray-500 mt-1">
+              Enter the URL of the document you want to analyze
+            </p>
+          </div>
+
+          <!-- Questions Input -->
+          <div class="mb-6">
+            <label
+              for="questions"
+              class="block text-sm font-medium text-gray-700 mb-2"
+            >
+              Questions
+            </label>
+            <div id="questionsContainer">
+              <div class="question-input-group mb-3">
+                <div class="flex items-center space-x-2">
+                  <input
+                    type="text"
+                    class="question-input flex-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Enter your question..."
+                  />
+                  <button
+                    type="button"
+                    class="remove-question-btn bg-red-500 text-white p-3 rounded-lg hover:bg-red-600 transition-colors"
+                  >
+                    <i class="fas fa-trash"></i>
+                  </button>
                 </div>
-
-                <!-- Questions Input -->
-                <div class="mb-6">
-                    <label for="questions" class="block text-sm font-medium text-gray-700 mb-2">
-                        Questions
-                    </label>
-                    <div id="questionsContainer">
-                        <div class="question-input-group mb-3">
-                            <div class="flex items-center space-x-2">
-                                <input type="text" class="question-input flex-1 p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                                       placeholder="Enter your question...">
-                                <button type="button" class="remove-question-btn bg-red-500 text-white p-3 rounded-lg hover:bg-red-600 transition-colors">
-                                    <i class="fas fa-trash"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <button type="button" id="addQuestionBtn" 
-                            class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors">
-                        <i class="fas fa-plus mr-2"></i>Add Question
-                    </button>
-                </div>
-
-                <!-- Token Input -->
-                <div class="mb-6">
-                    <label for="authToken" class="block text-sm font-medium text-gray-700 mb-2">
-                        Authentication Token
-                    </label>
-                    <input type="password" id="authToken" 
-                           class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                           placeholder="Enter your authentication token">
-                    <p class="text-sm text-gray-500 mt-1">Required for API access</p>
-                </div>
-
-                <!-- Submit Button -->
-                <button type="button" id="submitBtn" 
-                        class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
-                    <i class="fas fa-search mr-2"></i>Analyze Document
-                </button>
+              </div>
             </div>
+            <button
+              type="button"
+              id="addQuestionBtn"
+              class="bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors"
+            >
+              <i class="fas fa-plus mr-2"></i>Add Question
+            </button>
+          </div>
 
-            <!-- Loading Section -->
-            <div id="loadingSection" class="hidden bg-white rounded-lg shadow-lg p-8 mb-8 text-center">
-                <div class="loading-spinner mx-auto mb-4"></div>
-                <h3 class="text-lg font-semibold text-gray-700">Processing your request...</h3>
-                <p class="text-gray-500">This may take a few moments</p>
-                <div id="processingTime" class="text-sm text-gray-400 mt-2"></div>
-            </div>
+          <!-- Token Input -->
+          <div class="mb-6">
+            <label
+              for="authToken"
+              class="block text-sm font-medium text-gray-700 mb-2"
+            >
+              Authentication Token
+            </label>
+            <input
+              type="password"
+              id="authToken"
+              class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              placeholder="Enter your authentication token"
+            />
+            <p class="text-sm text-gray-500 mt-1">Required for API access</p>
+          </div>
 
-            <!-- Results Section -->
-            <div id="resultsSection" class="hidden">
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h2 class="text-2xl font-semibold mb-6 text-gray-800">
-                        <i class="fas fa-lightbulb mr-2 text-yellow-500"></i>Results
-                    </h2>
-                    <div id="resultsContainer"></div>
-                </div>
-            </div>
-
-            <!-- Error Section -->
-            <div id="errorSection" class="hidden bg-red-50 border border-red-200 rounded-lg p-6 mb-8">
-                <h3 class="text-lg font-semibold text-red-800 mb-2">
-                    <i class="fas fa-exclamation-triangle mr-2"></i>Error
-                </h3>
-                <p id="errorMessage" class="text-red-700"></p>
-            </div>
+          <!-- Submit Button -->
+          <button
+            type="button"
+            id="submitBtn"
+            class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+          >
+            <i class="fas fa-search mr-2"></i>Analyze Document
+          </button>
         </div>
+
+        <!-- Loading Section -->
+        <div
+          id="loadingSection"
+          class="hidden bg-white rounded-lg shadow-lg p-8 mb-8 text-center"
+        >
+          <div class="loading-spinner mx-auto mb-4"></div>
+          <h3 class="text-lg font-semibold text-gray-700">
+            Processing your request...
+          </h3>
+          <p class="text-gray-500">This may take a few moments</p>
+          <div id="processingTime" class="text-sm text-gray-400 mt-2"></div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="resultsSection" class="hidden">
+          <div class="bg-white rounded-lg shadow-lg p-6">
+            <h2 class="text-2xl font-semibold mb-6 text-gray-800">
+              <i class="fas fa-lightbulb mr-2 text-yellow-500"></i>Results
+            </h2>
+            <div id="resultsContainer"></div>
+          </div>
+        </div>
+
+        <!-- Error Section -->
+        <div
+          id="errorSection"
+          class="hidden bg-red-50 border border-red-200 rounded-lg p-6 mb-8"
+        >
+          <h3 class="text-lg font-semibold text-red-800 mb-2">
+            <i class="fas fa-exclamation-triangle mr-2"></i>Error
+          </h3>
+          <p id="errorMessage" class="text-red-700"></p>
+        </div>
+      </div>
     </div>
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-white py-6 mt-12">
-        <div class="container mx-auto px-4 text-center">
-            <p>&copy; 2025 RAG Document Query System. Built with FastAPI and modern web technologies.</p>
-        </div>
+      <div class="container mx-auto px-4 text-center">
+        <p>
+          &copy; 2025 RAG Document Query System. Built with FastAPI and modern
+          web technologies.
+        </p>
+      </div>
     </footer>
 
     <script src="/static/script.js"></script>
-</body>
+  </body>
 </html>

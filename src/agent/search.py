@@ -17,7 +17,7 @@ model = SentenceTransformer("sentence-transformers/all-mpnet-base-v2")
 from concurrent.futures import ThreadPoolExecutor
 
 def uploadText(fileName: str, batch_size=50):
-    with open(f"{fileName}.txt", 'r', encoding='utf-8') as f:
+    with open(f"../data/processed/{fileName}.txt", 'r', encoding='utf-8') as f:
         text = f.read().strip().replace("\n"," ")
     if not text:
         return

@@ -4,6 +4,17 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from pydantic import BaseModel
+import sys
+import os
+from pathlib import Path
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+
+# Get the project root directory (parent of src)
+PROJECT_ROOT = Path(__file__).parent.parent
+FRONTEND_DIR = PROJECT_ROOT / "frontend"
+DATA_DIR = PROJECT_ROOT / "data"
+VECTOR_DIR = PROJECT_ROOT / "vector"
+
 from agent.localDatabase import storeVectors
 from agent.agent import start
 from agent.localOCR import pdf_to_text
@@ -538,7 +549,7 @@ app=FastAPI()
 bearer_scheme = HTTPBearer()
 
 # Mount static files for frontend
-app.mount("/static", StaticFiles(directory="frontend"), name="static")
+app.mount("/static", StaticFiles(directory=str(FRONTEND_DIR)), name="static")
 
 app.add_middleware(
     CORSMiddleware,
@@ -569,7 +580,7 @@ def verify_token(credentials: HTTPAuthorizationCredentials = Depends(bearer_sche
 
 @app.get("/")
 def serve_frontend():
-    return FileResponse("frontend/index.html")
+    return FileResponse(str(FRONTEND_DIR / "index.html"))
 
 @app.get("/hackrx/run")
 def check():
@@ -578,7 +589,7 @@ def check():
     }
     
     
-arr=os.listdir('./vector')
+arr=os.listdir(str(VECTOR_DIR))
 arr=[item.split(".")[0] for item in arr]
     
 @app.post("/hackrx/run", dependencies=[Depends(verify_token)])
@@ -607,8 +618,8 @@ def getFile(query: input):
             content_type = response.headers.get("Content-Type", "")
             if "pdf" in content_type:
                 # For PDFs, we'll check if we have the text version
-                text_file = f"{fileName}.txt"
-                if os.path.exists(text_file):
+                text_file = DATA_DIR / "processed" / f"{fileName}.txt"
+                if text_file.exists():
                     with open(text_file, 'r', encoding='utf-8') as f:
                         document_content = f.read()
             else:
@@ -673,7 +684,8 @@ def getFile(query: input):
                     try:
                         check_content_for_embedding(content)
                         # Save scraped content
-                        with open(f"{fileName}.txt", 'w', encoding='utf-8') as f:
+                        processed_file = DATA_DIR / "processed" / f"{fileName}.txt"
+                        with open(processed_file, 'w', encoding='utf-8') as f:
                             if isinstance(content, dict):
                                 f.write(json.dumps(content, indent=2))
                             else:
@@ -694,7 +706,8 @@ def getFile(query: input):
             content_type = response.headers.get("Content-Type")
 
             if "pdf" in content_type:
-                with open(f'{fileName}.pdf', "wb") as f:
+                pdf_file = DATA_DIR / "documents" / f"{fileName}.pdf"
+                with open(pdf_file, "wb") as f:
                     f.write(response.content)
             elif "document" in content_type:
                 doc = Document(io.BytesIO(response.content))
@@ -702,7 +715,8 @@ def getFile(query: input):
                 # Check content before saving
                 try:
                     check_content_for_embedding(text)
-                    with open(f"{fileName}.txt", 'w') as f:
+                    processed_file = DATA_DIR / "processed" / f"{fileName}.txt"
+                    with open(processed_file, 'w') as f:
                         f.write(text)
                 except ValueError as e:
                     print(f"Skipping embedding for {fileName}: {e}")
@@ -711,7 +725,8 @@ def getFile(query: input):
                 # Check content before saving
                 try:
                     check_content_for_embedding(response.content)
-                    with open(f"{fileName}.txt", 'w') as f:
+                    processed_file = DATA_DIR / "processed" / f"{fileName}.txt"
+                    with open(processed_file, 'w') as f:
                         f.write(response.content.decode('utf-8', errors='ignore'))
                 except ValueError as e:
                     print(f"Skipping embedding for {fileName}: {e}")

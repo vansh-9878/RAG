@@ -1,6 +1,28 @@
 
 ================================================================================
-REQUEST RECEIVED AT: 2025-08-10 22:07:07
+REQUEST RECEIVED AT: 2025-08-10 22:59:39
+Documents: https://hackrx.blob.core.windows.net/hackrx/rounds/News.pdf?sv=2023-01-03&spr=https&st=2025-08-07T17%3A10%3A11Z&se=2026-08-08T17%3A10%3A00Z&sr=b&sp=r&sig=ybRsnfv%2B6VbxPz5xF7kLLjC4ehU0NF7KDkXua9ujSf0%3D
+Questions: ['What impact will this new policy have on consumers and the global market?']
+================================================================================
+Classifying question: What impact will this new policy have on consumers and the global market?
+Classified as SIMPLE document Q&A
+News News.pdf
+1
+1
+Raw answer from model:
+["This situation continuing leads to price increases and anti-commercial reactions."]
+Parsed answers: ['This situation continuing leads to price increases and anti-commercial reactions.']
+1 1
+answers ['This situation continuing leads to price increases and anti-commercial reactions.']
+RESPONSE SENT:
+Response sent at: 2025-08-10 22:59:42
+Time taken: 2.61 seconds
+Answers: ['This situation continuing leads to price increases and anti-commercial reactions.']
+================================================================================
+INFO:     122.187.117.179:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+
+================================================================================
+REQUEST RECEIVED AT: 2025-08-10 22:59:55
 Documents: https://hackrx.blob.core.windows.net/hackrx/rounds/News.pdf?sv=2023-01-03&spr=https&st=2025-08-07T17%3A10%3A11Z&se=2026-08-08T17%3A10%3A00Z&sr=b&sp=r&sig=ybRsnfv%2B6VbxPz5xF7kLLjC4ehU0NF7KDkXua9ujSf0%3D
 Questions: ['ട്രംപ് ഏത് ദിവസമാണ് 100% ശുൽകം പ്രഖ്യാപിച്ചത്?', 'ഏത് ഉത്പന്നങ്ങൾക്ക് ഈ 100% ഇറക്കുമതി ശുൽകം ബാധകമാണ്?', 'ഏത് സാഹചര്യത്തിൽ ഒരു കമ്പനിയ്ക്ക് ഈ 100% ശുൽകത്തിൽ നിന്നും നിന്നും ഒഴികെയാക്കും?', 'What was Apple’s investment commitment and what was its objective?', 'What impact will this new policy have on consumers and the global market?']
 ================================================================================
@@ -18,39 +40,80 @@ News News.pdf
 5
 5
 Raw answer from model:
-["2025 ഓഗസ്റ്റ് 6-ന്", "വിദേശത്ത് നിർമ്മിച്ച കമ്പ്യൂട്ടർ ചിപ്പുകൾക്കും സെമിക്കണ്ടക്ടറുകൾക്കും", "യുഎസിൽ നിർമ്മിക്കാൻ പ്രതിജ്ഞാബദ്ധരായ കമ്പനികൾക്ക് ഈ ശുൽകം ബാധകമല്ല", "Apple announced a future investment of 600 billion dollars. The document does not state Apple's objective for its investment.", "ഈ പുതിയ നയം വില വർദ്ധിപ്പിക്കാനും വാണിജ്യവിരുദ്ധ പ്രതികരണങ്ങൾക്കും വഴിയൊരുക്കും."]
-Parsed answers: ['2025 ഓഗസ്റ്റ് 6-ന്', 'വിദേശത്ത് നിർമ്മിച്ച കമ്പ്യൂട്ടർ ചിപ്പുകൾക്കും സെമിക്കണ്ടക്ടറുകൾക്കും', 'യുഎസിൽ നിർമ്മിക്കാൻ പ്രതിജ്ഞാബദ്ധരായ കമ്പനികൾക്ക് ഈ ശുൽകം ബാധകമല്ല', "Apple announced a future investment of 600 billion dollars. The document does not state Apple's objective for its investment.", 'ഈ പുതിയ നയം വില വർദ്ധിപ്പിക്കാനും വാണിജ്യവിരുദ്ധ പ്രതികരണങ്ങൾക്കും വഴിയൊരുക്കും.']
+["ട്രംപ് 2025 ഓഗസ്റ്റ് 6-ന് 100% ശുൽകം പ്രഖ്യാപിച്ചു.", "വിദേശത്ത് നിർമ്മിച്ച കമ്പ്യൂട്ടർ ചിപ്പുകൾക്കും സെമിക്കണ്ടക്ടറുകൾക്കും ഈ 100% ഇറക്കുമതി ശുൽകം ബാധകമാണ്.", "യുഎസിൽ നിർമ്മിക്കാൻ പ്രതിജ്ഞാബദ്ധരായ കമ്പനികൾക്ക് ഈ 100% ശുൽകം ബാധകമല്ല.", "Apple's investment commitment was 600 billion dollars. The document does not explicitly state Apple's objective for this investment.", "This policy will lead to price increases and anti-trade reactions."]
+Parsed answers: ['ട്രംപ് 2025 ഓഗസ്റ്റ് 6-ന് 100% ശുൽകം പ്രഖ്യാപിച്ചു.', 'വിദേശത്ത് നിർമ്മിച്ച കമ്പ്യൂട്ടർ ചിപ്പുകൾക്കും സെമിക്കണ്ടക്ടറുകൾക്കും ഈ 100% ഇറക്കുമതി ശുൽകം ബാധകമാണ്.', 'യുഎസിൽ നിർമ്മിക്കാൻ പ്രതിജ്ഞാബദ്ധരായ കമ്പനികൾക്ക് ഈ 100% ശുൽകം ബാധകമല്ല.', "Apple's investment commitment was 600 billion dollars. The document does not explicitly state Apple's objective for this investment.", 'This policy will lead to price increases and anti-trade reactions.']
 5 5
-answers ['2025 ഓഗസ്റ്റ് 6-ന്', 'വിദേശത്ത് നിർമ്മിച്ച കമ്പ്യൂട്ടർ ചിപ്പുകൾക്കും സെമിക്കണ്ടക്ടറുകൾക്കും', 'യുഎസിൽ നിർമ്മിക്കാൻ പ്രതിജ്ഞാബദ്ധരായ കമ്പനികൾക്ക് ഈ ശുൽകം ബാധകമല്ല', "Apple announced a future investment of 600 billion dollars. The document does not state Apple's objective for its investment.", 'ഈ പുതിയ നയം വില വർദ്ധിപ്പിക്കാനും വാണിജ്യവിരുദ്ധ പ്രതികരണങ്ങൾക്കും വഴിയൊരുക്കും.']
+answers ['ട്രംപ് 2025 ഓഗസ്റ്റ് 6-ന് 100% ശുൽകം പ്രഖ്യാപിച്ചു.', 'വിദേശത്ത് നിർമ്മിച്ച കമ്പ്യൂട്ടർ ചിപ്പുകൾക്കും സെമിക്കണ്ടക്ടറുകൾക്കും ഈ 100% ഇറക്കുമതി ശുൽകം ബാധകമാണ്.', 'യുഎസിൽ നിർമ്മിക്കാൻ പ്രതിജ്ഞാബദ്ധരായ കമ്പനികൾക്ക് ഈ 100% ശുൽകം ബാധകമല്ല.', "Apple's investment commitment was 600 billion dollars. The document does not explicitly state Apple's objective for this investment.", 'This policy will lead to price increases and anti-trade reactions.']
 RESPONSE SENT:
-Response sent at: 2025-08-10 22:07:13
-Time taken: 6.63 seconds
-Answers: ['2025 ഓഗസ്റ്റ് 6-ന്', 'വിദേശത്ത് നിർമ്മിച്ച കമ്പ്യൂട്ടർ ചിപ്പുകൾക്കും സെമിക്കണ്ടക്ടറുകൾക്കും', 'യുഎസിൽ നിർമ്മിക്കാൻ പ്രതിജ്ഞാബദ്ധരായ കമ്പനികൾക്ക് ഈ ശുൽകം ബാധകമല്ല', "Apple announced a future investment of 600 billion dollars. The document does not state Apple's objectivട്രംപ് ഏത് ദിവസമാണ് 100% ശുൽകം പ്രഖ്യാപിച്ചത്?e for its investment.", 'ഈ പുതിയ നയം വില വർദ്ധിപ്പിക്കാനും വാണിജ്യവിരുദ്ധ പ്രതികരണങ്ങൾക്കും വഴിയൊരുക്കും.']
-==========================
+Response sent at: 2025-08-10 23:00:02
+Time taken: 7.04 seconds
+Answers: ['ട്രംപ് 2025 ഓഗസ്റ്റ് 6-ന് 100% ശുൽകം പ്രഖ്യാപിച്ചു.', 'വിദേശത്ത് നിർമ്മിച്ച കമ്പ്യൂട്ടർ ചിപ്പുകൾക്കും സെമിക്കണ്ടക്ടറുകൾക്കും ഈ 100% ഇറക്കുമതി ശുൽകം ബാധകമാണ്.', 'യുഎസിൽ നിർമ്മിക്കാൻ പ്രതിജ്ഞാബദ്ധരായ കമ്പനികൾക്ക് ഈ 100% ശുൽകം ബാധകമല്ല.', "Apple's investment commitment was 600 billion dollars. The document does not explicitly state Apple's objective for this investment.", 'This policy will lead to price increases and anti-trade reactions.']
 ================================================================================
-REQUEST RECEIVED AT: 2025-08-10 22:08:41
-Documents: https://hackrx.blob.core.windows.net/hackrx/rounds/News.pdf?sv=2023-01-03&spr=https&st=2025-08-07T17%3A10%3A11Z&se=2026-08-08T17%3A10%3A00Z&sr=b&sp=r&sig=ybRsnfv%2B6VbxPz5xF7kLLjC4ehU0NF7KDkXua9ujSf0%3D
-Questions: ['What was Apple’s investment commitment and what was its objective?', 'What impact will this new policy have on consumers and the global market?']
+INFO:     127.0.0.1:34778 - "POST /hackrx/run HTTP/1.1" 200 OK
+
 ================================================================================
-Classifying question: What was Apple’s investment commitment and what was its objective?
-Classified as SIMPLE document Q&A
-Classifying question: What impact will this new policy have on consumers and the global market?
-Classified as SIMPLE document Q&A
-News News.pdf
-2
-2
-Raw answer from model:
-["Apple announced a future investment of 600 billion dollars. The specific objective of Apple's investment is not explicitly stated in the document.", "The new policy will lead to price increases and open the way for anti-commercial reactions."]
-Parsed answers: ["Apple announced a future investment of 600 billion dollars. The specific objective of Apple's investment is not explicitly stated in the document.", 'The new policy will lead to price increases and open the way for anti-commercial reactions.']
-2 2
-answers ["Apple announced a future investment of 600 billion dollars. The specific objective of Apple's investment is not explicitly stated in the document.", 'The new policy will lead to price increases and open the way for anti-commercial reactions.']
+REQUEST RECEIVED AT: 2025-08-10 23:00:19
+Documents: https://hackrx.blob.core.windows.net/hackrx/rounds/FinalRound4SubmissionPDF.pdf?sv=2023-01-03&spr=https&st=2025-08-07T14%3A23%3A48Z&se=2027-08-08T14%3A23%3A00Z&sr=b&sp=r&sig=nMtZ2x9aBvz%2FPjRWboEOZIGB%2FaGfNf5TfBOrhGqSv4M%3D
+Questions: ['What is my flight number?']
+================================================================================
+Classifying question: What is my flight number?
+Classified as COMPLEX navigation
+Classifying question: What is my flight number?
+Classified as COMPLEX navigation
+Detected intent: complex
+Executing complex navigation for: What is my flight number?
+Found 6 URLs in document
+Scraping URL 1: https://register.hackrx.in/submissions/myFavouriteCity
+Scraping URL 2: https://register.hackrx.in/teams/public/flights/getFirstCityFlightNumber
+Scraping URL 3: https://register.hackrx.in/teams/public/flights/getSecondCityFlightNumber
+Scraping URL 4: https://register.hackrx.in/teams/public/flights/getThirdCityFlightNumber
+Scraping URL 5: https://register.hackrx.in/teams/public/flights/getFourthCityFlightNumber
+==================================================
+GEMINI REQUEST FOR COMPLEX QUESTION:
+Question: What is my flight number?
+Scraped 5 URLs successfully
+==================================================
+Using direct extraction method...
+Looking for flight number in scraped data...
+Checking url_1: https://register.hackrx.in/submissions/myFavouriteCity
+Found favorite city: Delhi
+Checking url_2: https://register.hackrx.in/teams/public/flights/getFirstCityFlightNumber
+Found flight number: 2f1b0b from https://register.hackrx.in/teams/public/flights/getFirstCityFlightNumber
+Checking url_3: https://register.hackrx.in/teams/public/flights/getSecondCityFlightNumber
+Found flight number: 26c219 from https://register.hackrx.in/teams/public/flights/getSecondCityFlightNumber
+Checking url_4: https://register.hackrx.in/teams/public/flights/getThirdCityFlightNumber
+Found flight number: cd6332 from https://register.hackrx.in/teams/public/flights/getThirdCityFlightNumber
+Checking url_5: https://register.hackrx.in/teams/public/flights/getFourthCityFlightNumber
+Found flight number: bf886c from https://register.hackrx.in/teams/public/flights/getFourthCityFlightNumber
+Favorite city is: Delhi
+Available flight numbers: {'https://register.hackrx.in/teams/public/flights/getFirstCityFlightNumber': '2f1b0b', 'https://register.hackrx.in/teams/public/flights/getSecondCityFlightNumber': '26c219', 'https://register.hackrx.in/teams/public/flights/getThirdCityFlightNumber': 'cd6332', 'https://register.hackrx.in/teams/public/flights/getFourthCityFlightNumber': 'bf886c'}
+City Delhi has landmark: Gateway of India
+Landmark Gateway of India maps to endpoint: getFirstCityFlightNumber
+Selected flight number 2f1b0b for city Delhi with landmark Gateway of India
 RESPONSE SENT:
-Response sent at: 2025-08-10 22:08:47
-Time taken: 6.22 seconds
-Answers: ["Apple announced a future investment of 600 billion dollars. The specific objective of Apple's investment is not explicitly stated in the document.", 'The new policy will lead to price increases and open the way for anti-commercial reactions.']
+Response sent at: 2025-08-10 23:00:22
+Time taken: 3.21 seconds
+Answers: ['2f1b0b']
 ================================================================================
-INFO:     127.0.0.1:37404 - "POST /hackrx/run HTTP/1.1" 200 OK
-INFO:     122.187.117.179:0 - "GET / HTTP/1.1" 200 OK
-INFO:     122.187.117.179:0 - "GET /static/styles.css HTTP/1.1" 200 OK
-INFO:     122.187.117.179:0 - "GET /static/script.js HTTP/1.1" 200 OK
-INFO:     122.187.117.179:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50542 - "POST /hackrx/run HTTP/1.1" 200 OK
+
+================================================================================
+REQUEST RECEIVED AT: 2025-08-10 23:00:27
+Documents: https://register.hackrx.in/utils/get-secret-token?hackTeam=4959
+Questions: ['Go to the link and get the secret token and return it']
+================================================================================
+Classifying question: Go to the link and get the secret token and return it
+Classified as COMPLEX navigation
+Classifying question: Go to the link and get the secret token and return it
+Classified as COMPLEX navigation
+Detected intent: complex
+Executing complex navigation for: Go to the link and get the secret token and return it
+Found 0 URLs in document
+No URLs in document, but this appears to be a secret/token/link question
+Trying to access the document URL directly for secret extraction
+RESPONSE SENT:
+Response sent at: 2025-08-10 23:00:27
+Time taken: 0.61 seconds
+Answers: ['Secret Token 🔒 Your Secret Token d9e9568cc4cd8a05700d2524e128ec500fd925804e44c6944cd3287824f9c6e0']
+================================================================================
+INFO:     127.0.0.1:50542 - "POST /hackrx/run HTTP/1.1" 200 OK

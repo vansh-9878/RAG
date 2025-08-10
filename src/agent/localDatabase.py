@@ -29,8 +29,13 @@ globalIndex=None
 globalTexts=None
 search_lock = threading.Lock()
 
-arr=os.listdir('./vector')
-arr=[item.split(".")[0] for item in arr]
+# Get the vector directory path relative to the agent directory
+vector_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), '..', 'vector')
+if os.path.exists(vector_path):
+    arr=os.listdir(vector_path)
+    arr=[item.split(".")[0] for item in arr]
+else:
+    arr = []  # Empty list if vector directory doesn't exist
 
 def load_text_chunks(filepath, chunk_size=800,stride=200):
     with open(filepath, 'r', encoding='utf-8') as f:
@@ -99,19 +104,22 @@ def search_faiss(index, query, texts,top_k=25):
 
 
 def storeVectors(fileName):
+    vector_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), '..', 'vector')
+    processed_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), '..', 'data', 'processed')
+    
     if fileName in arr:
-        index = faiss.read_index(f"vector/{fileName}.faiss")
-        with open(f"vector/{fileName}_texts.pkl", "rb") as f:
+        index = faiss.read_index(os.path.join(vector_dir, f"{fileName}.faiss"))
+        with open(os.path.join(vector_dir, f"{fileName}_texts.pkl"), "rb") as f:
             texts = pickle.load(f)
     else:
-        texts = load_text_chunks(fileName+".txt")
+        texts = load_text_chunks(os.path.join(processed_dir, f"{fileName}.txt"))
 
         embeddings = embed_in_batches(texts, model, batch_size=64, max_workers=8)
         index = create_faiss_index(embeddings)
         
-        faiss.write_index(index, f"vector/{fileName}.faiss")
+        faiss.write_index(index, os.path.join(vector_dir, f"{fileName}.faiss"))
 
-        with open(f"vector/{fileName}_texts.pkl", "wb") as f:
+        with open(os.path.join(vector_dir, f"{fileName}_texts.pkl"), "wb") as f:
             pickle.dump(texts, f)
     
     return index,texts
