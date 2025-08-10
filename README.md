@@ -41,19 +41,7 @@ RAG/
 
 ## Quick Start
 
-### Option 1: Using Python directly
-
-```bash
-python main.py
-```
-
-### Option 2: Using the shell script
-
-```bash
-./start.sh
-```
-
-### Option 3: Manual setup
+### Manual setup
 
 ```bash
 # Install dependencies
@@ -61,7 +49,7 @@ pip install -r requirements.txt
 
 # Run from src directory
 cd src
-uvicorn backend:app --host 0.0.0.0 --port 8000 --reload
+python backend.py > ../logs/test.txt
 ```
 
 ## Usage

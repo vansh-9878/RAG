@@ -1,18 +1,24 @@
-FROM nvidia/cuda:12.2.0-runtime-ubuntu22.04
+# Use Python 3.11 slim image
+FROM python:3.11-slim
 
+# Set working directory
 WORKDIR /app
 
-# System dependencies
-RUN apt-get update && \
-    apt-get install -y python3 python3-pip python3-venv && \
-    pip3 install --upgrade pip
+# Copy requirements and install dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy project
+# Copy the entire project
 COPY . .
 
-# Install dependencies
-RUN pip install -r requirements.txt
+# Create logs directory
+RUN mkdir -p logs
 
+# Expose port 8080
 EXPOSE 8080
 
-CMD ["uvicorn", "backend:app", "--host", "0.0.0.0", "--port", "8080"]
+# Set working directory to src for running backend.py
+WORKDIR /app/src
+
+# Run the backend server with output redirected to logs
+CMD cd src && python backend.py > ../logs/test.txt
