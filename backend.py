@@ -1,6 +1,8 @@
 from fastapi import FastAPI,Depends, HTTPException, status
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from agent.localDatabase import storeVectors
 from agent.agent import start
@@ -535,6 +537,8 @@ def execute_url_navigation(question, document_url, document_content=""):
 app=FastAPI()
 bearer_scheme = HTTPBearer()
 
+# Mount static files for frontend
+app.mount("/static", StaticFiles(directory="frontend"), name="static")
 
 app.add_middleware(
     CORSMiddleware,
@@ -562,6 +566,10 @@ def verify_token(credentials: HTTPAuthorizationCredentials = Depends(bearer_sche
             status_code=status.HTTP_401_UNAUTHORIZED,
             detail="Invalid or missing token",
         )
+
+@app.get("/")
+def serve_frontend():
+    return FileResponse("frontend/index.html")
 
 @app.get("/hackrx/run")
 def check():

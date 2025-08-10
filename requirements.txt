@@ -16,3 +16,4 @@ pydantic
 requests
 python-docx
 python-dotenv
+aiofiles

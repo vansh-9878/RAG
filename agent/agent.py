@@ -19,7 +19,7 @@ class AgentState(TypedDict):
     search:str
 
 model=ChatGoogleGenerativeAI(
-    model="gemini-2.5-pro",
+    model="gemini-2.5-flash",
     google_api_key=os.getenv("k1"),
     temperature=0.2
 )
