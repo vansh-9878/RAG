@@ -42,16 +42,19 @@ RAG/
 ## Quick Start
 
 ### Option 1: Using Python directly
+
 ```bash
 python main.py
 ```
 
 ### Option 2: Using the shell script
+
 ```bash
 ./start.sh
 ```
 
 ### Option 3: Manual setup
+
 ```bash
 # Install dependencies
 pip install -r requirements.txt
