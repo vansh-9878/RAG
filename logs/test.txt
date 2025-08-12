@@ -1,6 +1,272 @@
+INFO:     2401:4900:629e:b54b:d25:8451:8ada:fb8c:0 - "GET /hackrx/run HTTP/1.1" 200 OK
+INFO:     2401:4900:629e:b54b:d25:8451:8ada:fb8c:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     2401:4900:629e:b54b:d25:8451:8ada:fb8c:0 - "GET /hackrx/run HTTP/1.1" 200 OK
+INFO:     2401:4900:629e:b54b:d25:8451:8ada:fb8c:0 - "GET /hackrx/run HTTP/1.1" 200 OK
+INFO:     2401:4900:629e:b54b:d25:8451:8ada:fb8c:0 - "GET /hackrx/run HTTP/1.1" 200 OK
+INFO:     52.169.144.103:0 - "GET /.alf.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /.bod/.ll/ss.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /.well-known/about/function.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /.well-known/classwithtostring.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /.well-known/index.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /.well-known/radio.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /10.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /12.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /13k.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /87.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /about.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /about/Geforce.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /about/function.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /admin.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /admin/admin.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /admin/function.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /admin/index.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /adminfuns.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /akc.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /al.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /alfa.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /as.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /asasx.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /assets/images/doc.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /atomlib.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /auth.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /autoload_classmap.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /autoload_classmap/function.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /b.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /blog/fw.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /bugz.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /byp.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /cc.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /chosen.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /class.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /classwithtostring.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /composer.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /css.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /dropdown.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /edit.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /f35.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /file.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /file2.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /filemanager.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /files/index.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /fix.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /flower.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /fox.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /function/function.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /g.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /gecko.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /gel4y.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /gelay.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /gg.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /goat.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /goods.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /h.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /images/admin.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /images/class-config.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /inc.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /index.bak.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /index/function.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /info.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /infos.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /ioxi-o.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /k.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /m.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /mar.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /mini HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /mini.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /mm.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /ms-edit.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /ms-themes.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /options-general.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /options-reading.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /options-writing.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /web.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-blog.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-config-sample.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-activat.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /pages.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /aa.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /nf.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /lock360.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /makeasmtp.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /php.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /install.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /php8.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /mah.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /pinfo.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /radio.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /robots.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /cong.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /function.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /buy.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /thoms.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /rt.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /s.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /setup.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /simple.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /sts.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /system_log.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /test1.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /themes/zMousse/otuz1.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /file/function.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /tinyfilemanager.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /ty.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /users.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /w.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-aa.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-admin.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-admin/ HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-admin/admin.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-admin/classwithtostring.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-admin/css/colors/blue/index.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-admin/css/colors/ectoplasm/about.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-admin/css/colors/light/wp-login.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-admin/images/moon.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-admin/includes/colour.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-includes/Text/wp-conflg.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-admin/includes/header.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-admin/includes/index.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-admin/install.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-admin/js/autoload_classmap.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-admin/js/index.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-admin/js/widgets/cloud.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-admin/js/widgets/index.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-admin/mah.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-admin/maint/about.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-admin/network/network.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-admin/wp-admins.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-admin/wp-login.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-admin/wp.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-files.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-api.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-comments.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-content/1.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-content/wp-conflg.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-content/about.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-content/autoload_classmap.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-content/classwithtostring.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-content/click.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-content/index.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-content/languages/autoload_classmap.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-content/plugin.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-content/plugins/WordPressCore/include.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-content/plugins/autoload_classmap.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-content/plugins/ioxi/ioxi/dropdown.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-content/plugins/pwnd/as.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-content/plugins/revslider/includes/external/page/index.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-content/plugins/up/main.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-content/themes/admin.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-content/uploads/chosen.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-content/uploads/de_fb_uploads/b.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-content/uploads/json.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-content/wp.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-content/x.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-error.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-includes/ALFA_DATA/alfacgiapi/perl.alfa HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-includes/IXR/autoload_classmap.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-includes/IXR/chosen.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-includes/PHPMailer/file.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-includes/SimplePie/chosen.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-includes/about.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-includes/blocks/about.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-includes/blocks/calendar/index.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-includes/blocks/site-title/index.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-includes/certificates/chosen.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-includes/css/autoload_classmap.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-includes/fonts/admin.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-includes/fonts/autoload_classmap.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-includes/fonts/index.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-includes/html-api/about.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-includes/js/tinymce/langs/about.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-includes/rest-api/index.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-includes/style-engine/autoload_classmap.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-includes/widgets/autoload_classmap.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-includes/wp-class.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-includes/wp_class_datlib.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-l0gin.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-login.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-logs.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-setting.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-setup.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-signin.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp-wso.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wp_wrong_datlib.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wsa.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /wso.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /y.php HTTP/1.1" 404 Not Found
+INFO:     52.169.144.103:0 - "GET /zwso.php HTTP/1.1" 404 Not Found
+INFO:     66.249.65.105:0 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     66.249.65.96:0 - "GET / HTTP/1.1" 200 OK
+INFO:     45.89.70.31:0 - "GET / HTTP/1.1" 200 OK
+INFO:     2401:4900:629e:b54b:d25:8451:8ada:fb8c:0 - "GET /hackrx/run HTTP/1.1" 200 OK
+INFO:     2401:4900:629e:b54b:d25:8451:8ada:fb8c:0 - "GET /hackrx/run HTTP/1.1" 200 OK
+INFO:     2401:4900:629e:b54b:d25:8451:8ada:fb8c:0 - "GET /hackrx/run HTTP/1.1" 200 OK
+INFO:     134.209.24.11:0 - "GET / HTTP/1.1" 200 OK
+INFO:     134.209.24.11:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     134.209.24.11:0 - "GET / HTTP/1.1" 200 OK
+INFO:     134.209.24.11:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-content/plugins/hellopress/wp_filemanager.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-includes/admin.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-includes/Text/about.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-admin/network/about.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-admin/images/wp-login.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /item.php/admin.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /css/cloud.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /images/admin.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /about/function.php/ HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-includes/customize/autoload_classmap.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-includes/sitemaps/providers/about.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /function.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-admin/update.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-includes/autoload_classmap.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-content/upgrade/autoload_classmap.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /.well-known/pki-validation/about.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-admin/network/plugins.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-includes/css/about.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /alfa-rex2.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-admin/wp-admin.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-admin/file.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-content/upgrade/index.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-includes/style-engine/about.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /gecko.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-admin/images/index.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-info.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-includes/style-engine/index.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-admin/images/xmrlpc.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-admin/css/about.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-content/themes/twenty/twenty.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-includes/theme-compat/wp-login.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-admin/user/xmrlpc.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-includes/wp-includes/about.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-includes/assets/index.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-includes/style-engine/autoload_classmap.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-includes/js/codemirror/about.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-content/upgrade/wp-sigunq.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-content/uploads/chosen.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /public/makeasmtp.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /shop/lock.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /plugins.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /img/about HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-content/plugins/revslider/public/assets/assets/sources/wp-login.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /alfanew.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-includes/html-api/about.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-includes/block-patterns/autoload_classmap.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-content/plugins/not/includes/about.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /.well-known/acme-challenge/classwithtostring.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-admin/includes/about.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-content/themes/astra/inc/ki1k.php HTTP/1.1" 404 Not Found
+INFO:     172.192.61.81:0 - "GET /wp-content/plugins/seoplugins/mar.php HTTP/1.1" 404 Not Found
+INFO:     2401:4900:629e:b54b:d25:8451:8ada:fb8c:0 - "GET / HTTP/1.1" 200 OK
+INFO:     2401:4900:629e:b54b:d25:8451:8ada:fb8c:0 - "GET /static/styles.css HTTP/1.1" 304 Not Modified
+INFO:     2401:4900:629e:b54b:d25:8451:8ada:fb8c:0 - "GET /static/script.js HTTP/1.1" 304 Not Modified
+INFO:     34.55.108.55:0 - "GET / HTTP/1.1" 200 OK
+INFO:     101.91.148.219:0 - "GET / HTTP/1.1" 200 OK
+INFO:     2401:4900:629e:b54b:d25:8451:8ada:fb8c:0 - "GET /hackrx/run HTTP/1.1" 200 OK
+INFO:     2401:4900:629e:b54b:d25:8451:8ada:fb8c:0 - "GET /hackrx/run HTTP/1.1" 200 OK
+INFO:     2401:4900:629e:b54b:d25:8451:8ada:fb8c:0 - "GET /hackrx/run HTTP/1.1" 200 OK
 
 ================================================================================
-REQUEST RECEIVED AT: 2025-08-10 23:20:43
+REQUEST RECEIVED AT: 2025-08-11 20:35:39
 Documents: https://hackrx.blob.core.windows.net/hackrx/rounds/News.pdf?sv=2023-01-03&spr=https&st=2025-08-07T17%3A10%3A11Z&se=2026-08-08T17%3A10%3A00Z&sr=b&sp=r&sig=ybRsnfv%2B6VbxPz5xF7kLLjC4ehU0NF7KDkXua9ujSf0%3D
 Questions: ['What impact will this new policy have on consumers and the global market?']
 ================================================================================
@@ -10,13 +276,192 @@ News News.pdf
 1
 1
 Raw answer from model:
-["This policy is expected to lead to price increases and anti-commercial reactions, impacting consumers and the global market."]
-Parsed answers: ['This policy is expected to lead to price increases and anti-commercial reactions, impacting consumers and the global market.']
+["This situation continuing leads to price increases and anti-commercial reactions."]
+Parsed answers: ['This situation continuing leads to price increases and anti-commercial reactions.']
 1 1
-answers ['This policy is expected to lead to price increases and anti-commercial reactions, impacting consumers and the global market.']
+answers ['This situation continuing leads to price increases and anti-commercial reactions.']
 RESPONSE SENT:
-Response sent at: 2025-08-10 23:20:47
-Time taken: 3.67 seconds
-Answers: ['This policy is expected to lead to price increases and anti-commercial reactions, impacting consumers and the global market.']
+Response sent at: 2025-08-11 20:35:41
+Time taken: 2.49 seconds
+Answers: ['This situation continuing leads to price increases and anti-commercial reactions.']
 ================================================================================
-INFO:     122.187.117.179:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+INFO:     2401:4900:629e:b54b:d25:8451:8ada:fb8c:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+INFO:     80.85.245.37:0 - "GET / HTTP/1.1" 200 OK
+INFO:     198.23.210.59:0 - "GET /.env.staging HTTP/1.1" 404 Not Found
+INFO:     2401:4900:6275:a695:9ccc:66f8:2a4d:7af4:0 - "GET /hackrx/run HTTP/1.1" 200 OK
+INFO:     170.106.37.134:0 - "GET / HTTP/1.1" 200 OK
+INFO:     2401:4900:6275:a695:9ccc:66f8:2a4d:7af4:0 - "GET / HTTP/1.1" 200 OK
+INFO:     2401:4900:6275:a695:9ccc:66f8:2a4d:7af4:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     89.110.109.74:0 - "GET / HTTP/1.1" 200 OK
+INFO:     80.85.246.71:0 - "GET / HTTP/1.1" 200 OK
+
+================================================================================
+REQUEST RECEIVED AT: 2025-08-12 00:11:59
+Documents: https://hackrx.blob.core.windows.net/assets/Test%20/TG_NIAPOLICYCLAUSEDOCTG%201.PDF?sv=2023-01-03&spr=https&st=2025-08-11T16%3A50%3A58Z&se=2026-08-12T16%3A50%3A00Z&sr=b&sp=r&sig=acEgS1n5v7ZJCwjbBzgKGohHSUAkmLAjhvYidNhHeDo%3D
+Questions: ['Describe the timeline for claim settlement or rejection, including penalties for delays and the handling of document deficiencies.', 'What documents are required for notice of claim, and how does the waiver provision for delayed intimation work?', 'What are the conditions and limitations for the optional maternity expenses benefit extension, including waiting periods and exclusions?', "How are claims handled if medical expenses span two policy periods, and what is the company's stance on repudiation?"]
+================================================================================
+Classifying question: Describe the timeline for claim settlement or rejection, including penalties for delays and the handling of document deficiencies.
+Classified as SIMPLE document Q&A
+Classifying question: What documents are required for notice of claim, and how does the waiver provision for delayed intimation work?
+Classified as SIMPLE document Q&A
+Classifying question: What are the conditions and limitations for the optional maternity expenses benefit extension, including waiting periods and exclusions?
+Classified as SIMPLE document Q&A
+Classifying question: How are claims handled if medical expenses span two policy periods, and what is the company's stance on repudiation?
+Classified as SIMPLE document Q&A
+TG_NIAPOLICYCLAUSEDOCTG 1 TG_NIAPOLICYCLAUSEDOCTG%201.PDF
+4
+4
+Raw answer from model:
+["The Company shall settle or reject a claim within thirty days of receiving the last necessary document. In case of document deficiencies, the TPA issues a deficiency request, followed by three reminders at seven-day intervals if documents are not submitted within seven days of the request, and delayed payments will incur penal interest as per IRDAI Regulation 9(6).", "Preliminary notice of claim requires particulars relating to Policy Number, name of insured person, nature of Illness/Injury, and Name and Address of the attending Medical Practitioner/Hospital/Nursing Home. A waiver of the intimation period may be considered in extreme hardship cases where it was impossible for the insured or any other person to give notice or file a claim within the prescribed time limit, but this waiver is not a matter of right.", "The optional Maternity Expenses Benefit Extension requires payment of 10% of the total basic premium and must be exercised at policy inception with no refund for cancellation. The maximum benefit is Rs.50,000 or the opted Sum Insured, whichever is lower, and benefits are admissible only for inpatient hospital expenses in India. A 9-month waiting period applies for normal delivery, caesarean section, or extra uterine pregnancy, which may be relaxed for delivery, miscarriage, or abortion due to accident or medical emergency. Coverage is limited to the first two children, and expenses for voluntary medical termination of pregnancy within the first 12 weeks and pre-natal/post-natal expenses (unless hospitalized) are excluded.", "If a claim event spans two policy periods, claims are paid considering only the Sum Insured of the expiring policy, and the renewed policy's Sum Insured is not available for hospitalization that commenced in the expiring policy. Claims are settled on a per-event basis. The company can reject a claim if it is not covered under the Policy conditions, and communication of repudiation will be sent explicitly mentioning the grounds, with prior approval."]
+Parsed answers: ['The Company shall settle or reject a claim within thirty days of receiving the last necessary document. In case of document deficiencies, the TPA issues a deficiency request, followed by three reminders at seven-day intervals if documents are not submitted within seven days of the request, and delayed payments will incur penal interest as per IRDAI Regulation 9(6).', 'Preliminary notice of claim requires particulars relating to Policy Number, name of insured person, nature of Illness/Injury, and Name and Address of the attending Medical Practitioner/Hospital/Nursing Home. A waiver of the intimation period may be considered in extreme hardship cases where it was impossible for the insured or any other person to give notice or file a claim within the prescribed time limit, but this waiver is not a matter of right.', 'The optional Maternity Expenses Benefit Extension requires payment of 10% of the total basic premium and must be exercised at policy inception with no refund for cancellation. The maximum benefit is Rs.50,000 or the opted Sum Insured, whichever is lower, and benefits are admissible only for inpatient hospital expenses in India. A 9-month waiting period applies for normal delivery, caesarean section, or extra uterine pregnancy, which may be relaxed for delivery, miscarriage, or abortion due to accident or medical emergency. Coverage is limited to the first two children, and expenses for voluntary medical termination of pregnancy within the first 12 weeks and pre-natal/post-natal expenses (unless hospitalized) are excluded.', "If a claim event spans two policy periods, claims are paid considering only the Sum Insured of the expiring policy, and the renewed policy's Sum Insured is not available for hospitalization that commenced in the expiring policy. Claims are settled on a per-event basis. The company can reject a claim if it is not covered under the Policy conditions, and communication of repudiation will be sent explicitly mentioning the grounds, with prior approval."]
+4 4
+answers ['The Company shall settle or reject a claim within thirty days of receiving the last necessary document. In case of document deficiencies, the TPA issues a deficiency request, followed by three reminders at seven-day intervals if documents are not submitted within seven days of the request, and delayed payments will incur penal interest as per IRDAI Regulation 9(6).', 'Preliminary notice of claim requires particulars relating to Policy Number, name of insured person, nature of Illness/Injury, and Name and Address of the attending Medical Practitioner/Hospital/Nursing Home. A waiver of the intimation period may be considered in extreme hardship cases where it was impossible for the insured or any other person to give notice or file a claim within the prescribed time limit, but this waiver is not a matter of right.', 'The optional Maternity Expenses Benefit Extension requires payment of 10% of the total basic premium and must be exercised at policy inception with no refund for cancellation. The maximum benefit is Rs.50,000 or the opted Sum Insured, whichever is lower, and benefits are admissible only for inpatient hospital expenses in India. A 9-month waiting period applies for normal delivery, caesarean section, or extra uterine pregnancy, which may be relaxed for delivery, miscarriage, or abortion due to accident or medical emergency. Coverage is limited to the first two children, and expenses for voluntary medical termination of pregnancy within the first 12 weeks and pre-natal/post-natal expenses (unless hospitalized) are excluded.', "If a claim event spans two policy periods, claims are paid considering only the Sum Insured of the expiring policy, and the renewed policy's Sum Insured is not available for hospitalization that commenced in the expiring policy. Claims are settled on a per-event basis. The company can reject a claim if it is not covered under the Policy conditions, and communication of repudiation will be sent explicitly mentioning the grounds, with prior approval."]
+RESPONSE SENT:
+Response sent at: 2025-08-12 00:12:25
+Time taken: 26.06 seconds
+Answers: ['The Company shall settle or reject a claim within thirty days of receiving the last necessary document. In case of document deficiencies, the TPA issues a deficiency request, followed by three reminders at seven-day intervals if documents are not submitted within seven days of the request, and delayed payments will incur penal interest as per IRDAI Regulation 9(6).', 'Preliminary notice of claim requires particulars relating to Policy Number, name of insured person, nature of Illness/Injury, and Name and Address of the attending Medical Practitioner/Hospital/Nursing Home. A waiver of the intimation period may be considered in extreme hardship cases where it was impossible for the insured or any other person to give notice or file a claim within the prescribed time limit, but this waiver is not a matter of right.', 'The optional Maternity Expenses Benefit Extension requires payment of 10% of the total basic premium and must be exercised at policy inception with no refund for cancellation. The maximum benefit is Rs.50,000 or the opted Sum Insured, whichever is lower, and benefits are admissible only for inpatient hospital expenses in India. A 9-month waiting period applies for normal delivery, caesarean section, or extra uterine pregnancy, which may be relaxed for delivery, miscarriage, or abortion due to accident or medical emergency. Coverage is limited to the first two children, and expenses for voluntary medical termination of pregnancy within the first 12 weeks and pre-natal/post-natal expenses (unless hospitalized) are excluded.', "If a claim event spans two policy periods, claims are paid considering only the Sum Insured of the expiring policy, and the renewed policy's Sum Insured is not available for hospitalization that commenced in the expiring policy. Claims are settled on a per-event basis. The company can reject a claim if it is not covered under the Policy conditions, and communication of repudiation will be sent explicitly mentioning the grounds, with prior approval."]
+================================================================================
+INFO:     2402:e280:3e1c:866:7116:a1cf:30cf:2517:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+
+================================================================================
+REQUEST RECEIVED AT: 2025-08-12 00:12:29
+Documents: https://hackrx.blob.core.windows.net/assets/Test%20/image%20(1).png?sv=2023-01-03&spr=https&st=2025-08-11T16%3A54%3A36Z&se=2026-08-12T16%3A54%3A00Z&sr=b&sp=r&sig=d5zWWItc5pGsRLn8Y4%2Bp5FNndQXfXBGyR22RofrX9Fc%3D
+Questions: ['രാഹുൽ ഗാന്ധി ഏതു വിഷയത്തിൽ ജനങ്ങളോട് അഭ്യർത്ഥിച്ചു?', '"വോട്ട് കൊള്ള" സംബന്ധിച്ച് നൽകിയിരിക്കുന്ന ഓൺലൈൻ ലിങ്ക് ഏതാണ്?']
+================================================================================
+Classifying question: രാഹുൽ ഗാന്ധി ഏതു വിഷയത്തിൽ ജനങ്ങളോട് അഭ്യർത്ഥിച്ചു?
+Classified as SIMPLE document Q&A
+Classifying question: "വോട്ട് കൊള്ള" സംബന്ധിച്ച് നൽകിയിരിക്കുന്ന ഓൺലൈൻ ലിങ്ക് ഏതാണ്?
+Classified as SIMPLE document Q&A
+image (1) image%20(1).png
+Error in pdf_to_text for image (1)_png: no such file: '../data/documents/image (1)_png.pdf'
+2
+2
+Raw answer from model:
+["This information is not found in the document.", "This information is not found in the document."]
+Parsed answers: ['This information is not found in the document.', 'This information is not found in the document.']
+2 2
+answers ['This information is not found in the document.', 'This information is not found in the document.']
+RESPONSE SENT:
+Response sent at: 2025-08-12 00:13:57
+Time taken: 88.22 seconds
+Answers: ['This information is not found in the document.', 'This information is not found in the document.']
+================================================================================
+INFO:     2402:e280:3e1c:866:7116:a1cf:30cf:2517:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+
+================================================================================
+REQUEST RECEIVED AT: 2025-08-12 00:14:01
+Documents: https://hackrx.blob.core.windows.net/hackrx/rounds/FinalRound4SubmissionPDF.pdf?sv=2023-01-03&spr=https&st=2025-08-07T14%3A23%3A48Z&se=2027-08-08T14%3A23%3A00Z&sr=b&sp=r&sig=nMtZ2x9aBvz%2FPjRWboEOZIGB%2FaGfNf5TfBOrhGqSv4M%3D
+Questions: ['What is my flight number?']
+================================================================================
+Classifying question: What is my flight number?
+Classified as COMPLEX navigation
+Classifying question: What is my flight number?
+Classified as COMPLEX navigation
+Detected intent: complex
+Executing complex navigation for: What is my flight number?
+Found 6 URLs in document
+Scraping URL 1: https://register.hackrx.in/submissions/myFavouriteCity
+Scraping URL 2: https://register.hackrx.in/teams/public/flights/getFirstCityFlightNumber
+Scraping URL 3: https://register.hackrx.in/teams/public/flights/getSecondCityFlightNumber
+Scraping URL 4: https://register.hackrx.in/teams/public/flights/getThirdCityFlightNumber
+Scraping URL 5: https://register.hackrx.in/teams/public/flights/getFourthCityFlightNumber
+==================================================
+GEMINI REQUEST FOR COMPLEX QUESTION:
+Question: What is my flight number?
+Scraped 5 URLs successfully
+==================================================
+Using direct extraction method...
+Looking for flight number in scraped data...
+Checking url_1: https://register.hackrx.in/submissions/myFavouriteCity
+Found favorite city: Paris
+Checking url_2: https://register.hackrx.in/teams/public/flights/getFirstCityFlightNumber
+Found flight number: 44491f from https://register.hackrx.in/teams/public/flights/getFirstCityFlightNumber
+Checking url_3: https://register.hackrx.in/teams/public/flights/getSecondCityFlightNumber
+Found flight number: 3cda04 from https://register.hackrx.in/teams/public/flights/getSecondCityFlightNumber
+Checking url_4: https://register.hackrx.in/teams/public/flights/getThirdCityFlightNumber
+Found flight number: e21f3c from https://register.hackrx.in/teams/public/flights/getThirdCityFlightNumber
+Checking url_5: https://register.hackrx.in/teams/public/flights/getFourthCityFlightNumber
+Found flight number: 7f045b from https://register.hackrx.in/teams/public/flights/getFourthCityFlightNumber
+Favorite city is: Paris
+Available flight numbers: {'https://register.hackrx.in/teams/public/flights/getFirstCityFlightNumber': '44491f', 'https://register.hackrx.in/teams/public/flights/getSecondCityFlightNumber': '3cda04', 'https://register.hackrx.in/teams/public/flights/getThirdCityFlightNumber': 'e21f3c', 'https://register.hackrx.in/teams/public/flights/getFourthCityFlightNumber': '7f045b'}
+City Paris has landmark: Taj Mahal
+Landmark Taj Mahal maps to endpoint: getSecondCityFlightNumber
+Selected flight number 3cda04 for city Paris with landmark Taj Mahal
+RESPONSE SENT:
+Response sent at: 2025-08-12 00:14:06
+Time taken: 5.87 seconds
+Answers: ['3cda04']
+================================================================================
+INFO:     2402:e280:3e1c:866:7116:a1cf:30cf:2517:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+
+================================================================================
+REQUEST RECEIVED AT: 2025-08-12 00:14:10
+Documents: https://register.hackrx.in/utils/get-secret-token?hackTeam=98769
+Questions: ['Go to the link and get the secret token and return it']
+================================================================================
+Classifying question: Go to the link and get the secret token and return it
+Classified as COMPLEX navigation
+Classifying question: Go to the link and get the secret token and return it
+Classified as COMPLEX navigation
+Detected intent: complex
+Executing complex navigation for: Go to the link and get the secret token and return it
+Found 0 URLs in document
+No URLs in document, but this appears to be a secret/token/link question
+Trying to access the document URL directly for secret extraction
+RESPONSE SENT:
+Response sent at: 2025-08-12 00:14:12
+Time taken: 1.63 seconds
+Answers: ['Secret Token 🔒 Your Secret Token 72cc16471be32daab70a356582548b301fc44fba91ead76fa375ac6965597e2e']
+================================================================================
+INFO:     58.84.62.139:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+INFO:     66.249.65.99:0 - "GET / HTTP/1.1" 200 OK
+INFO:     66.249.65.100:0 - "GET / HTTP/1.1" 200 OK
+INFO:     35.187.132.228:0 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+INFO:     3.82.139.209:0 - "GET / HTTP/1.1" 200 OK
+INFO:     18.224.1.226:0 - "GET / HTTP/1.1" 200 OK
+INFO:     66.249.65.98:0 - "GET / HTTP/1.1" 200 OK
+INFO:     18.191.140.158:0 - "GET / HTTP/1.1" 200 OK
+INFO:     35.187.132.227:0 - "GET / HTTP/1.1" 200 OK
+INFO:     66.249.65.98:0 - "GET / HTTP/1.1" 200 OK
+INFO:     34.125.230.24:0 - "GET / HTTP/1.1" 200 OK
+INFO:     66.249.65.99:0 - "GET / HTTP/1.1" 200 OK
+INFO:     34.125.230.24:0 - "GET /static/script.js HTTP/1.1" 200 OK
+INFO:     34.125.230.24:0 - "GET /static/styles.css HTTP/1.1" 200 OK
+INFO:     66.249.65.99:0 - "GET /static/styles.css HTTP/1.1" 200 OK
+INFO:     34.125.230.24:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     52.34.76.65:0 - "GET / HTTP/1.1" 200 OK
+INFO:     176.65.149.84:0 - "GET / HTTP/1.1" 200 OK
+INFO:     66.249.65.99:0 - "GET /static/script.js HTTP/1.1" 200 OK
+INFO:     52.34.76.65:0 - "GET /static/script.js HTTP/1.1" 200 OK
+INFO:     52.34.76.65:0 - "GET /static/styles.css HTTP/1.1" 200 OK
+INFO:     35.187.132.228:0 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+INFO:     35.187.132.228:0 - "GET / HTTP/1.1" 200 OK
+INFO:     66.249.65.98:0 - "GET /static/script.js HTTP/1.1" 200 OK
+INFO:     66.249.65.98:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     2401:4900:6275:a695:9ccc:66f8:2a4d:7af4:0 - "GET / HTTP/1.1" 200 OK
+INFO:     2401:4900:6275:a695:9ccc:66f8:2a4d:7af4:0 - "GET /static/styles.css HTTP/1.1" 304 Not Modified
+INFO:     2401:4900:6275:a695:9ccc:66f8:2a4d:7af4:0 - "GET /static/script.js HTTP/1.1" 304 Not Modified
+INFO:     116.202.183.99:0 - "GET /backup.zip HTTP/1.1" 404 Not Found
+INFO:     116.202.183.99:0 - "GET /Archive.zip HTTP/1.1" 404 Not Found
+INFO:     116.202.183.99:0 - "GET /abeergupta.zip HTTP/1.1" 404 Not Found
+INFO:     116.202.183.99:0 - "GET /abeergupta.tech.zip HTTP/1.1" 404 Not Found
+INFO:     4.197.236.174:0 - "GET /wp-content/plugins/hellopress/wp_filemanager.php HTTP/1.1" 404 Not Found
+INFO:     4.197.236.174:0 - "GET /.trash7309/index.php HTTP/1.1" 404 Not Found
+INFO:     4.197.236.174:0 - "GET /deployment.php HTTP/1.1" 404 Not Found
+INFO:     4.197.236.174:0 - "GET /goat.php HTTP/1.1" 404 Not Found
+INFO:     4.197.236.174:0 - "GET /sHS.php HTTP/1.1" 404 Not Found
+INFO:     4.197.236.174:0 - "GET /checkbox.php HTTP/1.1" 404 Not Found
+INFO:     4.197.236.174:0 - "GET /suu.php HTTP/1.1" 404 Not Found
+INFO:     4.197.236.174:0 - "GET /debug.php HTTP/1.1" 404 Not Found
+INFO:     4.197.236.174:0 - "GET /6.php HTTP/1.1" 404 Not Found
+INFO:     4.197.236.174:0 - "GET /header.php HTTP/1.1" 404 Not Found
+INFO:     4.197.236.174:0 - "GET /5index.php HTTP/1.1" 404 Not Found
+INFO:     4.197.236.174:0 - "GET /staging.php HTTP/1.1" 404 Not Found
+INFO:     4.197.236.174:0 - "GET /faq.php HTTP/1.1" 404 Not Found
+INFO:     4.197.236.174:0 - "GET /wp-includes/ID3/index.php HTTP/1.1" 404 Not Found
+INFO:     4.197.236.174:0 - "GET /filemanager.php HTTP/1.1" 404 Not Found
+INFO:     4.197.236.174:0 - "GET /403.php HTTP/1.1" 404 Not Found
+INFO:     4.197.236.174:0 - "GET /404.php HTTP/1.1" 404 Not Found
+INFO:     4.197.236.174:0 - "GET /wp-content/wp-conflg.php HTTP/1.1" 404 Not Found
+INFO:     4.197.236.174:0 - "GET /wp-admin/js/wp-conflg.php HTTP/1.1" 404 Not Found
+INFO:     4.197.236.174:0 - "GET /wp-admin/wp-conflg.php HTTP/1.1" 404 Not Found

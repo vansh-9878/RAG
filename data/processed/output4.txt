@@ -1,0 +1,95 @@
+['Arogya%20Sanjeevani', 'Arogya%20Sanjeevani_texts', 'Super_Splendor_(Feb_2023)', 'Family%20Medicare%20Policy%20(UIN-%20UIIHLIP22070V042122)%201_texts', 'HDFHLIP23024V072223_texts', 'UNI%20GROUP%20HEALTH%20INSURANCE%20POLICY%20-%20UIIHLGP26043V022526%201_texts', 'policy_texts', 'UNI%20GROUP%20HEALTH%20INSURANCE%20POLICY%20-%20UIIHLGP26043V022526%201', 'indian_constitution_texts', 'HDFHLIP23024V072223', 'Happy%20Family%20Floater%20-%202024%20OICHLIP25046V062425%201', 'Happy%20Family%20Floater%20-%202024%20OICHLIP25046V062425%201_texts', 'Family%20Medicare', 'Arogya%20Sanjeevani%20Policy%20-%20CIN%20-%20U10200WB1906GOI001713%201', 'Family%20Medicare%20Policy%20(UIN-%20UIIHLIP22070V042122)%201', 'Arogya%2520Sanjeevani%2520Policy%2520-%2520CIN%2520-%2520U10200WB1906GOI001713%25201', 'Super_Splendor_(Feb_2023)_texts', 'Family%20Medicare_texts', 'principia_newton_texts', 'policy', 'Arogya%2520Sanjeevani%2520Policy%2520-%2520CIN%2520-%2520U10200WB1906GOI001713%25201_texts', 'indian_constitution', 'principia_newton', 'Arogya%20Sanjeevani%20Policy%20-%20CIN%20-%20U10200WB1906GOI001713%201_texts']
+Received query: documents='https://hackrx.blob.core.windows.net/assets/policy.pdf?sv=2023-01-03&st=2025-07-04T09%3A11%3A24Z&se=2027-07-05T09%3A11%3A00Z&sr=b&sp=r&sig=N4a9OU0w0QXO6AOIBiu4bpl7AXvEZogeT%2FjUHNO7HzQ%3D' questions=['What is the grace period for premium payment under the National Parivar Mediclaim Plus Policy?', 'What is the waiting period for pre-existing diseases (PED) to be covered?', 'Does this policy cover maternity expenses, and what are the conditions?', 'What is the waiting period for cataract surgery?', 'Are the medical expenses for an organ donor covered under this policy?', 'What is the No Claim Discount (NCD) offered in this policy?', 'Is there a benefit for preventive health check-ups?']
+Questions received: ['What is the grace period for premium payment under the National Parivar Mediclaim Plus Policy?', 'What is the waiting period for pre-existing diseases (PED) to be covered?', 'Does this policy cover maternity expenses, and what are the conditions?', 'What is the waiting period for cataract surgery?', 'Are the medical expenses for an organ donor covered under this policy?', 'What is the No Claim Discount (NCD) offered in this policy?', 'Is there a benefit for preventive health check-ups?']
+Number of questions: 7
+policy What is the grace period for premium payment under the National Parivar Mediclaim Plus Policy?
+policy What is the waiting period for pre-existing diseases (PED) to be covered?
+policy Does this policy cover maternity expenses, and what are the conditions?
+policy What is the waiting period for cataract surgery?
+policy Are the medical expenses for an organ donor covered under this policy?
+policy What is the No Claim Discount (NCD) offered in this policy?
+policy Is there a benefit for preventive health check-ups?
+INFO:     14.195.131.227:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+Received query: documents='http://localhost:8000/Arogya%2520Sanjeevani%2520Policy%2520-%2520CIN%2520-%2520U10200WB1906GOI001713%25201.pdf' questions=['When will my root canal claim of Rs 25,000 be settled?', 'I have done an IVF for Rs 56,000. Is it covered?', 'I did a cataract treatment of Rs 100,000. Will you settle the full Rs 100,000?', 'Give me a list of documents to be uploaded for hospitalization for heart surgery.', 'Generate 10 random numbers']
+Questions received: ['When will my root canal claim of Rs 25,000 be settled?', 'I have done an IVF for Rs 56,000. Is it covered?', 'I did a cataract treatment of Rs 100,000. Will you settle the full Rs 100,000?', 'Give me a list of documents to be uploaded for hospitalization for heart surgery.', 'Generate 10 random numbers']
+Number of questions: 5
+Arogya%2520Sanjeevani%2520Policy%2520-%2520CIN%2520-%2520U10200WB1906GOI001713%25201 When will my root canal claim of Rs 25,000 be settled?
+Arogya%2520Sanjeevani%2520Policy%2520-%2520CIN%2520-%2520U10200WB1906GOI001713%25201 I have done an IVF for Rs 56,000. Is it covered?
+Arogya%2520Sanjeevani%2520Policy%2520-%2520CIN%2520-%2520U10200WB1906GOI001713%25201 I did a cataract treatment of Rs 100,000. Will you settle the full Rs 100,000?
+Arogya%2520Sanjeevani%2520Policy%2520-%2520CIN%2520-%2520U10200WB1906GOI001713%25201 Give me a list of documents to be uploaded for hospitalization for heart surgery.
+Arogya%2520Sanjeevani%2520Policy%2520-%2520CIN%2520-%2520U10200WB1906GOI001713%25201 Generate 10 random numbers
+INFO:     110.224.94.155:0 - "POST /hackrx/run HTTP/1.1" 500 Internal Server Error
+Received query: documents='http://localhost:8000/Arogya%2520Sanjeevani%2520Policy%2520-%2520CIN%2520-%2520U10200WB1906GOI001713%25201.pdf' questions=['When will my root canal claim of Rs 25,000 be settled?', 'I have done an IVF for Rs 56,000. Is it covered?', 'I did a cataract treatment of Rs 100,000. Will you settle the full Rs 100,000?', 'Give me a list of documents to be uploaded for hospitalization for heart surgery.', 'Generate 10 random numbers']
+Questions received: ['When will my root canal claim of Rs 25,000 be settled?', 'I have done an IVF for Rs 56,000. Is it covered?', 'I did a cataract treatment of Rs 100,000. Will you settle the full Rs 100,000?', 'Give me a list of documents to be uploaded for hospitalization for heart surgery.', 'Generate 10 random numbers']
+Number of questions: 5
+Arogya%2520Sanjeevani%2520Policy%2520-%2520CIN%2520-%2520U10200WB1906GOI001713%25201 When will my root canal claim of Rs 25,000 be settled?
+Arogya%2520Sanjeevani%2520Policy%2520-%2520CIN%2520-%2520U10200WB1906GOI001713%25201 I have done an IVF for Rs 56,000. Is it covered?
+Arogya%2520Sanjeevani%2520Policy%2520-%2520CIN%2520-%2520U10200WB1906GOI001713%25201 I did a cataract treatment of Rs 100,000. Will you settle the full Rs 100,000?
+Arogya%2520Sanjeevani%2520Policy%2520-%2520CIN%2520-%2520U10200WB1906GOI001713%25201 Give me a list of documents to be uploaded for hospitalization for heart surgery.
+Arogya%2520Sanjeevani%2520Policy%2520-%2520CIN%2520-%2520U10200WB1906GOI001713%25201 Generate 10 random numbers
+INFO:     110.224.94.155:0 - "POST /hackrx/run HTTP/1.1" 500 Internal Server Error
+Received query: documents='http://localhost:8000/Arogya%2520Sanjeevani%2520Policy%2520-%2520CIN%2520-%2520U10200WB1906GOI001713%25201.pdf' questions=['When will my root canal claim of Rs 25,000 be settled?', 'I have done an IVF for Rs 56,000. Is it covered?', 'I did a cataract treatment of Rs 100,000. Will you settle the full Rs 100,000?', 'Give me a list of documents to be uploaded for hospitalization for heart surgery.', 'Generate 10 random numbers']
+Questions received: ['When will my root canal claim of Rs 25,000 be settled?', 'I have done an IVF for Rs 56,000. Is it covered?', 'I did a cataract treatment of Rs 100,000. Will you settle the full Rs 100,000?', 'Give me a list of documents to be uploaded for hospitalization for heart surgery.', 'Generate 10 random numbers']
+Number of questions: 5
+Arogya%2520Sanjeevani%2520Policy%2520-%2520CIN%2520-%2520U10200WB1906GOI001713%25201 When will my root canal claim of Rs 25,000 be settled?
+Arogya%2520Sanjeevani%2520Policy%2520-%2520CIN%2520-%2520U10200WB1906GOI001713%25201 I have done an IVF for Rs 56,000. Is it covered?
+Arogya%2520Sanjeevani%2520Policy%2520-%2520CIN%2520-%2520U10200WB1906GOI001713%25201 I did a cataract treatment of Rs 100,000. Will you settle the full Rs 100,000?
+Arogya%2520Sanjeevani%2520Policy%2520-%2520CIN%2520-%2520U10200WB1906GOI001713%25201 Give me a list of documents to be uploaded for hospitalization for heart surgery.
+Arogya%2520Sanjeevani%2520Policy%2520-%2520CIN%2520-%2520U10200WB1906GOI001713%25201 Generate 10 random numbers
+INFO:     110.224.94.155:0 - "POST /hackrx/run HTTP/1.1" 500 Internal Server Error
+Received query: documents='https://hackrx.blob.core.windows.net/assets/policy.pdf?sv=2023-01-03&st=2025-07-04T09%3A11%3A24Z&se=2027-07-05T09%3A11%3A00Z&sr=b&sp=r&sig=N4a9OU0w0QXO6AOIBiu4bpl7AXvEZogeT%2FjUHNO7HzQ%3D' questions=['What is the grace period for premium payment under the National Parivar Mediclaim Plus Policy?', 'What is the waiting period for pre-existing diseases (PED) to be covered?', 'Does this policy cover maternity expenses, and what are the conditions?', 'What is the waiting period for cataract surgery?', 'Are the medical expenses for an organ donor covered under this policy?', 'What is the No Claim Discount (NCD) offered in this policy?', 'Is there a benefit for preventive health check-ups?', "How does the policy define a 'Hospital'?", 'What is the extent of coverage for AYUSH treatments?', 'Are there any sub-limits on room rent and ICU charges for Plan A?']
+Questions received: ['What is the grace period for premium payment under the National Parivar Mediclaim Plus Policy?', 'What is the waiting period for pre-existing diseases (PED) to be covered?', 'Does this policy cover maternity expenses, and what are the conditions?', 'What is the waiting period for cataract surgery?', 'Are the medical expenses for an organ donor covered under this policy?', 'What is the No Claim Discount (NCD) offered in this policy?', 'Is there a benefit for preventive health check-ups?', "How does the policy define a 'Hospital'?", 'What is the extent of coverage for AYUSH treatments?', 'Are there any sub-limits on room rent and ICU charges for Plan A?']
+Number of questions: 10
+policy What is the grace period for premium payment under the National Parivar Mediclaim Plus Policy?
+policy What is the waiting period for pre-existing diseases (PED) to be covered?
+policy Does this policy cover maternity expenses, and what are the conditions?
+policy What is the waiting period for cataract surgery?
+policy Are the medical expenses for an organ donor covered under this policy?
+policy What is the No Claim Discount (NCD) offered in this policy?
+policy Is there a benefit for preventive health check-ups?
+policy How does the policy define a 'Hospital'?
+policy What is the extent of coverage for AYUSH treatments?
+policy Are there any sub-limits on room rent and ICU charges for Plan A?
+INFO:     110.224.94.155:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+Received query: documents='https://hackrx.blob.core.windows.net/assets/policy.pdf?sv=2023-01-03&st=2025-07-04T09%3A11%3A24Z&se=2027-07-05T09%3A11%3A00Z&sr=b&sp=r&sig=N4a9OU0w0QXO6AOIBiu4bpl7AXvEZogeT%2FjUHNO7HzQ%3D' questions=['What is the grace period for premium payment under the National Parivar Mediclaim Plus Policy?', 'What is the waiting period for pre-existing diseases (PED) to be covered?', 'Does this policy cover maternity expenses, and what are the conditions?', 'What is the waiting period for cataract surgery?', 'Are the medical expenses for an organ donor covered under this policy?', 'What is the No Claim Discount (NCD) offered in this policy?', 'Is there a benefit for preventive health check-ups?', "How does the policy define a 'Hospital'?", 'What is the extent of coverage for AYUSH treatments?', 'Are there any sub-limits on room rent and ICU charges for Plan A?']
+Questions received: ['What is the grace period for premium payment under the National Parivar Mediclaim Plus Policy?', 'What is the waiting period for pre-existing diseases (PED) to be covered?', 'Does this policy cover maternity expenses, and what are the conditions?', 'What is the waiting period for cataract surgery?', 'Are the medical expenses for an organ donor covered under this policy?', 'What is the No Claim Discount (NCD) offered in this policy?', 'Is there a benefit for preventive health check-ups?', "How does the policy define a 'Hospital'?", 'What is the extent of coverage for AYUSH treatments?', 'Are there any sub-limits on room rent and ICU charges for Plan A?']
+Number of questions: 10
+policy What is the grace period for premium payment under the National Parivar Mediclaim Plus Policy?
+policy What is the waiting period for pre-existing diseases (PED) to be covered?
+policy Does this policy cover maternity expenses, and what are the conditions?
+policy What is the waiting period for cataract surgery?
+policy Are the medical expenses for an organ donor covered under this policy?
+policy What is the No Claim Discount (NCD) offered in this policy?
+policy Is there a benefit for preventive health check-ups?
+policy How does the policy define a 'Hospital'?
+policy What is the extent of coverage for AYUSH treatments?
+policy Are there any sub-limits on room rent and ICU charges for Plan A?
+INFO:     110.224.94.155:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+Received query: documents='https://hackrx.blob.core.windows.net/assets/policy.pdf?sv=2023-01-03&st=2025-07-04T09%3A11%3A24Z&se=2027-07-05T09%3A11%3A00Z&sr=b&sp=r&sig=N4a9OU0w0QXO6AOIBiu4bpl7AXvEZogeT%2FjUHNO7HzQ%3D' questions=['What is the grace period for premium payment under the National Parivar Mediclaim Plus Policy?', 'What is the waiting period for pre-existing diseases (PED) to be covered?', 'Does this policy cover maternity expenses, and what are the conditions?', 'What is the waiting period for cataract surgery?', 'Are the medical expenses for an organ donor covered under this policy?', 'What is the No Claim Discount (NCD) offered in this policy?', 'Is there a benefit for preventive health check-ups?', "How does the policy define a 'Hospital'?", 'What is the extent of coverage for AYUSH treatments?', 'Are there any sub-limits on room rent and ICU charges for Plan A?']
+Questions received: ['What is the grace period for premium payment under the National Parivar Mediclaim Plus Policy?', 'What is the waiting period for pre-existing diseases (PED) to be covered?', 'Does this policy cover maternity expenses, and what are the conditions?', 'What is the waiting period for cataract surgery?', 'Are the medical expenses for an organ donor covered under this policy?', 'What is the No Claim Discount (NCD) offered in this policy?', 'Is there a benefit for preventive health check-ups?', "How does the policy define a 'Hospital'?", 'What is the extent of coverage for AYUSH treatments?', 'Are there any sub-limits on room rent and ICU charges for Plan A?']
+Number of questions: 10
+policy What is the grace period for premium payment under the National Parivar Mediclaim Plus Policy?
+policy What is the waiting period for pre-existing diseases (PED) to be covered?
+policy Does this policy cover maternity expenses, and what are the conditions?
+policy What is the waiting period for cataract surgery?
+policy Are the medical expenses for an organ donor covered under this policy?
+policy What is the No Claim Discount (NCD) offered in this policy?
+policy Is there a benefit for preventive health check-ups?
+policy How does the policy define a 'Hospital'?
+policy What is the extent of coverage for AYUSH treatments?
+policy Are there any sub-limits on room rent and ICU charges for Plan A?
+INFO:     2401:4900:6342:2e8a:cedd:454:9791:ba9f:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+Received query: documents='https://hackrx.blob.core.windows.net/assets/policy.pdf?sv=2023-01-03&st=2025-07-04T09%3A11%3A24Z&se=2027-07-05T09%3A11%3A00Z&sr=b&sp=r&sig=N4a9OU0w0QXO6AOIBiu4bpl7AXvEZogeT%2FjUHNO7HzQ%3D' questions=["How does the policy define a 'Hospital'?", 'What is the extent of coverage for AYUSH treatments?', 'Are there any sub-limits on room rent and ICU charges for Plan A?']
+Questions received: ["How does the policy define a 'Hospital'?", 'What is the extent of coverage for AYUSH treatments?', 'Are there any sub-limits on room rent and ICU charges for Plan A?']
+Number of questions: 3
+policy How does the policy define a 'Hospital'?
+policy What is the extent of coverage for AYUSH treatments?
+policy Are there any sub-limits on room rent and ICU charges for Plan A?
+INFO:     2401:4900:6342:2e8a:cedd:454:9791:ba9f:0 - "POST /hackrx/run HTTP/1.1" 200 OK
+Received query: documents='https://hackrx.blob.core.windows.net/assets/policy.pdf?sv=2023-01-03&st=2025-07-04T09%3A11%3A24Z&se=2027-07-05T09%3A11%3A00Z&sr=b&sp=r&sig=N4a9OU0w0QXO6AOIBiu4bpl7AXvEZogeT%2FjUHNO7HzQ%3D' questions=["How does the policy define a 'Hospital'?", 'What is the extent of coverage for AYUSH treatments?', 'Are there any sub-limits on room rent and ICU charges for Plan A?']
+Questions received: ["How does the policy define a 'Hospital'?", 'What is the extent of coverage for AYUSH treatments?', 'Are there any sub-limits on room rent and ICU charges for Plan A?']
+Number of questions: 3
+policy How does the policy define a 'Hospital'?
+policy What is the extent of coverage for AYUSH treatments?
+policy Are there any sub-limits on room rent and ICU charges for Plan A?
+INFO:     110.224.94.155:0 - "POST /hackrx/run HTTP/1.1" 200 OK

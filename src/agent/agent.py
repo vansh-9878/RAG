@@ -96,6 +96,8 @@ def start(questions: list[str], index: str, texts: str)->list[str]:
     answer=answer.replace("json","").replace("```","")
     if(not answer.endswith("]")):
         answer += "]"
+    if(not answer.startswith("[")):
+        answer = "[" + answer
     print("Raw answer from model:")
     print(answer)
     try:
